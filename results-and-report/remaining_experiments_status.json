@@ -1,0 +1,16 @@
+{
+  "oppor_targetS2": {
+    "status": "completed",
+    "duration_minutes": 38.16,
+    "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/oppor_targetS2/best_model.pt",
+    "training_log": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/oppor_targetS2_training.log",
+    "metrics": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/oppor_targetS2_metrics.json"
+  },
+  "oppor_targetS3": {
+    "status": "completed",
+    "duration_minutes": 38.26,
+    "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/oppor_targetS3/best_model.pt",
+    "training_log": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/oppor_targetS3_training.log",
+    "metrics": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/oppor_targetS3_metrics.json"
+  }
+}

@@ -1,0 +1,4 @@
+Dataset,Target_Domains,Total_Evaluated_Samples,Mean_Accuracy,Mean_Macro_F1,Mean_Weighted_F1,Mean_Paper_GILE_Score,Mean_Accuracy_Paper_Gap
+UCI HAR,5,1609.0,89.34,87.87,88.24,88.17,1.17
+Opportunity,4,57953.0,80.42,52.33,79.38,81.4,-0.97
+UniMiB-SHAR,4,1569.0,52.23,41.03,48.14,55.72,-3.49

@@ -1,0 +1,61 @@
+{
+  "dataset": "UCI HAR",
+  "target_domain": 0,
+  "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/ucihar_target0/best_model.pt",
+  "n_samples": 347,
+  "accuracy": 0.899135446685879,
+  "macro_f1": 0.8937005769978271,
+  "weighted_f1": 0.8955631929838467,
+  "classification_report": {
+    "0": {
+      "precision": 0.9759036144578314,
+      "recall": 0.8526315789473684,
+      "f1-score": 0.9101123595505617,
+      "support": 95
+    },
+    "1": {
+      "precision": 0.85,
+      "recall": 0.9622641509433962,
+      "f1-score": 0.9026548672566371,
+      "support": 53
+    },
+    "2": {
+      "precision": 0.8421052631578947,
+      "recall": 0.9795918367346939,
+      "f1-score": 0.9056603773584905,
+      "support": 49
+    },
+    "3": {
+      "precision": 0.9038461538461539,
+      "recall": 1.0,
+      "f1-score": 0.9494949494949495,
+      "support": 47
+    },
+    "4": {
+      "precision": 0.8412698412698413,
+      "recall": 1.0,
+      "f1-score": 0.9137931034482758,
+      "support": 53
+    },
+    "5": {
+      "precision": 1.0,
+      "recall": 0.64,
+      "f1-score": 0.7804878048780487,
+      "support": 50
+    },
+    "accuracy": 0.899135446685879,
+    "macro avg": {
+      "precision": 0.9021874787886203,
+      "recall": 0.9057479277709097,
+      "f1-score": 0.8937005769978271,
+      "support": 347
+    },
+    "weighted avg": {
+      "precision": 0.9109281616319932,
+      "recall": 0.899135446685879,
+      "f1-score": 0.8955631929838467,
+      "support": 347
+    }
+  },
+  "protocol_note": "Checkpoint selected by the original implementation's target-domain accuracy during training. This uses target labels for model selection and must not be interpreted as an unbiased generalisation estimate."
+}
