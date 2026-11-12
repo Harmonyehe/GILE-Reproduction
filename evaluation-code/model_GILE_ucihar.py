@@ -83,7 +83,7 @@ class pzd(nn.Module):
         self.fc22[0].bias.data.zero_()
 
     def forward(self, d):
-        a = torch.eye(self.d_dim)
+        a = torch.eye(self.d_dim, device=d.device)
         d_onehot = a[d]
         d_onehot = d_onehot.to(self.device)
         hidden = self.fc1(d_onehot)
@@ -112,7 +112,7 @@ class pzy(nn.Module):
 
     def forward(self, y):
 
-        a = torch.eye(self.y_dim)
+        a = torch.eye(self.y_dim, device=y.device)
         y_onehot = a[y]
         y_onehot = y_onehot.to(self.device)
 

@@ -1,0 +1,26 @@
+COMMAND:
+/content/bin/micromamba run -p /content/mamba-root/envs/gile310 python evaluate_best.py --target_domain 1 --checkpoint /content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/1/best_model.pt --output /content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_evaluation/ucihar_1.json --beta_d 1.0 --beta_y 1.0
+
+STDOUT:
+source_domain: 0
+source_loader batch:  5
+source_domain: 2
+source_loader batch:  5
+source_domain: 3
+source_loader batch:  4
+source_domain: 4
+source_loader batch:  4
+target_domain: 1
+target_loader batch:  5
+{
+  "dataset": "UCI HAR",
+  "target_domain": 1,
+  "n_samples": 302,
+  "accuracy": 0.8145695364238411,
+  "macro_f1": 0.7849176685383581,
+  "weighted_f1": 0.7921183634816884,
+  "metrics_file": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_evaluation/ucihar_1.json"
+}
+
+
+STDERR:

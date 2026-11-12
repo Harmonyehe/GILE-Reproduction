@@ -1,0 +1,14 @@
+dataset,target,epochs,status,checkpoint_directory,log_file
+ucihar,0,150,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/0,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/ucihar_0.log
+ucihar,1,150,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/1,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/ucihar_1.log
+ucihar,2,150,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/2,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/ucihar_2.log
+ucihar,3,150,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/3,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/ucihar_3.log
+ucihar,4,150,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/4,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/ucihar_4.log
+oppor,S1,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/oppor/S1,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/oppor_S1.log
+oppor,S2,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/oppor/S2,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/oppor_S2.log
+oppor,S3,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/oppor/S3,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/oppor_S3.log
+oppor,S4,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/oppor/S4,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/oppor_S4.log
+shar,1,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/shar/1,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/shar_1.log
+shar,2,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/shar/2,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/shar_2.log
+shar,3,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/shar/3,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/shar_3.log
+shar,5,100,COMPLETED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/shar/5,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/shar_5.log

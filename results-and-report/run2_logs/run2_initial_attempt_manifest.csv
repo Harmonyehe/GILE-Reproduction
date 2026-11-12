@@ -1,0 +1,2 @@
+dataset,target,epochs,status,checkpoint_directory,log_file
+ucihar,0,150,FAILED,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/0,/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_logs/ucihar_0.log

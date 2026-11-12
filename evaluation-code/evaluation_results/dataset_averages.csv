@@ -1,0 +1,4 @@
+Dataset,Accuracy (%),Macro-F1 (%),Weighted-F1 (%)
+Opportunity,81.16,52.08,79.46
+UCI HAR,89.51,88.75,88.99
+UniMiB SHAR,52.23,41.03,48.14
