@@ -1,0 +1,191 @@
+source_domain: S2
+source_loader batch:  234
+source_domain: S3
+source_loader batch:  225
+source_domain: S4
+source_loader batch:  200
+target_domain: S1
+Epoch: [1/100], avg loss: 1062.26, y loss: 0.75%
+Epoch:[1/100], train acc d:0.30 y:0.73 | d_false:0.33 y_false:0.05
+Epoch:[1/100], TEST acc d:0.00 y:0.65 | d_false:0.05 y_false:0.01
+Epoch: [2/100], avg loss: 623.90, y loss: 0.32%
+Epoch:[2/100], train acc d:0.30 y:0.84 | d_false:0.28 y_false:0.06
+Epoch:[2/100], TEST acc d:0.00 y:0.68 | d_false:0.02 y_false:0.01
+Epoch: [3/100], avg loss: 579.41, y loss: 0.22%
+Epoch:[3/100], train acc d:0.30 y:0.88 | d_false:0.33 y_false:0.05
+Epoch:[3/100], TEST acc d:0.00 y:0.69 | d_false:0.01 y_false:0.07
+Epoch: [4/100], avg loss: 548.55, y loss: 0.16%
+Epoch:[4/100], train acc d:0.30 y:0.91 | d_false:0.35 y_false:0.05
+Epoch:[4/100], TEST acc d:0.00 y:0.77 | d_false:0.00 y_false:0.66
+Epoch: [5/100], avg loss: 658.36, y loss: 0.14%
+Epoch:[5/100], train acc d:0.30 y:0.92 | d_false:0.34 y_false:0.05
+Epoch:[5/100], TEST acc d:0.00 y:0.67 | d_false:0.00 y_false:0.59
+Epoch: [6/100], avg loss: 688.84, y loss: 0.13%
+Epoch:[6/100], train acc d:0.30 y:0.95 | d_false:0.32 y_false:0.04
+Epoch:[6/100], TEST acc d:0.00 y:0.74 | d_false:0.00 y_false:0.27
+Epoch: [7/100], avg loss: 769.36, y loss: 0.11%
+Epoch:[7/100], train acc d:0.30 y:0.93 | d_false:0.33 y_false:0.05
+Epoch:[7/100], TEST acc d:0.00 y:0.72 | d_false:0.00 y_false:0.01
+Epoch: [8/100], avg loss: 678.62, y loss: 0.10%
+Epoch:[8/100], train acc d:0.30 y:0.95 | d_false:0.32 y_false:0.06
+Epoch:[8/100], TEST acc d:0.00 y:0.72 | d_false:0.00 y_false:0.72
+Epoch: [9/100], avg loss: 901.21, y loss: 0.09%
+Epoch:[9/100], train acc d:0.30 y:0.95 | d_false:0.30 y_false:0.05
+Epoch:[9/100], TEST acc d:0.00 y:0.73 | d_false:0.00 y_false:0.01
+Epoch: [10/100], avg loss: 998.29, y loss: 0.09%
+Epoch:[10/100], train acc d:0.30 y:0.96 | d_false:0.30 y_false:0.06
+Epoch:[10/100], TEST acc d:0.00 y:0.71 | d_false:0.00 y_false:0.02
+Epoch: [11/100], avg loss: 654.91, y loss: 0.08%
+Epoch:[11/100], train acc d:0.30 y:0.97 | d_false:0.30 y_false:0.06
+Epoch:[11/100], TEST acc d:0.00 y:0.76 | d_false:0.00 y_false:0.59
+Epoch: [12/100], avg loss: 732.83, y loss: 0.09%
+Epoch:[12/100], train acc d:0.30 y:0.97 | d_false:0.30 y_false:0.06
+Epoch:[12/100], TEST acc d:0.00 y:0.79 | d_false:0.00 y_false:0.72
+Epoch: [13/100], avg loss: 812.83, y loss: 0.07%
+Epoch:[13/100], train acc d:0.30 y:0.97 | d_false:0.30 y_false:0.06
+Epoch:[13/100], TEST acc d:0.00 y:0.72 | d_false:0.00 y_false:0.72
+Epoch: [14/100], avg loss: 797.96, y loss: 0.07%
+Epoch:[14/100], train acc d:0.30 y:0.97 | d_false:0.31 y_false:0.06
+Epoch:[14/100], TEST acc d:0.00 y:0.77 | d_false:0.00 y_false:0.72
+Epoch: [15/100], avg loss: 1045.25, y loss: 0.07%
+Epoch:[15/100], train acc d:0.30 y:0.98 | d_false:0.32 y_false:0.05
+Epoch:[15/100], TEST acc d:0.00 y:0.79 | d_false:0.00 y_false:0.01
+Epoch: [16/100], avg loss: 1021.06, y loss: 0.06%
+Epoch:[16/100], train acc d:0.30 y:0.98 | d_false:0.34 y_false:0.05
+Epoch:[16/100], TEST acc d:0.00 y:0.77 | d_false:0.00 y_false:0.02
+Epoch: [17/100], avg loss: 759.40, y loss: 0.07%
+Epoch:[17/100], train acc d:0.30 y:0.98 | d_false:0.32 y_false:0.06
+Epoch:[17/100], TEST acc d:0.00 y:0.78 | d_false:0.00 y_false:0.01
+Epoch: [18/100], avg loss: 747.24, y loss: 0.06%
+Epoch:[18/100], train acc d:0.30 y:0.97 | d_false:0.33 y_false:0.06
+Epoch:[18/100], TEST acc d:0.00 y:0.77 | d_false:0.00 y_false:0.09
+Epoch: [19/100], avg loss: 1116.61, y loss: 0.06%
+Epoch:[19/100], train acc d:0.30 y:0.98 | d_false:0.34 y_false:0.06
+Epoch:[19/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.04
+Epoch: [20/100], avg loss: 890.00, y loss: 0.06%
+Epoch:[20/100], train acc d:0.30 y:0.98 | d_false:0.32 y_false:0.06
+Epoch:[20/100], TEST acc d:0.00 y:0.78 | d_false:0.00 y_false:0.07
+Epoch: [21/100], avg loss: 834.04, y loss: 0.05%
+Epoch:[21/100], train acc d:0.30 y:0.99 | d_false:0.33 y_false:0.05
+Epoch:[21/100], TEST acc d:0.00 y:0.78 | d_false:0.00 y_false:0.01
+Epoch: [22/100], avg loss: 681.66, y loss: 0.05%
+Epoch:[22/100], train acc d:0.30 y:0.99 | d_false:0.32 y_false:0.05
+Epoch:[22/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.71
+Epoch: [23/100], avg loss: 770.17, y loss: 0.05%
+Epoch:[23/100], train acc d:0.30 y:0.98 | d_false:0.30 y_false:0.06
+Epoch:[23/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.01
+Epoch: [24/100], avg loss: 959.06, y loss: 0.05%
+Epoch:[24/100], train acc d:0.30 y:0.98 | d_false:0.31 y_false:0.06
+Epoch:[24/100], TEST acc d:0.00 y:0.77 | d_false:0.00 y_false:0.01
+Epoch: [25/100], avg loss: 919.05, y loss: 0.05%
+Epoch:[25/100], train acc d:0.30 y:0.99 | d_false:0.31 y_false:0.05
+Epoch:[25/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.07
+Epoch: [26/100], avg loss: 984.89, y loss: 0.05%
+Epoch:[26/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[26/100], TEST acc d:0.00 y:0.79 | d_false:0.00 y_false:0.01
+Epoch: [27/100], avg loss: 1130.97, y loss: 0.04%
+Epoch:[27/100], train acc d:0.30 y:0.99 | d_false:0.32 y_false:0.05
+Epoch:[27/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.02
+Epoch: [28/100], avg loss: 1238.39, y loss: 0.04%
+Epoch:[28/100], train acc d:0.30 y:0.99 | d_false:0.31 y_false:0.05
+Epoch:[28/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.01
+Epoch: [29/100], avg loss: 905.56, y loss: 0.04%
+Epoch:[29/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.05
+Epoch:[29/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.01
+Epoch: [30/100], avg loss: 911.29, y loss: 0.04%
+Epoch:[30/100], train acc d:0.30 y:0.99 | d_false:0.33 y_false:0.05
+Epoch:[30/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.01
+Epoch: [31/100], avg loss: 688.51, y loss: 0.04%
+Epoch:[31/100], train acc d:0.30 y:0.99 | d_false:0.31 y_false:0.08
+Epoch:[31/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.02
+Epoch: [32/100], avg loss: 737.22, y loss: 0.04%
+Epoch:[32/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.07
+Epoch:[32/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.18
+Epoch: [33/100], avg loss: 646.72, y loss: 0.04%
+Epoch:[33/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.05
+Epoch:[33/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.02
+Epoch: [34/100], avg loss: 844.67, y loss: 0.04%
+Epoch:[34/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[34/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.01
+Epoch: [35/100], avg loss: 1115.20, y loss: 0.04%
+Epoch:[35/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[35/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.01
+Epoch: [36/100], avg loss: 801.05, y loss: 0.04%
+Epoch:[36/100], train acc d:0.30 y:0.99 | d_false:0.31 y_false:0.05
+Epoch:[36/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.01
+Epoch: [37/100], avg loss: 959.19, y loss: 0.03%
+Epoch:[37/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[37/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [38/100], avg loss: 854.77, y loss: 0.04%
+Epoch:[38/100], train acc d:0.30 y:0.99 | d_false:0.31 y_false:0.06
+Epoch:[38/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.72
+Epoch: [39/100], avg loss: 924.95, y loss: 0.03%
+Epoch:[39/100], train acc d:0.30 y:1.00 | d_false:0.31 y_false:0.06
+Epoch:[39/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.72
+Epoch: [40/100], avg loss: 972.71, y loss: 0.03%
+Epoch:[40/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[40/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [41/100], avg loss: 1019.18, y loss: 0.04%
+Epoch:[41/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[41/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.72
+Epoch: [42/100], avg loss: 975.62, y loss: 0.03%
+Epoch:[42/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[42/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.72
+Epoch: [43/100], avg loss: 1003.11, y loss: 0.04%
+Epoch:[43/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[43/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [44/100], avg loss: 1004.32, y loss: 0.04%
+Epoch:[44/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[44/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [45/100], avg loss: 1034.74, y loss: 0.03%
+Epoch:[45/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[45/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.72
+Epoch: [46/100], avg loss: 1025.57, y loss: 0.04%
+Epoch:[46/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[46/100], TEST acc d:0.00 y:0.80 | d_false:0.00 y_false:0.72
+Epoch: [47/100], avg loss: 1063.85, y loss: 0.04%
+Epoch:[47/100], train acc d:0.30 y:1.00 | d_false:0.30 y_false:0.05
+Epoch:[47/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [48/100], avg loss: 1037.28, y loss: 0.02%
+Epoch:[48/100], train acc d:0.30 y:1.00 | d_false:0.30 y_false:0.06
+Epoch:[48/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.72
+Epoch: [49/100], avg loss: 1059.59, y loss: 0.03%
+Epoch:[49/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[49/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.72
+Epoch: [50/100], avg loss: 991.25, y loss: 0.03%
+Epoch:[50/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[50/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [51/100], avg loss: 1029.43, y loss: 0.03%
+Epoch:[51/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[51/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [52/100], avg loss: 1061.35, y loss: 0.02%
+Epoch:[52/100], train acc d:0.30 y:0.99 | d_false:0.30 y_false:0.06
+Epoch:[52/100], TEST acc d:0.00 y:0.82 | d_false:0.00 y_false:0.72
+Epoch: [53/100], avg loss: 1105.81, y loss: 0.03%
+Epoch:[53/100], train acc d:0.30 y:1.00 | d_false:0.30 y_false:0.06
+Epoch:[53/100], TEST acc d:0.00 y:0.81 | d_false:0.00 y_false:0.72
+Epoch: [54/100], avg loss: 1118.24, y loss: 0.03%
+Traceback (most recent call last):
+  File "main_oppor.py", line 56, in <module>
+    train(model, DEVICE, optimizer, source_loaders, target_loader, result_csv, result_txt, args)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/train.py", line 138, in train
+    return train_GILE(model, DEVICE, optimizer, source_loaders, target_loader, result_csv, result_txt, args)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/train.py", line 113, in train_GILE
+    train_acc_d, train_acc_y, train_acc_d_false, train_acc_y_false = get_accuracy(source_loaders, DEVICE, model, model.classifier, args.batch_size)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/train.py", line 54, in get_accuracy
+    pred_d, pred_y, pred_d_false, pred_y_false = classifier_fn(xs)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/model_GILE_oppor.py", line 519, in classifier
+    zy_q_loc, zy_q_scale, _, _ = self.qzy.forward(x)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/model_GILE_oppor.py", line 316, in forward
+    out_conv1 = self.conv1(x_img)
+  File "/content/mamba-root/envs/gile/lib/python3.6/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/mamba-root/envs/gile/lib/python3.6/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/content/mamba-root/envs/gile/lib/python3.6/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/mamba-root/envs/gile/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 345, in forward
+    return self.conv2d_forward(input, self.weight)
+  File "/content/mamba-root/envs/gile/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 342, in conv2d_forward
+    self.padding, self.dilation, self.groups)
+KeyboardInterrupt

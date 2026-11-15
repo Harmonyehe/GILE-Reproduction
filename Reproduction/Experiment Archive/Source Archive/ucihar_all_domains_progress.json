@@ -1,0 +1,46 @@
+[
+  {
+    "target_domain": 1,
+    "training_seconds": 163.8,
+    "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/ucihar_target1/best_model.pt",
+    "training_log": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target1_training.log",
+    "metrics_file": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target1_metrics.json",
+    "n_samples": 302,
+    "accuracy": 0.804635761589404,
+    "macro_f1": 0.742112994778827,
+    "weighted_f1": 0.7543556188663484
+  },
+  {
+    "target_domain": 2,
+    "training_seconds": 156.8,
+    "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/ucihar_target2/best_model.pt",
+    "training_log": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target2_training.log",
+    "metrics_file": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target2_metrics.json",
+    "n_samples": 341,
+    "accuracy": 0.9765395894428153,
+    "macro_f1": 0.9754278678327708,
+    "weighted_f1": 0.9766090559605023
+  },
+  {
+    "target_domain": 3,
+    "training_seconds": 164.4,
+    "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/ucihar_target3/best_model.pt",
+    "training_log": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target3_training.log",
+    "metrics_file": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target3_metrics.json",
+    "n_samples": 317,
+    "accuracy": 0.8927444794952681,
+    "macro_f1": 0.8887461811910029,
+    "weighted_f1": 0.8903806877434852
+  },
+  {
+    "target_domain": 4,
+    "training_seconds": 163.2,
+    "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/ucihar_target4/best_model.pt",
+    "training_log": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target4_training.log",
+    "metrics_file": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/results-and-report/ucihar_target4_metrics.json",
+    "n_samples": 302,
+    "accuracy": 0.8940397350993378,
+    "macro_f1": 0.8935806024041318,
+    "weighted_f1": 0.8952028752963694
+  }
+]

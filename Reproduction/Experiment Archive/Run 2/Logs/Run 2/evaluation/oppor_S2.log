@@ -1,0 +1,23 @@
+COMMAND:
+/content/bin/micromamba run -p /content/mamba-root/envs/gile310 python evaluate_oppor.py --target_domain S2 --checkpoint /content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/oppor/S2/best_model.pt --output /content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_evaluation/oppor_S2.json
+
+STDOUT:
+source_domain: S1
+source_loader batch:  244
+source_domain: S3
+source_loader batch:  225
+source_domain: S4
+source_loader batch:  200
+target_domain: S2
+{
+  "dataset": "oppor",
+  "target_domain": "S2",
+  "num_samples": 15011,
+  "accuracy": 0.8197988142029179,
+  "macro_f1": 0.5305846568221366,
+  "weighted_f1": 0.8001885068657603,
+  "output": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_evaluation/oppor_S2.json"
+}
+
+
+STDERR:

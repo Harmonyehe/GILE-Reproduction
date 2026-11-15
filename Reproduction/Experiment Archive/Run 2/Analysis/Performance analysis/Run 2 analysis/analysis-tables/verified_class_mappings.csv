@@ -1,0 +1,42 @@
+dataset,class_id,activity
+UCI HAR,0,Walking
+UCI HAR,1,Walking Upstairs
+UCI HAR,2,Walking Downstairs
+UCI HAR,3,Sitting
+UCI HAR,4,Standing
+UCI HAR,5,Laying
+Opportunity,0,Null / Background
+Opportunity,1,Open Door 1
+Opportunity,2,Open Door 2
+Opportunity,3,Close Door 1
+Opportunity,4,Close Door 2
+Opportunity,5,Open Fridge
+Opportunity,6,Close Fridge
+Opportunity,7,Open Dishwasher
+Opportunity,8,Close Dishwasher
+Opportunity,9,Open Drawer 1
+Opportunity,10,Close Drawer 1
+Opportunity,11,Open Drawer 2
+Opportunity,12,Close Drawer 2
+Opportunity,13,Open Drawer 3
+Opportunity,14,Close Drawer 3
+Opportunity,15,Clean Table
+Opportunity,16,Drink from Cup
+Opportunity,17,Toggle Switch
+UniMiB SHAR,0,StandingUpFS
+UniMiB SHAR,1,StandingUpFL
+UniMiB SHAR,2,Walking
+UniMiB SHAR,3,Running
+UniMiB SHAR,4,GoingUpS
+UniMiB SHAR,5,Jumping
+UniMiB SHAR,6,GoingDownS
+UniMiB SHAR,7,LyingDownFS
+UniMiB SHAR,8,SittingDown
+UniMiB SHAR,9,FallingForw
+UniMiB SHAR,10,FallingRight
+UniMiB SHAR,11,FallingBack
+UniMiB SHAR,12,HittingObstacle
+UniMiB SHAR,13,FallingWithPS
+UniMiB SHAR,14,FallingBackSC
+UniMiB SHAR,15,Syncope
+UniMiB SHAR,16,FallingLeft

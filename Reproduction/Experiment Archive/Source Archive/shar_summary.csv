@@ -1,0 +1,5 @@
+Dataset,Target Domain,Samples,Accuracy (%),Macro F1 (%),Weighted F1 (%)
+UniMiB-SHAR,1,384,46.35,33.83,40.26
+UniMiB-SHAR,2,583,53.86,47.2,52.46
+UniMiB-SHAR,3,304,67.11,48.81,65.79
+UniMiB-SHAR,5,298,41.61,34.28,34.06

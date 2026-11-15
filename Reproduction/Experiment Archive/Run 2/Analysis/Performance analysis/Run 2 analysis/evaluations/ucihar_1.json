@@ -1,0 +1,111 @@
+{
+  "dataset": "UCI HAR",
+  "target_domain": 1,
+  "checkpoint": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/ucihar/1/best_model.pt",
+  "n_samples": 302,
+  "accuracy": 0.8145695364238411,
+  "macro_f1": 0.7849176685383582,
+  "weighted_f1": 0.7921183634816885,
+  "classification_report": {
+    "0": {
+      "precision": 0.9473684210526315,
+      "recall": 0.9152542372881356,
+      "f1-score": 0.9310344827586207,
+      "support": 59.0
+    },
+    "1": {
+      "precision": 0.75,
+      "recall": 0.875,
+      "f1-score": 0.8076923076923077,
+      "support": 48.0
+    },
+    "2": {
+      "precision": 0.926829268292683,
+      "recall": 0.8085106382978723,
+      "f1-score": 0.8636363636363636,
+      "support": 47.0
+    },
+    "3": {
+      "precision": 1.0,
+      "recall": 0.21739130434782608,
+      "f1-score": 0.35714285714285715,
+      "support": 46.0
+    },
+    "4": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1-score": 0.75,
+      "support": 54.0
+    },
+    "5": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 48.0
+    },
+    "accuracy": 0.8145695364238411,
+    "macro avg": {
+      "precision": 0.8706996148908858,
+      "recall": 0.802692696655639,
+      "f1-score": 0.7849176685383582,
+      "support": 302.0
+    },
+    "weighted avg": {
+      "precision": 0.8670718955359646,
+      "recall": 0.8145695364238411,
+      "f1-score": 0.7921183634816885,
+      "support": 302.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      54,
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      42,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      9,
+      38,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      10,
+      36,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      54,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      48
+    ]
+  ],
+  "protocol_note": "Checkpoint selected by the original implementation's target-domain accuracy during training. This uses target labels for model selection and must not be interpreted as an unbiased generalisation estimate."
+}

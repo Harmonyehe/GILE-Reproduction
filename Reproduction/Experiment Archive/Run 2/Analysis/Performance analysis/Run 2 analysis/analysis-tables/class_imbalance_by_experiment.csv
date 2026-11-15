@@ -1,0 +1,14 @@
+experiment,dataset,target,total_windows,number_of_classes_present,largest_class_support,smallest_nonzero_class_support,imbalance_ratio_max_over_min,largest_class_id,smallest_nonzero_class_id
+ucihar_0,UCI HAR,0,347,6,95,47,2.021276595744681,0,3
+ucihar_1,UCI HAR,1,302,6,59,46,1.2826086956521738,0,3
+ucihar_2,UCI HAR,2,341,6,62,49,1.2653061224489797,5,2
+ucihar_3,UCI HAR,3,317,6,60,45,1.3333333333333333,0,2
+ucihar_4,UCI HAR,4,302,6,56,44,1.2727272727272727,0,3
+oppor_S1,oppor,S1,15643,18,11299,133,84.95488721804512,0,9
+oppor_S2,oppor,S2,15011,18,10805,81,133.39506172839506,0,12
+oppor_S3,oppor,S3,14456,18,10331,117,88.2991452991453,0,12
+oppor_S4,oppor,S4,12843,18,9426,94,100.27659574468085,0,10
+shar_1,shar,1,384,17,71,2,35.5,3,8
+shar_2,shar,2,583,17,143,4,35.75,2,8
+shar_3,shar,3,304,17,73,1,73.0,3,1
+shar_5,shar,5,298,17,66,1,66.0,3,8

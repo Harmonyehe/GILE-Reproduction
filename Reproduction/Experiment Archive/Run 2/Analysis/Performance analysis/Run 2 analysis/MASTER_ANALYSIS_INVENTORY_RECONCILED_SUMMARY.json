@@ -1,0 +1,13 @@
+{
+    "alternative_filenames_verified": 3,
+    "posthoc_outputs_verified": 4,
+    "posthoc_outputs_expected": 4,
+    "posthoc_file_checks": {
+        "class-distributions/all_13_class_distributions.csv": true,
+        "analysis-tables/top_confusion_pairs_per_experiment.csv": true,
+        "analysis-tables/weakest_5_classes_per_experiment.csv": true,
+        "analysis-tables/experiment_metrics.csv": true
+    },
+    "all_posthoc_outputs_present": true,
+    "total_expected_outputs": 73
+}

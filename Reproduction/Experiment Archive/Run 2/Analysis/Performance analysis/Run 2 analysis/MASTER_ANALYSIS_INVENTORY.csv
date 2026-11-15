@@ -1,0 +1,182 @@
+file,relative_path,extension,size_bytes,size_kb,modified,exists,expected_output,category
+activity_error_summary.csv,named-activity-analysis/activity_error_summary.csv,.csv,3851.0,3.76,2026-11-15T19:26:36,True,True,Activity-level analysis
+recurring_confusion_pairs.csv,named-activity-analysis/recurring_confusion_pairs.csv,.csv,5091.0,4.97,2026-11-15T19:26:36,True,True,Activity-level analysis
+top_10_confusions_per_experiment.csv,named-activity-analysis/top_10_confusions_per_experiment.csv,.csv,7871.0,7.69,2026-11-15T19:26:36,True,True,Activity-level analysis
+verified_class_mappings.csv,analysis-tables/verified_class_mappings.csv,.csv,1108.0,1.08,2026-11-15T19:22:34,True,True,Class mapping
+oppor_S1.json,evaluations/oppor_S1.json,.json,6711.0,6.55,2026-11-15T18:30:17,True,True,Evaluation JSONs
+oppor_S2.json,evaluations/oppor_S2.json,.json,6672.0,6.52,2026-11-15T18:30:59,True,True,Evaluation JSONs
+oppor_S3.json,evaluations/oppor_S3.json,.json,6659.0,6.5,2026-11-15T18:31:42,True,True,Evaluation JSONs
+oppor_S4.json,evaluations/oppor_S4.json,.json,6656.0,6.5,2026-11-15T18:32:22,True,True,Evaluation JSONs
+shar_1.json,evaluations/shar_1.json,.json,5631.0,5.5,2026-11-15T18:32:51,True,True,Evaluation JSONs
+shar_2.json,evaluations/shar_2.json,.json,5941.0,5.8,2026-11-15T18:33:08,True,True,Evaluation JSONs
+shar_3.json,evaluations/shar_3.json,.json,5841.0,5.7,2026-11-15T18:33:20,True,True,Evaluation JSONs
+shar_5.json,evaluations/shar_5.json,.json,5612.0,5.48,2026-11-15T18:33:32,True,True,Evaluation JSONs
+ucihar_0.json,evaluations/ucihar_0.json,.json,2218.0,2.17,2026-11-15T18:54:59,True,True,Evaluation JSONs
+ucihar_1.json,evaluations/ucihar_1.json,.json,2142.0,2.09,2026-11-15T18:55:04,True,True,Evaluation JSONs
+ucihar_2.json,evaluations/ucihar_2.json,.json,2192.0,2.14,2026-11-15T18:55:10,True,True,Evaluation JSONs
+ucihar_3.json,evaluations/ucihar_3.json,.json,2169.0,2.12,2026-11-15T18:55:17,True,True,Evaluation JSONs
+ucihar_4.json,evaluations/ucihar_4.json,.json,2155.0,2.1,2026-11-15T18:55:27,True,True,Evaluation JSONs
+oppor_S1_normalised.png,named-confusion-matrices/figures/oppor_S1_normalised.png,.png,273037.0,266.64,2026-11-15T19:23:51,True,True,Named confusion matrix figures
+oppor_S1_raw.png,named-confusion-matrices/figures/oppor_S1_raw.png,.png,235478.0,229.96,2026-11-15T19:23:48,True,True,Named confusion matrix figures
+oppor_S2_normalised.png,named-confusion-matrices/figures/oppor_S2_normalised.png,.png,273843.0,267.42,2026-11-15T19:23:55,True,True,Named confusion matrix figures
+oppor_S2_raw.png,named-confusion-matrices/figures/oppor_S2_raw.png,.png,237395.0,231.83,2026-11-15T19:23:52,True,True,Named confusion matrix figures
+oppor_S3_normalised.png,named-confusion-matrices/figures/oppor_S3_normalised.png,.png,276949.0,270.46,2026-11-15T19:23:59,True,True,Named confusion matrix figures
+oppor_S3_raw.png,named-confusion-matrices/figures/oppor_S3_raw.png,.png,237700.0,232.13,2026-11-15T19:23:58,True,True,Named confusion matrix figures
+oppor_S4_normalised.png,named-confusion-matrices/figures/oppor_S4_normalised.png,.png,274309.0,267.88,2026-11-15T19:24:03,True,True,Named confusion matrix figures
+oppor_S4_raw.png,named-confusion-matrices/figures/oppor_S4_raw.png,.png,243050.0,237.35,2026-11-15T19:24:01,True,True,Named confusion matrix figures
+shar_1_normalised.png,named-confusion-matrices/figures/shar_1_normalised.png,.png,210599.0,205.66,2026-11-15T19:24:06,True,True,Named confusion matrix figures
+shar_1_raw.png,named-confusion-matrices/figures/shar_1_raw.png,.png,179713.0,175.5,2026-11-15T19:24:04,True,True,Named confusion matrix figures
+shar_2_normalised.png,named-confusion-matrices/figures/shar_2_normalised.png,.png,222078.0,216.87,2026-11-15T19:24:09,True,True,Named confusion matrix figures
+shar_2_raw.png,named-confusion-matrices/figures/shar_2_raw.png,.png,185951.0,181.59,2026-11-15T19:24:07,True,True,Named confusion matrix figures
+shar_3_normalised.png,named-confusion-matrices/figures/shar_3_normalised.png,.png,209235.0,204.33,2026-11-15T19:24:14,True,True,Named confusion matrix figures
+shar_3_raw.png,named-confusion-matrices/figures/shar_3_raw.png,.png,179119.0,174.92,2026-11-15T19:24:11,True,True,Named confusion matrix figures
+shar_5_normalised.png,named-confusion-matrices/figures/shar_5_normalised.png,.png,206988.0,202.14,2026-11-15T19:24:16,True,True,Named confusion matrix figures
+shar_5_raw.png,named-confusion-matrices/figures/shar_5_raw.png,.png,177290.0,173.13,2026-11-15T19:24:15,True,True,Named confusion matrix figures
+ucihar_0_normalised.png,named-confusion-matrices/figures/ucihar_0_normalised.png,.png,105506.0,103.03,2026-11-15T19:23:41,True,True,Named confusion matrix figures
+ucihar_0_raw.png,named-confusion-matrices/figures/ucihar_0_raw.png,.png,94850.0,92.63,2026-11-15T19:23:40,True,True,Named confusion matrix figures
+ucihar_1_normalised.png,named-confusion-matrices/figures/ucihar_1_normalised.png,.png,98608.0,96.3,2026-11-15T19:23:42,True,True,Named confusion matrix figures
+ucihar_1_raw.png,named-confusion-matrices/figures/ucihar_1_raw.png,.png,90466.0,88.35,2026-11-15T19:23:42,True,True,Named confusion matrix figures
+ucihar_2_normalised.png,named-confusion-matrices/figures/ucihar_2_normalised.png,.png,100817.0,98.45,2026-11-15T19:23:44,True,True,Named confusion matrix figures
+ucihar_2_raw.png,named-confusion-matrices/figures/ucihar_2_raw.png,.png,92212.0,90.05,2026-11-15T19:23:43,True,True,Named confusion matrix figures
+ucihar_3_normalised.png,named-confusion-matrices/figures/ucihar_3_normalised.png,.png,99606.0,97.27,2026-11-15T19:23:45,True,True,Named confusion matrix figures
+ucihar_3_raw.png,named-confusion-matrices/figures/ucihar_3_raw.png,.png,90686.0,88.56,2026-11-15T19:23:44,True,True,Named confusion matrix figures
+ucihar_4_normalised.png,named-confusion-matrices/figures/ucihar_4_normalised.png,.png,97099.0,94.82,2026-11-15T19:23:46,True,True,Named confusion matrix figures
+ucihar_4_raw.png,named-confusion-matrices/figures/ucihar_4_raw.png,.png,90085.0,87.97,2026-11-15T19:23:46,True,True,Named confusion matrix figures
+oppor_S1.csv,named-confusion-matrices/normalised/oppor_S1.csv,.csv,3523.0,3.44,2026-11-15T19:23:46,True,True,Normalised confusion matrices
+oppor_S2.csv,named-confusion-matrices/normalised/oppor_S2.csv,.csv,3602.0,3.52,2026-11-15T19:23:51,True,True,Normalised confusion matrices
+oppor_S3.csv,named-confusion-matrices/normalised/oppor_S3.csv,.csv,3593.0,3.51,2026-11-15T19:23:55,True,True,Normalised confusion matrices
+oppor_S4.csv,named-confusion-matrices/normalised/oppor_S4.csv,.csv,3619.0,3.53,2026-11-15T19:23:59,True,True,Normalised confusion matrices
+shar_1.csv,named-confusion-matrices/normalised/shar_1.csv,.csv,2151.0,2.1,2026-11-15T19:24:03,True,True,Normalised confusion matrices
+shar_2.csv,named-confusion-matrices/normalised/shar_2.csv,.csv,2427.0,2.37,2026-11-15T19:24:06,True,True,Normalised confusion matrices
+shar_3.csv,named-confusion-matrices/normalised/shar_3.csv,.csv,2167.0,2.12,2026-11-15T19:24:09,True,True,Normalised confusion matrices
+shar_5.csv,named-confusion-matrices/normalised/shar_5.csv,.csv,2008.0,1.96,2026-11-15T19:24:14,True,True,Normalised confusion matrices
+ucihar_0.csv,named-confusion-matrices/normalised/ucihar_0.csv,.csv,458.0,0.45,2026-11-15T19:23:39,True,True,Normalised confusion matrices
+ucihar_1.csv,named-confusion-matrices/normalised/ucihar_1.csv,.csv,380.0,0.37,2026-11-15T19:23:41,True,True,Normalised confusion matrices
+ucihar_2.csv,named-confusion-matrices/normalised/ucihar_2.csv,.csv,474.0,0.46,2026-11-15T19:23:43,True,True,Normalised confusion matrices
+ucihar_3.csv,named-confusion-matrices/normalised/ucihar_3.csv,.csv,412.0,0.4,2026-11-15T19:23:44,True,True,Normalised confusion matrices
+ucihar_4.csv,named-confusion-matrices/normalised/ucihar_4.csv,.csv,361.0,0.35,2026-11-15T19:23:45,True,True,Normalised confusion matrices
+class_imbalance_by_experiment.csv,analysis-tables/class_imbalance_by_experiment.csv,.csv,839.0,0.82,2026-11-15T19:11:16,True,False,Other
+class_mapping_status.csv,analysis-tables/class_mapping_status.csv,.csv,390.0,0.38,2026-11-15T19:12:51,True,False,Other
+class_performance_across_targets.csv,analysis-tables/class_performance_across_targets.csv,.csv,4150.0,4.05,2026-11-15T19:10:50,True,False,Other
+dataset_level_summary.csv,analysis-tables/dataset_level_summary.csv,.csv,488.0,0.48,2026-11-15T19:10:34,True,False,Other
+experiment_validation.csv,analysis-tables/experiment_validation.csv,.csv,1348.0,1.32,2026-11-15T19:14:09,True,False,Other
+opportunity_numeric_label_mapping.csv,analysis-tables/opportunity_numeric_label_mapping.csv,.csv,466.0,0.46,2026-11-15T19:12:51,True,False,Other
+run2_automated_findings.md,analysis-tables/run2_automated_findings.md,.md,1475.0,1.44,2026-11-15T19:13:11,True,False,Other
+systematic_confusion_patterns.csv,analysis-tables/systematic_confusion_patterns.csv,.csv,2148.0,2.1,2026-11-15T19:12:24,True,False,Other
+top_confusion_pairs_per_experiment.csv,analysis-tables/top_confusion_pairs_per_experiment.csv,.csv,5149.0,5.03,2026-11-15T19:09:38,True,False,Other
+weakest_5_classes_per_experiment.csv,analysis-tables/weakest_5_classes_per_experiment.csv,.csv,4619.0,4.51,2026-11-15T19:10:50,True,False,Other
+existing_run2_metrics_inventory.csv,analysis_tables/existing_run2_metrics_inventory.csv,.csv,4284.0,4.18,2026-11-15T18:14:18,True,False,Other
+experiment_coverage_template.csv,analysis_tables/experiment_coverage_template.csv,.csv,363.0,0.35,2026-11-15T18:14:20,True,False,Other
+all_13_class_distributions.csv,class-distributions/all_13_class_distributions.csv,.csv,12464.0,12.17,2026-11-15T19:09:38,True,False,Other
+oppor_S1_distribution.csv,class-distributions/oppor_S1_distribution.csv,.csv,1442.0,1.41,2026-11-15T18:59:20,True,False,Other
+oppor_S2_distribution.csv,class-distributions/oppor_S2_distribution.csv,.csv,1399.0,1.37,2026-11-15T18:59:21,True,False,Other
+oppor_S3_distribution.csv,class-distributions/oppor_S3_distribution.csv,.csv,1386.0,1.35,2026-11-15T18:59:24,True,False,Other
+oppor_S4_distribution.csv,class-distributions/oppor_S4_distribution.csv,.csv,1391.0,1.36,2026-11-15T18:59:25,True,False,Other
+shar_1_distribution.csv,class-distributions/shar_1_distribution.csv,.csv,792.0,0.77,2026-11-15T18:59:25,True,False,Other
+shar_2_distribution.csv,class-distributions/shar_2_distribution.csv,.csv,1101.0,1.08,2026-11-15T18:59:28,True,False,Other
+shar_3_distribution.csv,class-distributions/shar_3_distribution.csv,.csv,1003.0,0.98,2026-11-15T18:59:29,True,False,Other
+shar_5_distribution.csv,class-distributions/shar_5_distribution.csv,.csv,770.0,0.75,2026-11-15T18:59:30,True,False,Other
+ucihar_0_distribution.csv,class-distributions/ucihar_0_distribution.csv,.csv,478.0,0.47,2026-11-15T18:59:24,True,False,Other
+ucihar_1_distribution.csv,class-distributions/ucihar_1_distribution.csv,.csv,403.0,0.39,2026-11-15T18:59:25,True,False,Other
+ucihar_2_distribution.csv,class-distributions/ucihar_2_distribution.csv,.csv,457.0,0.45,2026-11-15T18:59:26,True,False,Other
+ucihar_3_distribution.csv,class-distributions/ucihar_3_distribution.csv,.csv,429.0,0.42,2026-11-15T18:59:27,True,False,Other
+ucihar_4_distribution.csv,class-distributions/ucihar_4_distribution.csv,.csv,416.0,0.41,2026-11-15T18:59:28,True,False,Other
+oppor_S1_report.csv,classification-reports/oppor_S1_report.csv,.csv,1204.0,1.18,2026-11-15T19:09:06,True,False,Other
+oppor_S2_report.csv,classification-reports/oppor_S2_report.csv,.csv,1164.0,1.14,2026-11-15T19:09:11,True,False,Other
+oppor_S3_report.csv,classification-reports/oppor_S3_report.csv,.csv,1153.0,1.13,2026-11-15T19:09:15,True,False,Other
+oppor_S4_report.csv,classification-reports/oppor_S4_report.csv,.csv,1156.0,1.13,2026-11-15T19:09:18,True,False,Other
+shar_1_report.csv,classification-reports/shar_1_report.csv,.csv,624.0,0.61,2026-11-15T19:09:22,True,False,Other
+shar_2_report.csv,classification-reports/shar_2_report.csv,.csv,926.0,0.9,2026-11-15T19:09:27,True,False,Other
+shar_3_report.csv,classification-reports/shar_3_report.csv,.csv,834.0,0.81,2026-11-15T19:09:30,True,False,Other
+shar_5_report.csv,classification-reports/shar_5_report.csv,.csv,602.0,0.59,2026-11-15T19:09:34,True,False,Other
+ucihar_0_report.csv,classification-reports/ucihar_0_report.csv,.csv,372.0,0.36,2026-11-15T19:08:48,True,False,Other
+ucihar_1_report.csv,classification-reports/ucihar_1_report.csv,.csv,297.0,0.29,2026-11-15T19:08:52,True,False,Other
+ucihar_2_report.csv,classification-reports/ucihar_2_report.csv,.csv,351.0,0.34,2026-11-15T19:08:56,True,False,Other
+ucihar_3_report.csv,classification-reports/ucihar_3_report.csv,.csv,323.0,0.32,2026-11-15T19:08:59,True,False,Other
+ucihar_4_report.csv,classification-reports/ucihar_4_report.csv,.csv,310.0,0.3,2026-11-15T19:09:03,True,False,Other
+oppor_S1_confusion_matrix.png,confusion-matrices/Opportunity/oppor_S1_confusion_matrix.png,.png,72826.0,71.12,2026-11-15T19:09:09,True,False,Other
+oppor_S1_normalised.csv,confusion-matrices/Opportunity/oppor_S1_normalised.csv,.csv,3103.0,3.03,2026-11-15T19:09:07,True,False,Other
+oppor_S1_normalised.png,confusion-matrices/Opportunity/oppor_S1_normalised.png,.png,73808.0,72.08,2026-11-15T19:09:10,True,False,Other
+oppor_S1_normalized.png,confusion-matrices/Opportunity/oppor_S1_normalized.png,.png,76294.0,74.51,2026-11-15T18:59:22,True,False,Other
+oppor_S1_raw.csv,confusion-matrices/Opportunity/oppor_S1_raw.csv,.csv,828.0,0.81,2026-11-15T19:09:07,True,False,Other
+oppor_S2_confusion_matrix.png,confusion-matrices/Opportunity/oppor_S2_confusion_matrix.png,.png,72672.0,70.97,2026-11-15T19:09:13,True,False,Other
+oppor_S2_normalised.csv,confusion-matrices/Opportunity/oppor_S2_normalised.csv,.csv,3182.0,3.11,2026-11-15T19:09:12,True,False,Other
+oppor_S2_normalised.png,confusion-matrices/Opportunity/oppor_S2_normalised.png,.png,74304.0,72.56,2026-11-15T19:09:14,True,False,Other
+oppor_S2_normalized.png,confusion-matrices/Opportunity/oppor_S2_normalized.png,.png,76873.0,75.07,2026-11-15T18:59:23,True,False,Other
+oppor_S2_raw.csv,confusion-matrices/Opportunity/oppor_S2_raw.csv,.csv,826.0,0.81,2026-11-15T19:09:12,True,False,Other
+oppor_S3_confusion_matrix.png,confusion-matrices/Opportunity/oppor_S3_confusion_matrix.png,.png,70754.0,69.1,2026-11-15T19:09:17,True,False,Other
+oppor_S3_normalised.csv,confusion-matrices/Opportunity/oppor_S3_normalised.csv,.csv,3173.0,3.1,2026-11-15T19:09:16,True,False,Other
+oppor_S3_normalised.png,confusion-matrices/Opportunity/oppor_S3_normalised.png,.png,74415.0,72.67,2026-11-15T19:09:18,True,False,Other
+oppor_S3_normalized.png,confusion-matrices/Opportunity/oppor_S3_normalized.png,.png,77128.0,75.32,2026-11-15T18:59:23,True,False,Other
+oppor_S3_raw.csv,confusion-matrices/Opportunity/oppor_S3_raw.csv,.csv,826.0,0.81,2026-11-15T19:09:16,True,False,Other
+oppor_S4_confusion_matrix.png,confusion-matrices/Opportunity/oppor_S4_confusion_matrix.png,.png,78293.0,76.46,2026-11-15T19:09:20,True,False,Other
+oppor_S4_normalised.csv,confusion-matrices/Opportunity/oppor_S4_normalised.csv,.csv,3199.0,3.12,2026-11-15T19:09:19,True,False,Other
+oppor_S4_normalised.png,confusion-matrices/Opportunity/oppor_S4_normalised.png,.png,74096.0,72.36,2026-11-15T19:09:21,True,False,Other
+oppor_S4_normalized.png,confusion-matrices/Opportunity/oppor_S4_normalized.png,.png,76684.0,74.89,2026-11-15T18:59:25,True,False,Other
+oppor_S4_raw.csv,confusion-matrices/Opportunity/oppor_S4_raw.csv,.csv,818.0,0.8,2026-11-15T19:09:19,True,False,Other
+ucihar_0_confusion_matrix.png,confusion-matrices/UCIHAR/ucihar_0_confusion_matrix.png,.png,49791.0,48.62,2026-11-15T19:08:51,True,False,Other
+ucihar_0_normalised.csv,confusion-matrices/UCIHAR/ucihar_0_normalised.csv,.csv,346.0,0.34,2026-11-15T19:08:49,True,False,Other
+ucihar_0_normalised.png,confusion-matrices/UCIHAR/ucihar_0_normalised.png,.png,53946.0,52.68,2026-11-15T19:08:51,True,False,Other
+ucihar_0_normalized.png,confusion-matrices/UCIHAR/ucihar_0_normalized.png,.png,60911.0,59.48,2026-11-15T18:59:23,True,False,Other
+ucihar_0_raw.csv,confusion-matrices/UCIHAR/ucihar_0_raw.csv,.csv,110.0,0.11,2026-11-15T19:08:49,True,False,Other
+ucihar_1_confusion_matrix.png,confusion-matrices/UCIHAR/ucihar_1_confusion_matrix.png,.png,47512.0,46.4,2026-11-15T19:08:54,True,False,Other
+ucihar_1_normalised.csv,confusion-matrices/UCIHAR/ucihar_1_normalised.csv,.csv,268.0,0.26,2026-11-15T19:08:53,True,False,Other
+ucihar_1_normalised.png,confusion-matrices/UCIHAR/ucihar_1_normalised.png,.png,53538.0,52.28,2026-11-15T19:08:55,True,False,Other
+ucihar_1_normalized.png,confusion-matrices/UCIHAR/ucihar_1_normalized.png,.png,60303.0,58.89,2026-11-15T18:59:24,True,False,Other
+ucihar_1_raw.csv,confusion-matrices/UCIHAR/ucihar_1_raw.csv,.csv,110.0,0.11,2026-11-15T19:08:53,True,False,Other
+ucihar_2_confusion_matrix.png,confusion-matrices/UCIHAR/ucihar_2_confusion_matrix.png,.png,49191.0,48.04,2026-11-15T19:08:58,True,False,Other
+ucihar_2_normalised.csv,confusion-matrices/UCIHAR/ucihar_2_normalised.csv,.csv,362.0,0.35,2026-11-15T19:08:57,True,False,Other
+ucihar_2_normalised.png,confusion-matrices/UCIHAR/ucihar_2_normalised.png,.png,53919.0,52.66,2026-11-15T19:08:58,True,False,Other
+ucihar_2_normalized.png,confusion-matrices/UCIHAR/ucihar_2_normalized.png,.png,61167.0,59.73,2026-11-15T18:59:25,True,False,Other
+ucihar_2_raw.csv,confusion-matrices/UCIHAR/ucihar_2_raw.csv,.csv,109.0,0.11,2026-11-15T19:08:57,True,False,Other
+ucihar_3_confusion_matrix.png,confusion-matrices/UCIHAR/ucihar_3_confusion_matrix.png,.png,48052.0,46.93,2026-11-15T19:09:01,True,False,Other
+ucihar_3_normalised.csv,confusion-matrices/UCIHAR/ucihar_3_normalised.csv,.csv,300.0,0.29,2026-11-15T19:09:00,True,False,Other
+ucihar_3_normalised.png,confusion-matrices/UCIHAR/ucihar_3_normalised.png,.png,54085.0,52.82,2026-11-15T19:09:02,True,False,Other
+ucihar_3_normalized.png,confusion-matrices/UCIHAR/ucihar_3_normalized.png,.png,60928.0,59.5,2026-11-15T18:59:26,True,False,Other
+ucihar_3_raw.csv,confusion-matrices/UCIHAR/ucihar_3_raw.csv,.csv,110.0,0.11,2026-11-15T19:09:00,True,False,Other
+ucihar_4_confusion_matrix.png,confusion-matrices/UCIHAR/ucihar_4_confusion_matrix.png,.png,47699.0,46.58,2026-11-15T19:09:05,True,False,Other
+ucihar_4_normalised.csv,confusion-matrices/UCIHAR/ucihar_4_normalised.csv,.csv,249.0,0.24,2026-11-15T19:09:03,True,False,Other
+ucihar_4_normalised.png,confusion-matrices/UCIHAR/ucihar_4_normalised.png,.png,53793.0,52.53,2026-11-15T19:09:05,True,False,Other
+ucihar_4_normalized.png,confusion-matrices/UCIHAR/ucihar_4_normalized.png,.png,60487.0,59.07,2026-11-15T18:59:27,True,False,Other
+ucihar_4_raw.csv,confusion-matrices/UCIHAR/ucihar_4_raw.csv,.csv,109.0,0.11,2026-11-15T19:09:03,True,False,Other
+shar_1_confusion_matrix.png,confusion-matrices/UniMiB/shar_1_confusion_matrix.png,.png,65937.0,64.39,2026-11-15T19:09:25,True,False,Other
+shar_1_normalised.csv,confusion-matrices/UniMiB/shar_1_normalised.csv,.csv,1843.0,1.8,2026-11-15T19:09:23,True,False,Other
+shar_1_normalised.png,confusion-matrices/UniMiB/shar_1_normalised.png,.png,68634.0,67.03,2026-11-15T19:09:26,True,False,Other
+shar_1_normalized.png,confusion-matrices/UniMiB/shar_1_normalized.png,.png,73527.0,71.8,2026-11-15T18:59:25,True,False,Other
+shar_1_raw.csv,confusion-matrices/UniMiB/shar_1_raw.csv,.csv,674.0,0.66,2026-11-15T19:09:23,True,False,Other
+shar_2_confusion_matrix.png,confusion-matrices/UniMiB/shar_2_confusion_matrix.png,.png,66230.0,64.68,2026-11-15T19:09:29,True,False,Other
+shar_2_normalised.csv,confusion-matrices/UniMiB/shar_2_normalised.csv,.csv,2119.0,2.07,2026-11-15T19:09:27,True,False,Other
+shar_2_normalised.png,confusion-matrices/UniMiB/shar_2_normalised.png,.png,69328.0,67.7,2026-11-15T19:09:29,True,False,Other
+shar_2_normalized.png,confusion-matrices/UniMiB/shar_2_normalized.png,.png,74659.0,72.91,2026-11-15T18:59:28,True,False,Other
+shar_2_raw.csv,confusion-matrices/UniMiB/shar_2_raw.csv,.csv,682.0,0.67,2026-11-15T19:09:27,True,False,Other
+shar_3_confusion_matrix.png,confusion-matrices/UniMiB/shar_3_confusion_matrix.png,.png,66565.0,65.0,2026-11-15T19:09:32,True,False,Other
+shar_3_normalised.csv,confusion-matrices/UniMiB/shar_3_normalised.csv,.csv,1859.0,1.82,2026-11-15T19:09:31,True,False,Other
+shar_3_normalised.png,confusion-matrices/UniMiB/shar_3_normalised.png,.png,69285.0,67.66,2026-11-15T19:09:33,True,False,Other
+shar_3_normalized.png,confusion-matrices/UniMiB/shar_3_normalized.png,.png,74117.0,72.38,2026-11-15T18:59:28,True,False,Other
+shar_3_raw.csv,confusion-matrices/UniMiB/shar_3_raw.csv,.csv,673.0,0.66,2026-11-15T19:09:31,True,False,Other
+shar_5_confusion_matrix.png,confusion-matrices/UniMiB/shar_5_confusion_matrix.png,.png,65087.0,63.56,2026-11-15T19:09:36,True,False,Other
+shar_5_normalised.csv,confusion-matrices/UniMiB/shar_5_normalised.csv,.csv,1700.0,1.66,2026-11-15T19:09:35,True,False,Other
+shar_5_normalised.png,confusion-matrices/UniMiB/shar_5_normalised.png,.png,68901.0,67.29,2026-11-15T19:09:37,True,False,Other
+shar_5_normalized.png,confusion-matrices/UniMiB/shar_5_normalized.png,.png,73756.0,72.03,2026-11-15T18:59:30,True,False,Other
+shar_5_raw.csv,confusion-matrices/UniMiB/shar_5_raw.csv,.csv,674.0,0.66,2026-11-15T19:09:35,True,False,Other
+class_support_by_dataset.png,figures/class_support_by_dataset.png,.png,101761.0,99.38,2026-11-15T19:11:17,True,False,Other
+dataset_performance_comparison.png,figures/dataset_performance_comparison.png,.png,45023.0,43.97,2026-11-15T19:10:34,True,False,Other
+run2_analysis_inventory.json,logs/run2_analysis_inventory.json,.json,282.0,0.28,2026-11-15T19:14:09,True,False,Other
+run2_inventory.json,logs/run2_inventory.json,.json,5079.0,4.96,2026-11-15T18:12:41,True,False,Other
+class_distribution.csv,analysis-tables/class_distribution.csv,.csv,,,,False,True,Post-hoc analysis outputs
+experiment_metrics.csv,analysis-tables/experiment_metrics.csv,.csv,1119.0,1.09,2026-11-15T19:10:34,True,True,Post-hoc analysis outputs
+top_confusion_pairs.csv,analysis-tables/top_confusion_pairs.csv,.csv,,,,False,True,Post-hoc analysis outputs
+weakest_classes.csv,analysis-tables/weakest_classes.csv,.csv,,,,False,True,Post-hoc analysis outputs
+oppor_S1.csv,named-confusion-matrices/raw/oppor_S1.csv,.csv,1242.0,1.21,2026-11-15T19:23:46,True,True,Raw confusion matrices
+oppor_S2.csv,named-confusion-matrices/raw/oppor_S2.csv,.csv,1240.0,1.21,2026-11-15T19:23:51,True,True,Raw confusion matrices
+oppor_S3.csv,named-confusion-matrices/raw/oppor_S3.csv,.csv,1240.0,1.21,2026-11-15T19:23:55,True,True,Raw confusion matrices
+oppor_S4.csv,named-confusion-matrices/raw/oppor_S4.csv,.csv,1232.0,1.2,2026-11-15T19:23:59,True,True,Raw confusion matrices
+shar_1.csv,named-confusion-matrices/raw/shar_1.csv,.csv,976.0,0.95,2026-11-15T19:24:03,True,True,Raw confusion matrices
+shar_2.csv,named-confusion-matrices/raw/shar_2.csv,.csv,984.0,0.96,2026-11-15T19:24:06,True,True,Raw confusion matrices
+shar_3.csv,named-confusion-matrices/raw/shar_3.csv,.csv,975.0,0.95,2026-11-15T19:24:09,True,True,Raw confusion matrices
+shar_5.csv,named-confusion-matrices/raw/shar_5.csv,.csv,976.0,0.95,2026-11-15T19:24:14,True,True,Raw confusion matrices
+ucihar_0.csv,named-confusion-matrices/raw/ucihar_0.csv,.csv,216.0,0.21,2026-11-15T19:23:39,True,True,Raw confusion matrices
+ucihar_1.csv,named-confusion-matrices/raw/ucihar_1.csv,.csv,216.0,0.21,2026-11-15T19:23:41,True,True,Raw confusion matrices
+ucihar_2.csv,named-confusion-matrices/raw/ucihar_2.csv,.csv,215.0,0.21,2026-11-15T19:23:43,True,True,Raw confusion matrices
+ucihar_3.csv,named-confusion-matrices/raw/ucihar_3.csv,.csv,216.0,0.21,2026-11-15T19:23:44,True,True,Raw confusion matrices
+ucihar_4.csv,named-confusion-matrices/raw/ucihar_4.csv,.csv,215.0,0.21,2026-11-15T19:23:45,True,True,Raw confusion matrices

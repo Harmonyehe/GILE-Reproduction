@@ -1,0 +1,5 @@
+Dataset,Target,Samples,Accuracy (%),Macro F1 (%),Weighted F1 (%),Training status
+Opportunity,S1,15643,82.66,61.84,82.19,Interrupted
+Opportunity,S2,15011,81.24,53.51,79.85,100 epochs completed
+Opportunity,S3,14456,78.2,43.82,76.37,100 epochs completed
+Opportunity,S4,12843,79.59,50.14,79.13,Interrupted

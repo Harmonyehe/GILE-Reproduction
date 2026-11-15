@@ -1,0 +1,10 @@
+{
+  "evaluation_json_files": 13,
+  "raw_confusion_matrix_csv": 13,
+  "normalised_confusion_matrix_csv": 13,
+  "raw_confusion_matrix_png": 13,
+  "normalised_confusion_matrix_png": 13,
+  "classification_report_csv": 13,
+  "class_distribution_rows": 170,
+  "confusion_pair_rows": 113
+}

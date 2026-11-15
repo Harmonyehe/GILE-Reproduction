@@ -1,0 +1,4 @@
+Dataset,Your Mean Accuracy,Paper GILE Score,Difference (pp)
+UCI HAR,89.34,88.17,1.17
+Opportunity,80.42,81.4,-0.97
+UniMiB-SHAR,52.23,55.72,-3.49

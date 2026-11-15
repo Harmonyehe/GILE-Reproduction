@@ -1,0 +1,14 @@
+Dataset,Target Domain,Samples,Accuracy (%),Macro F1 (%),Weighted F1 (%),Paper GILE Score (%),Accuracy - Paper Score (pp),Paper Score Metric Verified,Metrics File
+UCI HAR,0,347.0,89.91,89.37,89.56,85.15,4.76,No - verify metric definition,ucihar_target0_metrics.json
+UCI HAR,1,302.0,80.46,74.21,75.44,81.56,-1.1,No - verify metric definition,ucihar_target1_metrics.json
+UCI HAR,2,341.0,97.65,97.54,97.66,86.97,10.68,No - verify metric definition,ucihar_target2_metrics.json
+UCI HAR,3,317.0,89.27,88.87,89.04,94.37,-5.1,No - verify metric definition,ucihar_target3_metrics.json
+UCI HAR,4,302.0,89.4,89.36,89.52,92.81,-3.41,No - verify metric definition,ucihar_target4_metrics.json
+Opportunity,S1,15643.0,82.66,61.84,82.19,83.86,-1.2,No - verify metric definition,oppor_targetS1_metrics.json
+Opportunity,S2,15011.0,81.24,53.51,79.85,81.65,-0.41,No - verify metric definition,oppor_targetS2_metrics.json
+Opportunity,S3,14456.0,78.2,43.82,76.37,78.66,-0.46,No - verify metric definition,oppor_targetS3_metrics.json
+Opportunity,S4,12843.0,79.59,50.14,79.13,81.41,-1.82,No - verify metric definition,oppor_targetS4_metrics.json
+UniMiB-SHAR,1,384.0,46.35,33.83,40.26,55.72,-9.37,No - verify metric definition,shar_target1_metrics.json
+UniMiB-SHAR,2,583.0,53.86,47.2,52.46,54.06,-0.2,No - verify metric definition,shar_target2_metrics.json
+UniMiB-SHAR,3,304.0,67.11,48.81,65.79,70.31,-3.2,No - verify metric definition,shar_target3_metrics.json
+UniMiB-SHAR,5,298.0,41.61,34.28,34.06,42.81,-1.2,No - verify metric definition,shar_target5_metrics.json
