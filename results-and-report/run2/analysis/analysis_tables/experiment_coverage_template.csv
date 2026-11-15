@@ -1,0 +1,14 @@
+dataset,target,confusion_matrix_saved,classification_report_saved
+UCIHAR,0,False,False
+UCIHAR,1,False,False
+UCIHAR,2,False,False
+UCIHAR,3,False,False
+UCIHAR,4,False,False
+Opportunity,S1,False,False
+Opportunity,S2,False,False
+Opportunity,S3,False,False
+Opportunity,S4,False,False
+UniMiB,1,False,False
+UniMiB,2,False,False
+UniMiB,3,False,False
+UniMiB,5,False,False

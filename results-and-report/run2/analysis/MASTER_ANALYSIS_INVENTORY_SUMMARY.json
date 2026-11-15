@@ -1,0 +1,13 @@
+{
+    "project": "GILE Reproduction",
+    "run": "Run 2",
+    "generated_at": "2026-11-15T19:36:28.715837",
+    "analysis_directory": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/analysis",
+    "total_files": 178,
+    "total_expected_outputs": 73,
+    "expected_outputs_found": 70,
+    "expected_outputs_missing": 3,
+    "all_expected_outputs_present": false,
+    "evaluation_json_count": 13,
+    "valid_evaluation_json_count": 13
+}

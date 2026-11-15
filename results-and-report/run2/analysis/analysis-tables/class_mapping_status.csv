@@ -1,0 +1,4 @@
+dataset,mapping_status
+UCI HAR,Numeric labels retained by preprocessing; activity names need official label-file verification.
+Opportunity,Original gesture numeric codes mapped to IDs 1–17; class 0 is residual/background. Activity names need official documentation.
+UniMiB SHAR,Original label column decremented by one to IDs 0–16; activity names need official label-file verification.

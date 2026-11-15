@@ -1,0 +1,7 @@
+,Walking,Walking Upstairs,Walking Downstairs,Sitting,Standing,Laying
+Walking,1.0,0.0,0.0,0.0,0.0,0.0
+Walking Upstairs,0.1276595744680851,0.7446808510638298,0.1276595744680851,0.0,0.0,0.0
+Walking Downstairs,0.0,0.0,1.0,0.0,0.0,0.0
+Sitting,0.0,0.0,0.0,0.8636363636363636,0.13636363636363635,0.0
+Standing,0.0,0.0,0.0,0.125,0.875,0.0
+Laying,0.0,0.0,0.0,0.0,0.0,1.0
