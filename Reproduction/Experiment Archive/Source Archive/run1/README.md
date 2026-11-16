@@ -1,21 +1,16 @@
-# Run 1 - Historical Experimental Attempt
+# Run 1 — Initial Source and Experiment Snapshot
 
-## Status
+## Purpose
 
-Run 1 represents an earlier experimental attempt during the
-GILE reproduction project.
+This directory identifies the source and experiment material associated with the initial Run 1 attempt. The attempt was interrupted before completion. Its files are retained to provide a traceable record of the development of the reproduction.
 
-Run 1 is retained for historical reference and transparency.
-Its results are not used as the primary results in the final
-Run 2 analysis.
+## Relationship to the completed reproduction
 
-## Reporting policy
+The final reproduction consists of the Run 2 Opportunity and UniMiB-SHAR experiments together with the UCI HAR experiments conducted using the corrected 100-epoch configuration. Run 1 is not included in the final 13-target metrics.
 
-- Run 1 results are kept separate from Run 2.
-- Run 1 metrics are not pooled with Run 2 metrics.
-- Run 1 is not used for the final dataset-level analysis.
-- Any comparison between Run 1 and Run 2 must be treated as
-  exploratory unless experimental settings are verified to match.
+## Reporting
 
-Run 2 is the primary experimental run used for the final
-reproduction analysis.
+- Keep the Run 1 execution records distinct from the final result tables.
+- Do not combine Run 1 metrics with the final target-level metrics.
+- Use the original file paths and experiment records when describing the initial attempt.
+- Refer to `Reproduction/Final Reproduction/README.md` for the final experiment configuration and results.

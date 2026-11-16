@@ -1,21 +1,9 @@
-# Run 1 — Training Logs
+# Run 1 — Training and Execution Logs
 
-This folder represents the training logs associated with the
-original experiment snapshot.
+This directory contains the logs associated with the initial experimental attempt.
 
-Dataset categories:
+The records cover UCI HAR, Opportunity, UniMiB-SHAR and other supporting runs. The Opportunity S1 and S4 logs document interrupted execution. The UCI HAR records also include the 150-epoch attempt; the final UCI HAR results use the corrected 100-epoch configuration.
 
-- Opportunity
-- UniMiB SHAR
-- UCI HAR
-- Other
+These logs are retained to document what occurred during the initial attempt. They should not be used as substitutes for the final evaluation metrics.
 
-The original Opportunity S1 and S4 logs are important historical
-evidence of the interrupted experiments.
-
-Where an identical log is stored elsewhere in the repository,
-its physical location is recorded in:
-
-`../RUN1_FILE_INDEX.csv`
-
-The original Git commit remains the authoritative historical source.
+Where a log is represented elsewhere in the repository, its original path and current location are listed in `../RUN1_FILE_INDEX.csv`.

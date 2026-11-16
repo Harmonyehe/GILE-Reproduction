@@ -1,21 +1,7 @@
-# Run 1 — Results
+# Run 1 — Available Results
 
-This folder represents the results category of the original
-experiment snapshot.
+This directory represents the results category of the initial experimental attempt. The attempt was interrupted, and its available outputs do not constitute the completed 13-target reproduction.
 
-To avoid duplicate files, original result files that already exist
-elsewhere in the repository are referenced through:
+Original result files that are stored elsewhere in the repository are referenced through `../RUN1_FILE_INDEX.csv`. The index identifies each file's original path and current physical location.
 
-`../RUN1_FILE_INDEX.csv`
-
-The index identifies each original result file and its current
-physical repository location.
-
-Dataset categories in the original experiment include:
-
-- Opportunity
-- UniMiB SHAR
-- UCI HAR
-
-Do not treat later experiment outputs as Run 1 results merely
-because their file contents are identical.
+The final reproduction results are reported separately in `Reproduction/Final Reproduction/` and comprise the Run 2 Opportunity and UniMiB-SHAR experiments together with the UCI HAR experiments conducted using the corrected 100-epoch configuration.

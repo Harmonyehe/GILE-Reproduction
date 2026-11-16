@@ -1,102 +1,41 @@
-# Run 2 - Primary Experimental Results
+# Run 2 — Main Experimental Execution
 
 ## Overview
 
-Run 2 is the primary experimental run used in this GILE
-reproduction project.
+Run 2 was conducted as the main experimental execution for the GILE reproduction. It covers the three wearable-sensor datasets and their target participants:
 
-It contains 13 target-participant experiments across three
-wearable-sensor human activity recognition datasets:
+- UCI HAR: targets 0, 1, 2, 3 and 4.
+- Opportunity: targets S1, S2, S3 and S4.
+- UniMiB-SHAR: targets 1, 2, 3 and 5.
 
-- UCI Human Activity Recognition (UCI HAR)
-- Opportunity
-- UniMiB SHAR
+The Run 2 execution records document 13 target experiments. During comparison with the paper, the UCI HAR training duration was checked and aligned to 100 epochs for the final reproduction. The final UCI HAR results are therefore taken from the five target experiments conducted with the corrected 100-epoch configuration. Opportunity and UniMiB-SHAR results are taken from their Run 2 experiments.
 
-All 13 experiments are recorded as completed in the
-Run 2 execution log.
+## Role in the final reproduction
 
-## Experiment coverage
+The final reproduction consists of the Run 2 Opportunity and UniMiB-SHAR results together with the UCI HAR results produced using the corrected 100-epoch configuration. These results are presented together as the final 13-target evaluation.
 
-| Dataset | Target participants | Experiments | Epochs |
-|---|---|---:|---:|
-| UCI HAR | 0, 1, 2, 3, 4 | 5 | 150 |
-| Opportunity | S1, S2, S3, S4 | 4 | 100 |
-| UniMiB SHAR | 1, 2, 3, 5 | 4 | 100 |
-| Total | | 13 | |
+The Run 2 execution records also retain the UCI HAR 150-epoch attempt so that the experiment sequence remains traceable. That attempt is not the source of the final UCI HAR metrics.
 
-## Results
+## Run 2 execution configuration recorded in the logs
 
-| Dataset | Accuracy (%) | Macro-F1 (%) | Weighted-F1 (%) |
-|---|---:|---:|---:|
-| UCI HAR | 89.51 | 88.75 | 88.99 |
-| Opportunity | 81.16 | 52.08 | 79.46 |
-| UniMiB SHAR | 52.23 | 41.03 | 48.14 |
+| Dataset | Targets | Recorded Run 2 duration |
+|---|---|---:|
+| UCI HAR | 0, 1, 2, 3, 4 | 150 epochs |
+| Opportunity | S1, S2, S3, S4 | 100 epochs |
+| UniMiB-SHAR | 1, 2, 3, 5 | 100 epochs |
 
-These are descriptive averages across the target-participant
-experiments in Run 2.
+The UCI HAR row above describes the Run 2 execution record. The final reproduction uses the separate UCI HAR execution with the corrected 100-epoch configuration.
 
-## Training configuration
+## Analysis records
 
-The recorded epoch counts are:
+This directory contains the Run 2 execution and analysis records, including evaluation metrics, confusion matrices, classification reports, class-distribution summaries and experiment-level analysis. Consult the final reproduction tables for the metrics used in the completed cross-dataset comparison.
 
-- UCI HAR: 150 epochs per target.
-- Opportunity: 100 epochs per target.
-- UniMiB SHAR: 100 epochs per target.
+## Evaluation protocol
 
-The current experiment scripts define dataset-specific default
-configurations. The execution manifest does not record every
-hyperparameter passed at runtime, so the defaults should not
-automatically be treated as a complete record of the original
-command-line invocations.
+The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target-domain labels therefore influence model selection, although they are not used for gradient-based parameter updates. Results should be interpreted in light of this protocol and should not be described as a strictly target-unseen model-selection procedure.
 
-## Analysis outputs
+## Final result location
 
-The analysis directory contains:
+The consolidated final results, including the corrected UCI HAR results, are documented in:
 
-- Evaluation JSON files.
-- Raw and normalised confusion matrices.
-- Classification reports.
-- Class-distribution tables.
-- Weakest-class analysis.
-- Top confusion pairs.
-- Recurring activity confusion analysis.
-- Activity-level error summaries.
-- Dataset-level and experiment-level metrics.
-- Output inventory and verification audit.
-
-The final output audit verified all 73 expected outputs.
-
-## Important methodological limitation
-
-An audit of the training implementation identified that the
-target-domain loader is evaluated after every training epoch.
-
-The best checkpoint is selected using target-domain
-classification accuracy.
-
-Consequently, target-domain labels indirectly influence
-checkpoint selection, even though they are not shown to
-contribute to gradient-based parameter updates.
-
-Therefore, Run 2 should not be interpreted as a strictly
-unsupervised domain generalisation evaluation.
-
-The reported results describe performance under the
-implemented checkpoint-selection procedure.
-
-## Run 1 distinction
-
-Run 1 is retained as historical experimental work.
-Its results are not combined with Run 2 for the final analysis.
-
-## Reproducibility records
-
-Training logs and execution records are stored in:
-
-`../run2_logs/`
-
-Evaluation outputs are stored in:
-
-`../../evaluation-code/evaluation_results/`
-
-The analysis outputs are stored in this directory.
+`Reproduction/Final Reproduction/README.md`

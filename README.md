@@ -1,65 +1,86 @@
 # GILE: Cross-Person Human Activity Recognition
 
-This repository contains the original GILE implementation and an independent reproduction of the approach for cross-person human activity recognition using wearable sensor data.
+This repository contains the original GILE implementation and the completed reproduction of the method described by Qian, Pan and Miao (AAAI 2021).
 
-The work is based on:
+**Paper:** *Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*
+**Authors:** Hangwei Qian, Sinno Jialin Pan and Chunyan Miao
+**Venue:** AAAI 2021
 
-**Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition**
+## Reproduction overview
 
-Qian, H., Pan, S. J., and Miao, C. (2021). AAAI 2021.
-
-## Repository Structure
-
-- `Original Code/` — original GILE implementation.
-- `Reproduction/Run 1/` — materials retained from the initial reproduction.
-- `Reproduction/Final Reproduction/` — organised reproduction code, results, analysis and logs.
-- `Reproduction/Experiment Archive/` — previous experiment outputs retained for reference.
-
-## Datasets
-
-The reproduction considers three benchmark datasets:
+The reproduction evaluates cross-person human activity recognition on three wearable-sensor datasets:
 
 - UCI Human Activity Recognition (UCI HAR)
 - Opportunity
-- UniMiB SHAR
+- UniMiB-SHAR
 
-The experiments use a cross-person evaluation setting, with participants treated as target domains.
+The evaluation covers 13 target participants in total.
 
-| Dataset | Target participants |
-|---|---|
-| UCI HAR | 0, 1, 2, 3, 4 |
-| Opportunity | S1, S2, S3, S4 |
-| UniMiB SHAR | 1, 2, 3, 5 |
+| Dataset | Target participants | Number of targets | Final training configuration |
+|---|---|---:|---:|
+| UCI HAR | 0, 1, 2, 3, 4 | 5 | 100 epochs |
+| Opportunity | S1, S2, S3, S4 | 4 | 100 epochs |
+| UniMiB-SHAR | 1, 2, 3, 5 | 4 | 100 epochs |
 
-## Implementation
+### Final experimental sequence
 
-The reproduction code retains the GILE architecture and training approach.
+The first experimental attempt was interrupted before the complete reproduction was obtained. The subsequent Run 2 execution was carried out as the main experiment. During the comparison with the paper, the UCI HAR training duration was checked and aligned to the 100-epoch configuration used for the final reproduction. The UCI HAR target experiments were therefore run with the corrected 100-epoch setting.
 
-Documented compatibility modifications include:
-- Replacing `np.product()` with `np.prod()` in `sliding_window.py`.
-- Adding explicit device arguments to `torch.eye()` calls where required.
-- Extending evaluation to report Accuracy, Macro-F1 and Weighted-F1.
+The final reproduction consists of the Run 2 Opportunity and UniMiB-SHAR experiments together with the UCI HAR results produced using the corrected 100-epoch configuration. These results form one final 13-target evaluation across the three datasets.
 
-## Experiment Status and Results
+The initial interrupted attempt is retained in the experiment records for traceability. It is not included in the final 13-target result tables.
 
-Previous Run 2 outputs are preserved for reference. They include participant-level evaluation results, training logs, classification reports and confusion-matrix analyses.
+## Final results
 
-**Important:** Run 2 results are historical and preliminary. They must not automatically be interpreted as results from the final reproduction.
+The following values are unweighted means across the target participants within each dataset. Accuracy is compared with the corresponding paper result. Macro-F1 and weighted-F1 are reported for the reproduction.
 
-A methodological limitation was identified in the previous training procedure: target-domain data was evaluated during training, and target-domain accuracy was used for checkpoint selection. This means target-domain information influenced model selection.
+| Dataset | Paper accuracy (%) | Reproduced accuracy (%) | Difference (percentage points) | Macro-F1 (%) | Weighted-F1 (%) |
+|---|---:|---:|---:|---:|---:|
+| UCI HAR | 88.172 | 88.426 | +0.254 | 87.125 | 87.287 |
+| Opportunity | 81.395 | 80.421 | -0.974 | 52.326 | 79.385 |
+| UniMiB-SHAR | 55.725 | 52.232 | -3.493 | 41.032 | 48.143 |
 
-A stricter cross-person evaluation should select checkpoints using source-domain validation data only, then evaluate the held-out target participant after training.
+The target-level results and per-class metrics are available in the final analysis tables. The comparison uses the paper's reported accuracy values; paper F1 values are not supplied in the comparison.
 
-The final reproduction summary and report will be updated after the relevant experiments have been completed and verified. Historical results must remain clearly distinguished from new results.
+## Evaluation protocol and interpretation
 
-## Reproducibility
+The final UCI HAR metrics were calculated from a fresh CPU evaluation of the selected checkpoints. The Opportunity and UniMiB-SHAR metrics are the results of their Run 2 target experiments. All 13 target results are brought together in the final analysis tables.
 
-- Training, preprocessing and evaluation scripts are organised under `Reproduction/Final Reproduction/Code/`.
-- Results, analysis and logs are stored in their respective folders.
-- Raw datasets are not included in this repository.
-- Model checkpoints are not currently included.
-- Consult the relevant experiment documentation before interpreting individual result files.
+The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target labels therefore influence checkpoint selection, even though they are not used for gradient-based parameter updates. The reported scores must be interpreted in light of this protocol; they are not an evaluation in which the target domain is entirely unseen during model selection.
 
-## Acknowledgements
+The historical training-accuracy calculation also used a denominator based on the configured batch size. Since the final batch can contain fewer samples, the historical training log values may not exactly match sample-level accuracy. The final evaluation metrics are calculated from the actual number of evaluated samples. See `Reproduction/Final Reproduction/Analysis/Audit/accuracy_calculation_audit.txt` for the calculation audit.
 
-This reproduction is based on the original GILE implementation by Hangwei Qian, Sinno Jialin Pan and Chunyan Miao.
+## Repository structure
+
+- `Original Code/` — source implementation supplied with the GILE paper.
+- `Reproduction/Final Reproduction/` — final reproduction code, results, analysis, logs and documentation.
+- `Reproduction/Experiment Archive/Run 1/` — records from the interrupted initial experiment.
+- `Reproduction/Experiment Archive/Run 2/` — execution records and analysis associated with the main experimental run.
+- `Reproduction/Experiment Archive/Source Archive/` — source snapshots and their supporting documentation.
+
+## Main final-reproduction files
+
+Within `Reproduction/Final Reproduction/`:
+
+- `Results/` — target-level evaluation outputs and final result summaries.
+- `Analysis/Final Analysis Tables/` — consolidated target-level, dataset-level and per-class metrics.
+- `Analysis/Fresh UCI HAR Confusion Matrices/` — confusion matrices and supporting metrics from the final UCI HAR evaluation.
+- `Analysis/Training History Plots/` — activity and domain training-history plots for all 13 targets.
+- `Analysis/Audit/` — evaluation and metric-calculation audit notes.
+- `Code/` — reproduction and evaluation scripts.
+
+Raw datasets are not included. Follow the original implementation's dataset preparation instructions and place the processed data in the expected `data` directories before running the scripts.
+
+## Citation
+
+If you use this implementation or reproduce the method, cite the original paper:
+
+```bibtex
+@inproceedings{DBLP:conf/aaai/QianPM21,
+  author    = {Hangwei Qian and Sinno Jialin Pan and Chunyan Miao},
+  title     = {Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  pages     = {11921--11929},
+  year      = {2021}
+}
+```
