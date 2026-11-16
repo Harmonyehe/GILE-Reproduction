@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser(description='argument setting of network')
 parser.add_argument('--now_model_name', type=str, default='GILE', help='the type of model')
 
 parser.add_argument('--batch_size', type=int, default=64, help='batch size of training')
-parser.add_argument('--n_epoch', type=int, default=150, help='number of training epochs')
+parser.add_argument('--n_epoch', type=int, default=100, help='number of training epochs')
 parser.add_argument('--dataset', type=str, default='ucihar', help='name of dataset')
 
 parser.add_argument('--n_feature', type=int, default=9, help='name of feature dimension')
