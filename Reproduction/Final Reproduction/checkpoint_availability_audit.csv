@@ -1,0 +1,4 @@
+dataset,checkpoint_status,evaluation_status
+UCI HAR,Available,Fresh CPU evaluation
+Opportunity,Not found in available GitHub branches,Archived Run 2 metrics retained
+UniMiB-SHAR,Not found in available GitHub branches,Archived Run 2 metrics retained

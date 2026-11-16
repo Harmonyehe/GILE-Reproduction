@@ -1,0 +1,14 @@
+source,sha256,rows,columns,status
+Reproduction/Final Reproduction/Code/Training/results/ucihar/GILE/1/training_history.csv,f566b2680ede2970629fc1c93b5fdc226e09c8bf1ffbc2f270e994c8874797d3,99,0.36;0.30;0.30.1;1.00;0.28,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Code/Training/results/ucihar/GILE/3/training_history.csv,995ab5eea6d31fcd53ae93f91266cf9c9b6af0a2fdd8c1df170151fddd7d5537,99,0.38;0.40;0.40.1;1.00;0.22,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Code/Training/results/ucihar/GILE/4/training_history.csv,a9e340e0f0e0721448a60797243a1cbf8e043c7d1c2223f4452609f76ec0f473,99,0.40;0.37;0.37.1;1.00;0.28,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Code/Training/results/ucihar/GILE/0/training_history.csv,ddccc8c54c5ecb9ca13ca235955ef97ee01701e33791682d120732418e0a2b22,99,0.39;0.27;0.27.1;1.00;0.25,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Code/Training/results/ucihar/GILE/2/training_history.csv,45cb5c6115d11a6fe41a827c8111dd387ac666efe7f30f0145aca4d8c29383b6,99,0.38;0.32;0.32.1;1.00;0.29,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/UniMiB-SHAR/target_3/training_history.csv,fd98db70708c9c6a4ef8e2228d133544fde548610039ad1265cc961c0d33e909,99,0.30;0.17;0.17.1;1.00;0.47,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/UniMiB-SHAR/target_1/training_history.csv,9d5fe9c30b2e76a4559d4996ca03894fa5e33620597a807d2a19c81119068759,99,0.30;0.22;0.22.1;1.00;0.35,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/UniMiB-SHAR/target_5/training_history.csv,626b91f29546fa4c54bc559eed2cef23a3b026eb462678dbdfcce6a4ccb68a10,99,0.40;0.13;0.13.1;1.00;0.47,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/UniMiB-SHAR/target_2/training_history.csv,b2dc80bcd158013422e8a4d8559c66227e7b3f9f72570c51d0782100ac75fe5e,99,0.23;0.12;0.12.1;1.00;0.54,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/Opportunity/target_S3/training_history.csv,0d7de609f113f277d0c25354895f6ff21947ace6957e61c13c50062f050f8d35,99,0.81;0.55;0.55.1;1.00;0.29,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/Opportunity/target_S4/training_history.csv,4962d9f67a314d6725f10745897ecaf704021c872cc88a595fad3d18655982d4,47,0.76;0.70;0.70.1;1.00;0.32,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/Opportunity/target_S2/training_history.csv,612c96ffb5d7cd14db82f05e1e5cc7fdf0917a39342cb01fbd59e0ad2979be9e,99,0.74;0.62;0.62.1;1.00;0.30,plotted; epoch semantics not inferred
+Reproduction/Final Reproduction/Results/Opportunity/target_S1/training_history.csv,fa13167a5d49c1a0a0dc30e104cb88d9a7d0bb4bbdf89015fee3d345e1cdaa21,52,0.73;0.65;0.65.1;1.00;0.30,plotted; epoch semantics not inferred

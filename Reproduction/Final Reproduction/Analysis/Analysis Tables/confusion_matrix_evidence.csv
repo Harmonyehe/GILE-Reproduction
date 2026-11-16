@@ -1,0 +1,14 @@
+dataset,target,status,source
+Opportunity,S1,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS1_metrics.json
+Opportunity,S2,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS2_metrics.json
+Opportunity,S3,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS3_metrics.json
+Opportunity,S4,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS4_metrics.json
+UniMiB-SHAR,1,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target1_metrics.json
+UniMiB-SHAR,2,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target2_metrics.json
+UniMiB-SHAR,3,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target3_metrics.json
+UniMiB-SHAR,5,generated from source JSON,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target5_metrics.json
+UCI HAR,0,UNAVAILABLE: no fresh raw confusion matrix in authoritative JSON,
+UCI HAR,1,UNAVAILABLE: no fresh raw confusion matrix in authoritative JSON,
+UCI HAR,2,UNAVAILABLE: no fresh raw confusion matrix in authoritative JSON,
+UCI HAR,3,UNAVAILABLE: no fresh raw confusion matrix in authoritative JSON,
+UCI HAR,4,UNAVAILABLE: no fresh raw confusion matrix in authoritative JSON,

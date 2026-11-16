@@ -1,0 +1,7 @@
+dataset,target,size_MB,recovered_path
+Opportunity,S3,11.59,/content/GILE-Reproduction/Recovered_Checkpoints/Opportunity/target_S3/best_model.pt
+Opportunity,S4,11.59,/content/GILE-Reproduction/Recovered_Checkpoints/Opportunity/target_S4/best_model.pt
+UniMiB-SHAR,1,7.82,/content/GILE-Reproduction/Recovered_Checkpoints/UniMiB-SHAR/target_1/best_model.pt
+UniMiB-SHAR,2,7.82,/content/GILE-Reproduction/Recovered_Checkpoints/UniMiB-SHAR/target_2/best_model.pt
+UniMiB-SHAR,3,7.82,/content/GILE-Reproduction/Recovered_Checkpoints/UniMiB-SHAR/target_3/best_model.pt
+UniMiB-SHAR,5,7.82,/content/GILE-Reproduction/Recovered_Checkpoints/UniMiB-SHAR/target_5/best_model.pt

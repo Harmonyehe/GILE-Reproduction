@@ -1,0 +1,5 @@
+dataset,target,samples,accuracy,macro_f1,weighted_f1,provenance,source_file
+Opportunity,S1,15643,0.8265677939014255,0.6183669577012678,0.821895081920416,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS1_metrics.json
+Opportunity,S2,15011,0.8124042368929452,0.5350843080162853,0.7985477027322481,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS2_metrics.json
+Opportunity,S3,14456,0.7819590481460985,0.4382288589904105,0.7636509097137113,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS3_metrics.json
+Opportunity,S4,12843,0.7959199563964806,0.5013772503961538,0.7913231079777894,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS4_metrics.json

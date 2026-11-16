@@ -1,14 +1,14 @@
-dataset,target,metric_json_found,metric_json_paths,matching_checkpoint_paths,matching_logs
-UCI HAR,0,True,Reproduction/Final Reproduction/Results/Archived Metrics/ucihar_target0_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/ucihar_target0_metrics.json,,Reproduction/Final Reproduction/Logs/ucihar_target0.log; Reproduction/Final Reproduction/Logs/ucihar_target0_checkpoint_run.log
-UCI HAR,1,True,Reproduction/Final Reproduction/Results/Archived Metrics/ucihar_target1_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/ucihar_target1_metrics.json,,Reproduction/Final Reproduction/Logs/ucihar_target1_training.log
-UCI HAR,2,True,Reproduction/Final Reproduction/Results/Archived Metrics/ucihar_target2_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/ucihar_target2_metrics.json,,Reproduction/Final Reproduction/Logs/ucihar_target2_training.log
-UCI HAR,3,True,Reproduction/Final Reproduction/Results/Archived Metrics/ucihar_target3_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/ucihar_target3_metrics.json,,Reproduction/Final Reproduction/Logs/ucihar_target3_training.log
-UCI HAR,4,True,Reproduction/Final Reproduction/Results/Archived Metrics/ucihar_target4_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/ucihar_target4_metrics.json,,Reproduction/Final Reproduction/Logs/ucihar_target4_training.log
-Opportunity,S1,True,Reproduction/Final Reproduction/Results/Archived Metrics/oppor_targetS1_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/oppor_targetS1_metrics.json,,Reproduction/Final Reproduction/Logs/oppor_targetS1_training.log
-Opportunity,S2,True,Reproduction/Final Reproduction/Results/Archived Metrics/oppor_targetS2_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/oppor_targetS2_metrics.json,,Reproduction/Final Reproduction/Logs/oppor_targetS2_training.log
-Opportunity,S3,True,Reproduction/Final Reproduction/Results/Archived Metrics/oppor_targetS3_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/oppor_targetS3_metrics.json,,Reproduction/Final Reproduction/Logs/oppor_targetS3_training.log
-Opportunity,S4,True,Reproduction/Final Reproduction/Results/Archived Metrics/oppor_targetS4_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/oppor_targetS4_metrics.json,,Reproduction/Final Reproduction/Logs/oppor_targetS4_training.log
-UniMiB-SHAR,1,True,Reproduction/Final Reproduction/Results/Archived Metrics/shar_target1_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/shar_target1_metrics.json,,Reproduction/Final Reproduction/Logs/shar_target1_training.log
-UniMiB-SHAR,2,True,Reproduction/Final Reproduction/Results/Archived Metrics/shar_target2_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/shar_target2_metrics.json,,Reproduction/Final Reproduction/Logs/shar_target2_training.log
-UniMiB-SHAR,3,True,Reproduction/Final Reproduction/Results/Archived Metrics/shar_target3_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/shar_target3_metrics.json,,Reproduction/Final Reproduction/Logs/shar_target3_training.log
-UniMiB-SHAR,5,True,Reproduction/Final Reproduction/Results/Archived Metrics/shar_target5_metrics.json; Reproduction/Final Reproduction/Results/Evaluation Metrics/shar_target5_metrics.json,,Reproduction/Final Reproduction/Logs/shar_target5_training.log
+dataset,target,authoritative_json,exists
+UCI HAR,0,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_0_fresh_metrics.json,True
+UCI HAR,1,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_1_fresh_metrics.json,True
+UCI HAR,2,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_2_fresh_metrics.json,True
+UCI HAR,3,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_3_fresh_metrics.json,True
+UCI HAR,4,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_4_fresh_metrics.json,True
+Opportunity,S1,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS1_metrics.json,True
+Opportunity,S2,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS2_metrics.json,True
+Opportunity,S3,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS3_metrics.json,True
+Opportunity,S4,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS4_metrics.json,True
+UniMiB-SHAR,1,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target1_metrics.json,True
+UniMiB-SHAR,2,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target2_metrics.json,True
+UniMiB-SHAR,3,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target3_metrics.json,True
+UniMiB-SHAR,5,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target5_metrics.json,True

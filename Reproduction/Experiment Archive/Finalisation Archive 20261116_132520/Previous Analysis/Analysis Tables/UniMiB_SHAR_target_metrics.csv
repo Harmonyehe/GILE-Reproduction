@@ -1,0 +1,5 @@
+dataset,target,samples,accuracy,macro_f1,weighted_f1,provenance,source_file
+UniMiB-SHAR,1,384,0.4635416666666667,0.33827973955144996,0.4026120058282798,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target1_metrics.json
+UniMiB-SHAR,2,583,0.5385934819897084,0.4720201535026965,0.5246193125864449,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target2_metrics.json
+UniMiB-SHAR,3,304,0.6710526315789473,0.48812124162081705,0.6578573326902637,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target3_metrics.json
+UniMiB-SHAR,5,298,0.4161073825503356,0.3428398257597081,0.3406140213126823,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target5_metrics.json

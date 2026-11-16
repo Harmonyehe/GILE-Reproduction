@@ -1,17 +1,34 @@
+# Evaluation Methodology
 
-# Evaluation Methodology and Provenance
+This finalisation is evaluation and repository maintenance only.
+It does not train models or execute training entry points.
 
-This final assembly uses existing experiment outputs only.
+## Metric sources
 
-No training script was invoked and no epochs were run.
+- UCI HAR: fresh CPU evaluation JSON files in
+  `Results/UCI HAR/Fresh CPU Evaluation/`.
+- Opportunity: Run 2 archived evaluation JSON files.
+- UniMiB-SHAR: Run 2 archived evaluation JSON files.
 
-UCI HAR results are taken from the newer fresh CPU evaluation JSON files.
-Opportunity and UniMiB-SHAR results are taken from the Run 2 metric JSON files and supporting artefacts.
+Accuracy, macro-F1, weighted-F1, sample counts, and per-class
+precision/recall/F1 are copied from source JSONs when present.
+Missing values are not inferred.
 
-Accuracy, macro-F1 and weighted-F1 are taken directly from the corresponding metric JSON.
-Per-class precision, recall, F1 and support are extracted from the saved classification reports.
+Confusion matrices are produced only from raw matrices in the
+authoritative source JSONs.
 
-Paper comparison uses the reported GILE accuracies from Qian et al., AAAI 2021.
-Differences are reported in percentage points.
+## Backup-branch checkpoints
 
-The provenance column in the canonical result table distinguishes fresh UCI HAR metrics from Run 2 archived metrics.
+Fetched remote branches are searched using Git's tracked tree.
+Recovered checkpoint files retain available branch and original
+path provenance.
+
+Recovery alone does not establish metric provenance.
+Independent evaluation requires a target-matched checkpoint,
+required dataset inputs, and an evaluation-only script.
+
+## Paper comparison
+
+Accuracy is compared with the target-wise GILE values
+transcribed for this project. Paper F1 values are not assumed
+or invented.
