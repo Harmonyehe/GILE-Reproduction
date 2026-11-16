@@ -1,0 +1,45 @@
+{
+  "experiment": "XPC-B stage 2 (Person 3): person-balanced batches + cross-person supervised contrastive loss",
+  "dataset": {
+    "name": "UCI HAR (Human Activity Recognition Using Smartphones)",
+    "url": "https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+    "sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+    "layout_after_preparation": "code/data/ucihar/{train,test}/InertialSignals/*.txt + y_{train,test}.txt + subject_{train,test}.txt (22 files)",
+    "persons": {"0": "UCI subject 1 (347 windows)", "1": "subject 2 (302)", "2": "subject 3 (341)", "3": "subject 4 (317)", "4": "subject 5 (302)"},
+    "note": "train and test files are concatenated, then windows of each subject are selected (data_preprocess_ucihar.load_domain_data)"
+  },
+  "protocol": {
+    "folds": "leave-one-person-out over persons 0-4: target t held out, the other 4 are sources",
+    "source_split": "per source person and activity, the last 20% of that activity's windows (file order) -> validation; train windows overlapping a validation window (50% sliding overlap, detected from sensor values) are purged; zero overlap asserted (6 purged per person)",
+    "selection": "epoch with max mean source-validation accuracy; tie -> lower source-validation CE_y. Target data never used for training, lambda, selection or probes",
+    "target_metrics": "accuracy, macro-F1, weighted-F1 at the selected epoch (primary); last epoch and mean of last 10 epochs (secondary); best-on-target epoch logged as DIAGNOSTIC only",
+    "probes": "StandardScaler + LogisticRegression (linear) and StandardScaler + MLP(64, random_state=seed); fit on source-train posterior means, scored on source-validation; person<-z, activity<-z_d, person<-z_d; leak guard asserted (0 shared, 0 target windows)"
+  },
+  "arms": {
+    "ie_off": "stage-1 control, person-sequential single-person batches; used ONLY as the reproducibility anchor (target 0, seed 0)",
+    "ie_off_bal": "single Adam, main GILE loss, person-balanced batches (16 windows x 4 source persons per step; steps/epoch = sum_p floor(n_p/64), same as stage 1)",
+    "xpc_bal": "ie_off_bal + lam * L_XPC on the posterior mean of z through projection head g (50->64->32), tau = 0.1"
+  },
+  "hyperparameters": {
+    "epochs": 150, "batch_size": 64, "optimizer": "Adam", "lr": 0.0011, "weight_decay": 0,
+    "beta_d": 1.0, "beta_y": 1.0, "beta_x": 0.0, "aux_loss_multiplier_y": 1000.0, "aux_loss_multiplier_d": 1000.0,
+    "d_AE": 50, "x_dim": 1152, "n_domains": 5, "n_class": 6,
+    "tau": 0.1, "lam": 6012.3811770276325,
+    "lam_rule": "lam = 0.1 * mean main loss per batch / mean L_XPC per batch at initialisation, source persons of target 0, seed 0, CPU; fixed for all runs (code/stage2_xpc/lambda.json)",
+    "sampler": "per person WeightedRandomSampler(weights = 100/class count, replacement=True, generator seed = seed*100 + k)",
+    "projection_head_init": "torch.manual_seed(10000 + seed) under fork_rng of CPU and all CUDA states",
+    "cudnn_deterministic": true, "cudnn_benchmark": false
+  },
+  "design": {
+    "targets": ["0", "1", "2", "3", "4"],
+    "seeds": [0, 1, 2, 3, 4],
+    "arms": ["ie_off_bal", "xpc_bal"],
+    "expected_runs": 50,
+    "anchor": {"variant": "ie_off", "target": "0", "seed": 0,
+               "expected_T4": {"selected_epoch": 99, "accuracy": 74.06340057636888, "weighted_f1": 73.92573013405048}},
+    "primary_contrast": "xpc_bal - ie_off_bal (paired per target-seed, averaged within target, 95% t-interval over 5 targets)",
+    "predeclared_success_rule": "accuracy improves for >= 4 of 5 targets AND both person<-z probes (linear, MLP) decrease for >= 4 of 5 targets; lower probes with worse recognition = failure; otherwise inconclusive / harmful",
+    "analysis_plan_after_interruption": "PRIMARY = seeds 0,1,2 (pre-planned reduced design) if the full 50 are not available; SENSITIVITY = all complete pairs. If all 50 complete on T4, report the full 50 as the pre-planned preferred design and the seeds 0-2 subset alongside."
+  },
+  "environment_reference": {"stage1_and_stage2_T4": "Colab Tesla T4, torch 2.14.1+cu130 (anchor matched stage 1 exactly)", "local_cpu": "torch 2.2.2+cpu, Python 3.10"}
+}

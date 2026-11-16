@@ -1,0 +1,276 @@
+{
+  "variant": "xpc_bal",
+  "target": "3",
+  "seed": 0,
+  "epochs": 150,
+  "stage": 2,
+  "lam": 6012.3811770276325,
+  "tau": 0.1,
+  "runner": "XPCB_TRANSFER_PACKAGE resumable run_stage2.py",
+  "resume": {
+    "resumed_after_epoch": null,
+    "note": null,
+    "environment": {
+      "device": "cuda",
+      "gpu": "Tesla T4",
+      "torch": "2.14.1+cu130"
+    }
+  },
+  "selection": {
+    "criterion": "max mean source-val accuracy, tie -> min source-val CE_y",
+    "selected_epoch": 150,
+    "source_val_acc": 96.00484261501211,
+    "source_val_ce_y": 0.20988471247255802
+  },
+  "target_at_selected_epoch": {
+    "n": 317,
+    "accuracy": 80.12618296529969,
+    "macro_f1": 79.37834240038411,
+    "weighted_f1": 79.5194093183955,
+    "confusion_matrix": [
+      [
+        59,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        29,
+        11,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        41,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        24,
+        32,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        54
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.7662337662337663,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.8613138686131386,
+        "support": 60.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.5576923076923077,
+        "f1-score": 0.7160493827160493,
+        "support": 52.0
+      },
+      "2": {
+        "precision": 0.7647058823529411,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.8125,
+        "support": 45.0
+      },
+      "3": {
+        "precision": 0.6307692307692307,
+        "recall": 0.82,
+        "f1-score": 0.7130434782608696,
+        "support": 50.0
+      },
+      "4": {
+        "precision": 0.7804878048780488,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.6597938144329897,
+        "support": 56.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "accuracy": 0.8012618296529969,
+      "macro avg": {
+        "precision": 0.8236994473723311,
+        "recall": 0.7998534798534798,
+        "f1-score": 0.7937834240038412,
+        "support": 317.0
+      },
+      "weighted avg": {
+        "precision": 0.8253361807304119,
+        "recall": 0.8012618296529969,
+        "f1-score": 0.7951940931839551,
+        "support": 317.0
+      }
+    }
+  },
+  "target_at_last_epoch": {
+    "n": 317,
+    "accuracy": 80.12618296529969,
+    "macro_f1": 79.37834240038411,
+    "weighted_f1": 79.5194093183955,
+    "confusion_matrix": [
+      [
+        59,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        29,
+        11,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        41,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        24,
+        32,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        54
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.7662337662337663,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.8613138686131386,
+        "support": 60.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.5576923076923077,
+        "f1-score": 0.7160493827160493,
+        "support": 52.0
+      },
+      "2": {
+        "precision": 0.7647058823529411,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.8125,
+        "support": 45.0
+      },
+      "3": {
+        "precision": 0.6307692307692307,
+        "recall": 0.82,
+        "f1-score": 0.7130434782608696,
+        "support": 50.0
+      },
+      "4": {
+        "precision": 0.7804878048780488,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.6597938144329897,
+        "support": 56.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "accuracy": 0.8012618296529969,
+      "macro avg": {
+        "precision": 0.8236994473723311,
+        "recall": 0.7998534798534798,
+        "f1-score": 0.7937834240038412,
+        "support": 317.0
+      },
+      "weighted avg": {
+        "precision": 0.8253361807304119,
+        "recall": 0.8012618296529969,
+        "f1-score": 0.7951940931839551,
+        "support": 317.0
+      }
+    }
+  },
+  "DIAGNOSTIC_ONLY_leaky_best_target_epoch": {
+    "warning": "epoch chosen by TARGET accuracy (released protocol) - for comparison with the paper only",
+    "epoch": 68,
+    "accuracy": 88.95899053627761,
+    "macro_f1": 89.05583176307141,
+    "weighted_f1": 89.0205189696166
+  },
+  "final_epoch_cross_accuracy": {
+    "person_from_z_val": 23.88224962115994,
+    "activity_from_zd_val": 17.47110541910568
+  },
+  "probes_selected_epoch": {
+    "person_from_activity_code_z": {
+      "majority_baseline": 27.131782945736433,
+      "linear": 62.7906976744186,
+      "mlp": 72.86821705426357
+    },
+    "activity_from_person_code_zd": {
+      "majority_baseline": 20.930232558139537,
+      "linear": 74.03100775193798,
+      "mlp": 74.4186046511628
+    },
+    "person_from_person_code_zd": {
+      "majority_baseline": 27.131782945736433,
+      "linear": 77.90697674418605,
+      "mlp": 78.29457364341084
+    },
+    "note": "fit on source-train codes (posterior means, selected epoch), scored on source-val codes",
+    "n_probe_train": 1010,
+    "n_probe_test": 258,
+    "leak_check": {
+      "identical_windows_train_test": 0,
+      "target_windows_used": 0
+    }
+  },
+  "train_seconds": 125.65910482406616,
+  "mean_epoch_seconds": 0.7510687303543091
+}

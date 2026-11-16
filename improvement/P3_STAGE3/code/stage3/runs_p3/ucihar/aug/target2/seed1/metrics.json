@@ -1,0 +1,277 @@
+{
+  "variant": "aug",
+  "arm": "aug",
+  "layout_fix": false,
+  "augmentation": true,
+  "target": "2",
+  "seed": 1,
+  "epochs": 150,
+  "stage": 3,
+  "runner": "P3_STAGE3 run_stage3.py",
+  "resume": {
+    "resumed_after_epoch": null,
+    "note": null,
+    "environment": {
+      "device": "cuda",
+      "gpu": "Tesla T4",
+      "torch": "2.14.1+cu130"
+    }
+  },
+  "selection": {
+    "criterion": "max mean source-val accuracy, tie -> min source-val CE_y",
+    "selected_epoch": 132,
+    "source_val_acc": 87.51046366495102,
+    "source_val_ce_y": 0.2651716507971287
+  },
+  "target_at_selected_epoch": {
+    "n": 341,
+    "accuracy": 92.96187683284457,
+    "macro_f1": 92.71968251519426,
+    "weighted_f1": 93.04248514732282,
+    "confusion_matrix": [
+      [
+        54,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        45,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        44,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        51,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        61,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        62
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9642857142857143,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9473684210526315,
+        "support": 58.0
+      },
+      "1": {
+        "precision": 0.8823529411764706,
+        "recall": 0.7627118644067796,
+        "f1-score": 0.8181818181818182,
+        "support": 59.0
+      },
+      "2": {
+        "precision": 0.7333333333333333,
+        "recall": 0.8979591836734694,
+        "f1-score": 0.8073394495412844,
+        "support": 49.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 0.9807692307692307,
+        "f1-score": 0.9902912621359223,
+        "support": 52.0
+      },
+      "4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 61.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 62.0
+      },
+      "accuracy": 0.9296187683284457,
+      "macro avg": {
+        "precision": 0.9299953314659198,
+        "recall": 0.9287457936013501,
+        "f1-score": 0.9271968251519427,
+        "support": 341.0
+      },
+      "weighted avg": {
+        "precision": 0.9352514026138316,
+        "recall": 0.9296187683284457,
+        "f1-score": 0.9304248514732283,
+        "support": 341.0
+      }
+    }
+  },
+  "target_at_last_epoch": {
+    "n": 341,
+    "accuracy": 87.97653958944281,
+    "macro_f1": 87.28778811825534,
+    "weighted_f1": 87.64976427616705,
+    "confusion_matrix": [
+      [
+        57,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        7,
+        47,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        4,
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        33,
+        18,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        61,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        62
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8260869565217391,
+        "recall": 0.9827586206896551,
+        "f1-score": 0.8976377952755905,
+        "support": 58.0
+      },
+      "1": {
+        "precision": 0.9038461538461539,
+        "recall": 0.7966101694915254,
+        "f1-score": 0.8468468468468469,
+        "support": 59.0
+      },
+      "2": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8163265306122449,
+        "f1-score": 0.851063829787234,
+        "support": 49.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 0.6346153846153846,
+        "f1-score": 0.7764705882352941,
+        "support": 52.0
+      },
+      "4": {
+        "precision": 0.7625,
+        "recall": 1.0,
+        "f1-score": 0.8652482269503546,
+        "support": 61.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 62.0
+      },
+      "accuracy": 0.8797653958944281,
+      "macro avg": {
+        "precision": 0.8968869998761303,
+        "recall": 0.8717184509014683,
+        "f1-score": 0.8728778811825534,
+        "support": 341.0
+      },
+      "weighted avg": {
+        "precision": 0.8953314431399984,
+        "recall": 0.8797653958944281,
+        "f1-score": 0.8764976427616704,
+        "support": 341.0
+      }
+    }
+  },
+  "DIAGNOSTIC_ONLY_leaky_best_target_epoch": {
+    "warning": "epoch chosen by TARGET accuracy (released protocol) - for comparison with the paper only",
+    "epoch": 116,
+    "accuracy": 93.54838709677419,
+    "macro_f1": 93.28921092120129,
+    "weighted_f1": 93.48735622690472
+  },
+  "final_epoch_cross_accuracy": {
+    "person_from_z_val": 24.719829582291375,
+    "activity_from_zd_val": 12.398461653810362
+  },
+  "probes_selected_epoch": {
+    "person_from_activity_code_z": {
+      "majority_baseline": 27.66798418972332,
+      "linear": 52.569169960474305,
+      "mlp": 63.63636363636363
+    },
+    "activity_from_person_code_zd": {
+      "majority_baseline": 21.34387351778656,
+      "linear": 64.82213438735178,
+      "mlp": 71.54150197628458
+    },
+    "person_from_person_code_zd": {
+      "majority_baseline": 27.66798418972332,
+      "linear": 63.63636363636363,
+      "mlp": 60.079051383399204
+    },
+    "note": "fit on source-train codes (posterior means, selected epoch, NO augmentation), scored on source-val codes",
+    "n_probe_train": 991,
+    "n_probe_test": 253,
+    "leak_check": {
+      "identical_windows_train_test": 0,
+      "target_windows_used": 0
+    }
+  },
+  "train_seconds": 302.8820893764496,
+  "mean_epoch_seconds": 1.4597395849227905
+}

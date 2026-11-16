@@ -1,0 +1,14 @@
+{
+  "lam": 6012.3811770276325,
+  "rule": "lam = 0.1 * mean main loss per batch / mean L_XPC per batch at initialisation",
+  "measured_on": "source persons of target 0, seed 0, one epoch of balanced batches, no parameter updates, no target data",
+  "mean_main_loss_per_batch": 246202.35216346153,
+  "mean_xpc_per_batch": 4.0949225425720215,
+  "tau": 0.1,
+  "n_batches": 13,
+  "mean_anchors_per_batch": 64.0,
+  "mean_positives_per_anchor": 7.971153846153846,
+  "fake_data": false,
+  "torch": "2.2.2+cpu",
+  "device": "cpu"
+}

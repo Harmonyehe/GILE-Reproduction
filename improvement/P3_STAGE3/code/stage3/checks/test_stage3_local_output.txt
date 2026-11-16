@@ -1,0 +1,22 @@
+﻿PASS C1 both layouts give (B,9,1,128)  [(4, 9, 1, 128)]
+PASS C2 fixed layout: channel c = sensor c, width t = time t (all 1152 positions)
+PASS C3 released layout mixes sensors: every width-5 conv window spans 5 different sensors  [first positions of channel 0 as (time,sensor): [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5)]]
+PASS C4 released "channel" holds all 9 sensors and ~14 time steps  [time span of channel 0: 0..14]
+PASS C5 patch touches only the encoders, init identical  [['qzd', 'qzy']]
+PASS C6 patched forward == released forward applied to correctly laid-out memory (qzy and qzd)
+PASS C7 patched forward differs from released forward on the same input
+PASS C8 loss finite and gradients reach first conv of qzy and qzd (fixed layout)  [loss 15757.2]
+PASS C9 decoder output shape == input shape (reconstruction target unchanged)
+PASS A1 rotation preserves every triad norm and the gravity magnitude
+PASS A2 rotations are proper (R R^T = I, det = +1) and within +-15 deg  [max angle 14.87 deg]
+PASS A3 windows not selected are bit-identical; selected windows change  [34/64 selected]
+PASS A4 scaling changes body_acc/body_gyro by s and leaves gravity (total-body) unchanged
+PASS A5 deterministic per seed; random draws do not depend on the data
+PASS A6 global torch RNG untouched by augmentation
+PASS R0 all short runs completed  [[0, 0, 0, 0, 0]]
+PASS R1 stage-3 control arm == stage-2 runner ie_off (history, target metrics, probes)
+PASS R2 identical initial parameters in all four arms  [c6af653dc6baf8c6]
+PASS R3 fix / aug / fix_aug each change training relative to the control
+PASS R4 interrupted+resumed fix_aug == uninterrupted (history and target metrics)
+device cpu | torch 2.2.2+cpu
+ALL PASSED

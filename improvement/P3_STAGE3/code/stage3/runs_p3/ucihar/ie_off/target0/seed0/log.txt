@@ -1,0 +1,210 @@
+x_data.shape: (7352, 1152)
+X.shape: (7352, 128, 9)
+x_data.shape: (2947, 1152)
+X.shape: (2947, 128, 9)
+
+Processing domain 1 files...
+
+
+Processing domain 1 files | X: (302, 128, 9) y: (302,) d:(302,) 
+
+person 1: n=302 train=235 val=61 purged=6
+x_data.shape: (7352, 1152)
+X.shape: (7352, 128, 9)
+x_data.shape: (2947, 1152)
+X.shape: (2947, 128, 9)
+
+Processing domain 2 files...
+
+
+Processing domain 2 files | X: (341, 128, 9) y: (341,) d:(341,) 
+
+person 2: n=341 train=267 val=68 purged=6
+x_data.shape: (7352, 1152)
+X.shape: (7352, 128, 9)
+x_data.shape: (2947, 1152)
+X.shape: (2947, 128, 9)
+
+Processing domain 3 files...
+
+
+Processing domain 3 files | X: (317, 128, 9) y: (317,) d:(317,) 
+
+person 3: n=317 train=248 val=63 purged=6
+x_data.shape: (7352, 1152)
+X.shape: (7352, 128, 9)
+x_data.shape: (2947, 1152)
+X.shape: (2947, 128, 9)
+
+Processing domain 4 files...
+
+
+Processing domain 4 files | X: (302, 128, 9) y: (302,) d:(302,) 
+
+person 4: n=302 train=237 val=59 purged=6
+x_data.shape: (7352, 1152)
+X.shape: (7352, 128, 9)
+x_data.shape: (2947, 1152)
+X.shape: (2947, 128, 9)
+
+Processing domain 0 files...
+
+
+Processing domain 0 files | X: (347, 128, 9) y: (347,) d:(347,) 
+
+target person 0: n=347 | data prep 10.7s | arm ie_off (layout_fix=False, aug=False)
+initial-parameter hash f6347cb83d1c9fe6 | layout-fixed encoders [] | augmentation off
+ep   1 | loss    4252.48 | val acc  24.80 ce 1.686 | cross p<-z  25.0 y<-zd  16.3 | [diag] target acc  31.70 | 1.2s
+ep   2 | loss    3109.54 | val acc  45.30 ce 1.190 | cross p<-z  25.8 y<-zd  15.1 | [diag] target acc  40.35 | 0.5s
+ep   3 | loss    2557.99 | val acc  49.56 ce 0.998 | cross p<-z  35.2 y<-zd  15.1 | [diag] target acc  61.67 | 0.5s
+ep   4 | loss    2645.45 | val acc  48.14 ce 1.370 | cross p<-z  31.6 y<-zd  15.1 | [diag] target acc  31.70 | 0.5s
+ep   5 | loss    2657.35 | val acc  44.65 ce 1.247 | cross p<-z  27.1 y<-zd  15.1 | [diag] target acc  41.50 | 0.5s
+ep   6 | loss    2688.30 | val acc  40.26 ce 1.393 | cross p<-z  25.0 y<-zd  15.1 | [diag] target acc  35.73 | 0.5s
+ep   7 | loss    2619.55 | val acc  49.07 ce 0.879 | cross p<-z  25.5 y<-zd  15.1 | [diag] target acc  53.03 | 0.5s
+ep   8 | loss    2292.43 | val acc  64.77 ce 0.784 | cross p<-z  19.8 y<-zd  15.1 | [diag] target acc  52.16 | 0.5s
+ep   9 | loss    2159.02 | val acc  65.29 ce 0.733 | cross p<-z  24.8 y<-zd  15.1 | [diag] target acc  53.31 | 0.5s
+ep  10 | loss    2156.59 | val acc  67.39 ce 0.730 | cross p<-z  28.1 y<-zd  15.1 | [diag] target acc  53.03 | 0.5s
+ep  11 | loss    2048.89 | val acc  66.98 ce 0.785 | cross p<-z  28.1 y<-zd  15.1 | [diag] target acc  53.89 | 0.5s
+ep  12 | loss    2061.86 | val acc  70.60 ce 0.632 | cross p<-z  22.8 y<-zd  15.1 | [diag] target acc  63.98 | 0.5s
+ep  13 | loss    1955.43 | val acc  76.04 ce 0.484 | cross p<-z  22.5 y<-zd  15.1 | [diag] target acc  60.52 | 0.5s
+ep  14 | loss    1962.97 | val acc  60.74 ce 0.903 | cross p<-z  24.3 y<-zd  15.1 | [diag] target acc  56.77 | 0.5s
+ep  15 | loss    2183.48 | val acc  51.47 ce 1.125 | cross p<-z  25.5 y<-zd  15.1 | [diag] target acc  41.79 | 0.5s
+ep  16 | loss    2199.62 | val acc  68.48 ce 0.619 | cross p<-z  24.5 y<-zd  15.1 | [diag] target acc  56.20 | 0.5s
+ep  17 | loss    1831.14 | val acc  74.57 ce 0.635 | cross p<-z  23.3 y<-zd  15.1 | [diag] target acc  54.47 | 0.5s
+ep  18 | loss    1885.86 | val acc  70.20 ce 0.703 | cross p<-z  24.8 y<-zd  15.1 | [diag] target acc  50.14 | 0.5s
+ep  19 | loss    2045.80 | val acc  73.65 ce 0.533 | cross p<-z  22.8 y<-zd  15.5 | [diag] target acc  55.91 | 0.5s
+ep  20 | loss    1752.18 | val acc  65.18 ce 0.675 | cross p<-z  23.6 y<-zd  15.1 | [diag] target acc  58.50 | 0.5s
+ep  21 | loss    1774.61 | val acc  72.80 ce 0.547 | cross p<-z  25.2 y<-zd  18.1 | [diag] target acc  61.67 | 0.5s
+ep  22 | loss    1633.23 | val acc  79.14 ce 0.416 | cross p<-z  24.0 y<-zd  18.1 | [diag] target acc  70.03 | 0.5s
+ep  23 | loss    1637.18 | val acc  78.43 ce 0.412 | cross p<-z  24.8 y<-zd  21.8 | [diag] target acc  58.50 | 0.5s
+ep  24 | loss    1474.88 | val acc  78.24 ce 0.413 | cross p<-z  26.1 y<-zd  18.8 | [diag] target acc  62.25 | 0.5s
+ep  25 | loss    1525.73 | val acc  78.62 ce 0.407 | cross p<-z  24.0 y<-zd  18.5 | [diag] target acc  62.54 | 0.5s
+ep  26 | loss    1566.06 | val acc  81.19 ce 0.345 | cross p<-z  25.1 y<-zd  19.0 | [diag] target acc  63.40 | 0.5s
+ep  27 | loss    1402.92 | val acc  79.91 ce 0.327 | cross p<-z  24.8 y<-zd  18.6 | [diag] target acc  71.18 | 0.5s
+ep  28 | loss    1426.08 | val acc  79.93 ce 0.360 | cross p<-z  24.9 y<-zd  16.2 | [diag] target acc  63.98 | 0.5s
+ep  29 | loss    1425.28 | val acc  70.05 ce 0.537 | cross p<-z  24.8 y<-zd  18.9 | [diag] target acc  60.23 | 0.5s
+ep  30 | loss    1408.31 | val acc  69.70 ce 0.650 | cross p<-z  21.2 y<-zd  15.9 | [diag] target acc  61.38 | 0.5s
+ep  31 | loss    1481.56 | val acc  84.75 ce 0.303 | cross p<-z  24.2 y<-zd  16.6 | [diag] target acc  63.98 | 0.5s
+ep  32 | loss    1314.66 | val acc  80.91 ce 0.403 | cross p<-z  24.2 y<-zd  16.1 | [diag] target acc  79.25 | 0.5s
+ep  33 | loss    1317.95 | val acc  80.40 ce 0.340 | cross p<-z  25.2 y<-zd  16.1 | [diag] target acc  70.89 | 0.5s
+ep  34 | loss    1286.89 | val acc  83.49 ce 0.371 | cross p<-z  20.8 y<-zd  15.8 | [diag] target acc  59.37 | 0.5s
+ep  35 | loss    1261.12 | val acc  81.69 ce 0.304 | cross p<-z  24.2 y<-zd  15.4 | [diag] target acc  70.61 | 0.5s
+ep  36 | loss    1220.05 | val acc  84.82 ce 0.290 | cross p<-z  23.4 y<-zd  15.8 | [diag] target acc  74.64 | 0.5s
+ep  37 | loss    1166.82 | val acc  85.61 ce 0.267 | cross p<-z  21.6 y<-zd  16.5 | [diag] target acc  70.03 | 0.5s
+ep  38 | loss    1268.89 | val acc  85.16 ce 0.255 | cross p<-z  22.7 y<-zd  16.2 | [diag] target acc  70.32 | 0.5s
+ep  39 | loss    1107.38 | val acc  85.82 ce 0.255 | cross p<-z  24.6 y<-zd  16.2 | [diag] target acc  75.50 | 0.5s
+ep  40 | loss    1280.36 | val acc  83.30 ce 0.262 | cross p<-z  23.5 y<-zd  15.8 | [diag] target acc  68.88 | 0.5s
+ep  41 | loss    1116.17 | val acc  84.21 ce 0.259 | cross p<-z  21.2 y<-zd  12.1 | [diag] target acc  74.06 | 0.5s
+ep  42 | loss    1110.11 | val acc  83.97 ce 0.290 | cross p<-z  24.9 y<-zd  16.1 | [diag] target acc  73.20 | 0.5s
+ep  43 | loss    1009.12 | val acc  83.74 ce 0.277 | cross p<-z  24.2 y<-zd  17.0 | [diag] target acc  69.16 | 0.5s
+ep  44 | loss    1030.37 | val acc  86.43 ce 0.276 | cross p<-z  21.6 y<-zd  16.5 | [diag] target acc  74.06 | 0.5s
+ep  45 | loss    1037.30 | val acc  86.43 ce 0.234 | cross p<-z  24.6 y<-zd  17.4 | [diag] target acc  71.76 | 0.5s
+ep  46 | loss     925.17 | val acc  83.06 ce 0.267 | cross p<-z  24.2 y<-zd  16.6 | [diag] target acc  74.06 | 0.5s
+ep  47 | loss    1013.81 | val acc  84.95 ce 0.239 | cross p<-z  20.1 y<-zd  15.1 | [diag] target acc  74.06 | 0.5s
+ep  48 | loss    1523.93 | val acc  85.87 ce 0.231 | cross p<-z  21.2 y<-zd  17.8 | [diag] target acc  71.18 | 0.5s
+ep  49 | loss    1089.72 | val acc  86.91 ce 0.225 | cross p<-z  23.5 y<-zd  17.8 | [diag] target acc  77.52 | 0.5s
+ep  50 | loss     913.06 | val acc  83.74 ce 0.279 | cross p<-z  23.1 y<-zd  17.4 | [diag] target acc  73.20 | 0.5s
+ep  51 | loss     873.66 | val acc  85.41 ce 0.242 | cross p<-z  23.1 y<-zd  17.3 | [diag] target acc  75.22 | 0.5s
+ep  52 | loss     833.60 | val acc  86.00 ce 0.249 | cross p<-z  21.2 y<-zd  16.2 | [diag] target acc  75.22 | 0.5s
+ep  53 | loss     869.38 | val acc  86.77 ce 0.214 | cross p<-z  22.0 y<-zd  15.9 | [diag] target acc  73.49 | 0.5s
+ep  54 | loss     813.66 | val acc  84.22 ce 0.273 | cross p<-z  21.2 y<-zd  14.7 | [diag] target acc  77.23 | 0.5s
+ep  55 | loss     714.23 | val acc  87.56 ce 0.232 | cross p<-z  23.4 y<-zd  17.0 | [diag] target acc  74.93 | 0.5s
+ep  56 | loss     845.25 | val acc  87.22 ce 0.236 | cross p<-z  21.2 y<-zd  16.2 | [diag] target acc  74.35 | 0.5s
+ep  57 | loss     766.87 | val acc  86.79 ce 0.222 | cross p<-z  22.8 y<-zd  16.2 | [diag] target acc  76.08 | 0.5s
+ep  58 | loss     743.85 | val acc  85.20 ce 0.270 | cross p<-z  22.4 y<-zd  12.5 | [diag] target acc  73.49 | 0.6s
+ep  59 | loss     634.35 | val acc  88.52 ce 0.206 | cross p<-z  22.0 y<-zd  18.0 | [diag] target acc  73.49 | 0.5s
+ep  60 | loss     796.29 | val acc  86.42 ce 0.240 | cross p<-z  21.2 y<-zd  16.2 | [diag] target acc  76.37 | 0.5s
+ep  61 | loss     623.33 | val acc  88.44 ce 0.204 | cross p<-z  22.0 y<-zd  16.5 | [diag] target acc  70.32 | 0.8s
+ep  62 | loss     595.64 | val acc  86.48 ce 0.237 | cross p<-z  22.0 y<-zd  16.2 | [diag] target acc  78.39 | 0.8s
+ep  63 | loss     587.85 | val acc  86.42 ce 0.219 | cross p<-z  22.0 y<-zd  18.7 | [diag] target acc  73.78 | 0.7s
+ep  64 | loss     515.93 | val acc  87.64 ce 0.211 | cross p<-z  22.4 y<-zd  18.9 | [diag] target acc  80.98 | 0.8s
+ep  65 | loss     612.39 | val acc  85.97 ce 0.271 | cross p<-z  22.0 y<-zd  17.7 | [diag] target acc  69.45 | 0.6s
+ep  66 | loss     479.62 | val acc  87.22 ce 0.233 | cross p<-z  22.4 y<-zd  21.7 | [diag] target acc  78.39 | 0.5s
+ep  67 | loss     521.68 | val acc  83.85 ce 0.338 | cross p<-z  21.2 y<-zd  19.0 | [diag] target acc  76.95 | 0.5s
+ep  68 | loss     504.51 | val acc  83.63 ce 0.385 | cross p<-z  24.6 y<-zd  18.1 | [diag] target acc  76.66 | 0.5s
+ep  69 | loss     443.36 | val acc  85.83 ce 0.286 | cross p<-z  24.6 y<-zd  17.0 | [diag] target acc  68.88 | 0.5s
+ep  70 | loss     438.27 | val acc  84.35 ce 0.305 | cross p<-z  23.2 y<-zd  20.1 | [diag] target acc  62.54 | 0.5s
+ep  71 | loss     492.53 | val acc  89.33 ce 0.182 | cross p<-z  22.0 y<-zd  18.5 | [diag] target acc  75.22 | 0.5s
+ep  72 | loss     439.19 | val acc  86.03 ce 0.244 | cross p<-z  23.6 y<-zd  18.2 | [diag] target acc  78.39 | 0.5s
+ep  73 | loss     468.07 | val acc  86.02 ce 0.382 | cross p<-z  22.4 y<-zd  17.0 | [diag] target acc  57.64 | 0.5s
+ep  74 | loss     575.37 | val acc  76.03 ce 0.634 | cross p<-z  22.8 y<-zd  17.4 | [diag] target acc  53.89 | 0.5s
+ep  75 | loss     617.17 | val acc  85.26 ce 0.307 | cross p<-z  21.2 y<-zd  19.4 | [diag] target acc  71.18 | 0.5s
+ep  76 | loss     496.37 | val acc  85.79 ce 0.303 | cross p<-z  22.4 y<-zd  18.9 | [diag] target acc  71.76 | 0.5s
+ep  77 | loss     554.31 | val acc  75.41 ce 0.798 | cross p<-z  21.3 y<-zd  18.2 | [diag] target acc  53.31 | 0.5s
+ep  78 | loss     650.33 | val acc  77.29 ce 0.618 | cross p<-z  22.8 y<-zd  16.2 | [diag] target acc  60.81 | 0.5s
+ep  79 | loss     649.43 | val acc  80.73 ce 0.353 | cross p<-z  24.5 y<-zd  17.7 | [diag] target acc  65.42 | 0.5s
+ep  80 | loss     571.51 | val acc  80.76 ce 0.343 | cross p<-z  24.9 y<-zd  16.3 | [diag] target acc  68.30 | 0.6s
+ep  81 | loss     474.55 | val acc  81.93 ce 0.301 | cross p<-z  24.1 y<-zd  17.0 | [diag] target acc  69.74 | 0.5s
+ep  82 | loss     464.30 | val acc  86.07 ce 0.270 | cross p<-z  23.5 y<-zd  13.8 | [diag] target acc  79.54 | 0.6s
+ep  83 | loss     392.00 | val acc  86.42 ce 0.232 | cross p<-z  23.3 y<-zd  17.4 | [diag] target acc  66.57 | 0.5s
+ep  84 | loss     503.99 | val acc  86.81 ce 0.226 | cross p<-z  21.9 y<-zd  15.4 | [diag] target acc  72.33 | 0.5s
+ep  85 | loss     385.18 | val acc  87.32 ce 0.206 | cross p<-z  21.0 y<-zd  15.4 | [diag] target acc  72.33 | 0.5s
+ep  86 | loss     387.74 | val acc  87.22 ce 0.210 | cross p<-z  23.9 y<-zd  17.2 | [diag] target acc  75.50 | 0.5s
+ep  87 | loss     355.89 | val acc  89.71 ce 0.167 | cross p<-z  19.9 y<-zd  18.5 | [diag] target acc  68.59 | 0.5s
+ep  88 | loss     368.18 | val acc  88.89 ce 0.202 | cross p<-z  18.7 y<-zd  19.0 | [diag] target acc  72.62 | 0.5s
+ep  89 | loss     274.33 | val acc  87.59 ce 0.193 | cross p<-z  19.5 y<-zd  19.3 | [diag] target acc  69.16 | 0.5s
+ep  90 | loss     377.20 | val acc  88.05 ce 0.188 | cross p<-z  23.5 y<-zd  18.6 | [diag] target acc  74.35 | 0.5s
+ep  91 | loss     281.67 | val acc  89.26 ce 0.189 | cross p<-z  24.7 y<-zd  17.4 | [diag] target acc  77.52 | 0.5s
+ep  92 | loss     406.34 | val acc  89.88 ce 0.204 | cross p<-z  22.3 y<-zd  17.5 | [diag] target acc  70.61 | 0.5s
+ep  93 | loss     323.14 | val acc  87.68 ce 0.240 | cross p<-z  19.1 y<-zd  19.0 | [diag] target acc  80.98 | 0.5s
+ep  94 | loss     317.27 | val acc  94.74 ce 0.185 | cross p<-z  24.2 y<-zd  17.9 | [diag] target acc  75.79 | 0.5s
+ep  95 | loss     317.22 | val acc  89.31 ce 0.198 | cross p<-z  23.5 y<-zd  15.9 | [diag] target acc  74.35 | 0.5s
+ep  96 | loss     295.72 | val acc  86.89 ce 0.241 | cross p<-z  23.8 y<-zd  16.3 | [diag] target acc  75.50 | 0.5s
+ep  97 | loss     416.45 | val acc  90.55 ce 0.178 | cross p<-z  23.1 y<-zd  16.6 | [diag] target acc  72.62 | 0.5s
+ep  98 | loss     328.81 | val acc  88.48 ce 0.200 | cross p<-z  24.7 y<-zd  17.1 | [diag] target acc  73.49 | 0.5s
+ep  99 | loss     363.21 | val acc  95.48 ce 0.145 | cross p<-z  25.5 y<-zd  17.5 | [diag] target acc  74.06 | 0.5s
+ep 100 | loss     239.93 | val acc  91.70 ce 0.162 | cross p<-z  21.5 y<-zd  20.2 | [diag] target acc  74.35 | 0.5s
+ep 101 | loss     311.73 | val acc  92.10 ce 0.156 | cross p<-z  23.5 y<-zd  14.6 | [diag] target acc  74.06 | 0.5s
+ep 102 | loss     236.62 | val acc  91.76 ce 0.151 | cross p<-z  23.6 y<-zd  17.0 | [diag] target acc  74.35 | 0.6s
+ep 103 | loss     318.91 | val acc  89.26 ce 0.205 | cross p<-z  25.5 y<-zd  15.1 | [diag] target acc  74.64 | 0.5s
+ep 104 | loss     309.47 | val acc  92.54 ce 0.163 | cross p<-z  25.5 y<-zd  16.1 | [diag] target acc  78.67 | 0.6s
+ep 105 | loss     423.61 | val acc  90.45 ce 0.172 | cross p<-z  21.1 y<-zd  15.2 | [diag] target acc  75.22 | 0.5s
+ep 106 | loss     367.45 | val acc  91.65 ce 0.172 | cross p<-z  25.5 y<-zd  13.6 | [diag] target acc  73.49 | 0.5s
+ep 107 | loss     421.50 | val acc  90.12 ce 0.169 | cross p<-z  24.1 y<-zd  17.8 | [diag] target acc  74.64 | 0.5s
+ep 108 | loss     620.80 | val acc  95.46 ce 0.172 | cross p<-z  25.5 y<-zd  17.5 | [diag] target acc  71.18 | 0.6s
+ep 109 | loss     471.14 | val acc  91.25 ce 0.187 | cross p<-z  27.2 y<-zd  13.9 | [diag] target acc  71.47 | 0.5s
+ep 110 | loss     398.53 | val acc  88.85 ce 0.190 | cross p<-z  25.1 y<-zd  14.7 | [diag] target acc  76.95 | 0.5s
+ep 111 | loss     445.19 | val acc  90.05 ce 0.191 | cross p<-z  20.7 y<-zd  15.9 | [diag] target acc  68.01 | 0.5s
+ep 112 | loss     260.74 | val acc  91.32 ce 0.200 | cross p<-z  26.0 y<-zd  13.8 | [diag] target acc  75.79 | 0.5s
+ep 113 | loss     278.10 | val acc  92.03 ce 0.192 | cross p<-z  26.4 y<-zd  15.9 | [diag] target acc  74.06 | 0.5s
+ep 114 | loss     241.47 | val acc  90.94 ce 0.169 | cross p<-z  26.8 y<-zd  15.9 | [diag] target acc  73.78 | 0.5s
+ep 115 | loss     188.24 | val acc  89.32 ce 0.170 | cross p<-z  29.1 y<-zd  15.6 | [diag] target acc  76.37 | 0.5s
+ep 116 | loss     284.85 | val acc  92.07 ce 0.158 | cross p<-z  29.2 y<-zd  14.3 | [diag] target acc  74.93 | 0.5s
+ep 117 | loss     206.75 | val acc  92.57 ce 0.147 | cross p<-z  29.2 y<-zd  15.9 | [diag] target acc  76.37 | 0.5s
+ep 118 | loss     238.57 | val acc  92.93 ce 0.149 | cross p<-z  28.8 y<-zd  15.1 | [diag] target acc  76.95 | 0.5s
+ep 119 | loss     196.72 | val acc  90.87 ce 0.233 | cross p<-z  28.8 y<-zd  13.8 | [diag] target acc  74.06 | 0.5s
+ep 120 | loss     187.73 | val acc  92.10 ce 0.164 | cross p<-z  28.8 y<-zd  15.9 | [diag] target acc  75.79 | 0.5s
+ep 121 | loss     262.38 | val acc  94.25 ce 0.158 | cross p<-z  28.7 y<-zd  14.0 | [diag] target acc  77.81 | 0.5s
+ep 122 | loss     217.03 | val acc  91.68 ce 0.163 | cross p<-z  29.5 y<-zd  13.9 | [diag] target acc  74.93 | 0.5s
+ep 123 | loss     211.58 | val acc  87.11 ce 0.230 | cross p<-z  25.1 y<-zd  15.6 | [diag] target acc  73.49 | 0.5s
+ep 124 | loss     173.72 | val acc  91.77 ce 0.182 | cross p<-z  29.9 y<-zd  12.2 | [diag] target acc  81.27 | 0.6s
+ep 125 | loss     164.27 | val acc  91.25 ce 0.174 | cross p<-z  25.1 y<-zd  13.1 | [diag] target acc  76.08 | 0.6s
+ep 126 | loss     250.30 | val acc  91.88 ce 0.186 | cross p<-z  23.2 y<-zd  11.1 | [diag] target acc  76.37 | 0.6s
+ep 127 | loss     195.78 | val acc  88.83 ce 0.191 | cross p<-z  25.9 y<-zd  11.0 | [diag] target acc  80.12 | 0.5s
+ep 128 | loss     247.63 | val acc  90.87 ce 0.198 | cross p<-z  24.7 y<-zd  11.8 | [diag] target acc  73.78 | 0.5s
+ep 129 | loss     180.44 | val acc  91.37 ce 0.181 | cross p<-z  24.4 y<-zd  14.5 | [diag] target acc  75.22 | 0.5s
+ep 130 | loss     324.70 | val acc  92.06 ce 0.199 | cross p<-z  25.9 y<-zd  13.6 | [diag] target acc  70.89 | 0.5s
+ep 131 | loss     327.38 | val acc  92.13 ce 0.174 | cross p<-z  24.4 y<-zd  11.8 | [diag] target acc  76.95 | 0.5s
+ep 132 | loss     228.79 | val acc  92.48 ce 0.167 | cross p<-z  25.2 y<-zd  14.1 | [diag] target acc  76.37 | 0.5s
+ep 133 | loss     215.60 | val acc  88.75 ce 0.232 | cross p<-z  26.4 y<-zd  11.9 | [diag] target acc  74.64 | 0.5s
+ep 134 | loss     297.07 | val acc  88.37 ce 0.250 | cross p<-z  27.6 y<-zd  14.1 | [diag] target acc  77.23 | 0.5s
+ep 135 | loss     212.40 | val acc  87.20 ce 0.274 | cross p<-z  24.5 y<-zd  11.7 | [diag] target acc  80.12 | 0.5s
+ep 136 | loss     255.13 | val acc  88.18 ce 0.227 | cross p<-z  26.3 y<-zd  13.4 | [diag] target acc  75.79 | 0.5s
+ep 137 | loss     275.88 | val acc  90.91 ce 0.191 | cross p<-z  26.3 y<-zd  15.9 | [diag] target acc  73.49 | 0.5s
+ep 138 | loss     216.69 | val acc  95.22 ce 0.286 | cross p<-z  29.9 y<-zd  15.2 | [diag] target acc  80.69 | 0.5s
+ep 139 | loss     191.99 | val acc  87.62 ce 0.327 | cross p<-z  28.4 y<-zd  13.8 | [diag] target acc  73.78 | 0.5s
+ep 140 | loss     202.25 | val acc  91.33 ce 0.220 | cross p<-z  28.0 y<-zd  15.9 | [diag] target acc  68.30 | 0.5s
+ep 141 | loss     169.61 | val acc  92.07 ce 0.199 | cross p<-z  27.7 y<-zd  13.0 | [diag] target acc  70.03 | 0.5s
+ep 142 | loss     138.02 | val acc  91.34 ce 0.199 | cross p<-z  26.1 y<-zd  13.0 | [diag] target acc  65.42 | 0.5s
+ep 143 | loss     157.15 | val acc  93.00 ce 0.212 | cross p<-z  26.8 y<-zd  14.7 | [diag] target acc  71.47 | 0.5s
+ep 144 | loss     110.99 | val acc  90.52 ce 0.182 | cross p<-z  27.1 y<-zd  14.2 | [diag] target acc  72.62 | 0.6s
+ep 145 | loss     149.22 | val acc  90.91 ce 0.206 | cross p<-z  28.0 y<-zd  15.1 | [diag] target acc  68.59 | 0.6s
+ep 146 | loss     140.74 | val acc  92.11 ce 0.179 | cross p<-z  28.7 y<-zd  14.3 | [diag] target acc  73.78 | 0.6s
+ep 147 | loss     114.16 | val acc  90.84 ce 0.204 | cross p<-z  26.8 y<-zd  13.4 | [diag] target acc  68.59 | 0.6s
+ep 148 | loss     121.44 | val acc  92.10 ce 0.166 | cross p<-z  27.2 y<-zd  12.7 | [diag] target acc  70.61 | 0.5s
+ep 149 | loss     149.40 | val acc  92.56 ce 0.210 | cross p<-z  25.1 y<-zd  13.8 | [diag] target acc  74.06 | 0.5s
+ep 150 | loss     150.11 | val acc  90.07 ce 0.221 | cross p<-z  29.2 y<-zd  14.6 | [diag] target acc  65.99 | 0.5s
+
+DONE ie_off target0 seed0 | selected epoch 99 | target acc 74.06 macroF1 75.18 wF1 73.93 | train 90s | -> /content/p3/code/stage3/runs_p3/ucihar/ie_off/target0/seed0
+probe person<-z  : {'majority_baseline': 27.091633466135455, 'linear': 56.573705179282875, 'mlp': 62.54980079681275}
+probe activity<-zd: {'majority_baseline': 18.725099601593627, 'linear': 76.09561752988047, 'mlp': 76.89243027888446}

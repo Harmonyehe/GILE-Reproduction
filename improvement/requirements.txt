@@ -1,0 +1,8 @@
+# Person 3 improvement code (GILE, UCI HAR). Versions actually used:
+#   GPU experiments: Google Colab, Tesla T4, Python 3.13.16, torch 2.14.1+cu130, numpy 2.4.6 (Colab defaults)
+#   CPU tests/analysis: Python 3.10.22, torch 2.2.2+cpu, numpy 1.26.4, scipy 1.15.3, scikit-learn 1.7.2
+# Bit-exact reproduction of the reported numbers requires the GPU environment above (cuDNN deterministic mode).
+torch>=2.2
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3

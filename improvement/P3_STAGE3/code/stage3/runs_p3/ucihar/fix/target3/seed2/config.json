@@ -1,0 +1,160 @@
+{
+  "arm": "fix",
+  "target": "3",
+  "seed": 2,
+  "epochs": 150,
+  "lr": 0.0011,
+  "val_frac": 0.2,
+  "batch_size": 64,
+  "beta_d": 1.0,
+  "beta_y": 1.0,
+  "fake": false,
+  "fake_n": 200,
+  "out_root": "runs_p3",
+  "no_probe": false,
+  "no_ckpt": false,
+  "no_last_ckpt": true,
+  "overwrite": false,
+  "stop_after_epoch": 0,
+  "allow_cross_env_resume": false,
+  "no_resume": false,
+  "stage": 3,
+  "layout_fix": true,
+  "augmentation": false,
+  "layout_fixed_encoders": [
+    "qzd",
+    "qzy"
+  ],
+  "augmentation_params": null,
+  "batching": "person-sequential (stage 1)",
+  "initial_parameter_hash": "76d93dc7ae83e5a6",
+  "source_persons": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "split": "per-activity contiguous tail, overlap-purged",
+  "split_stats": {
+    "0": {
+      "n": 347,
+      "n_with_overlap_successor": 314,
+      "n_successor_is_next_index": 314,
+      "n_train": 271,
+      "n_val": 70,
+      "n_purged": 6,
+      "train_val_overlap_pairs_after_purge": 0,
+      "train_val_exact_duplicates": 0,
+      "train_class_counts": {
+        "4": 41,
+        "3": 37,
+        "5": 39,
+        "0": 75,
+        "2": 38,
+        "1": 41
+      },
+      "val_class_counts": {
+        "4": 11,
+        "3": 9,
+        "5": 10,
+        "0": 19,
+        "1": 11,
+        "2": 10
+      }
+    },
+    "1": {
+      "n": 302,
+      "n_with_overlap_successor": 274,
+      "n_successor_is_next_index": 274,
+      "n_train": 235,
+      "n_val": 61,
+      "n_purged": 6,
+      "train_val_overlap_pairs_after_purge": 0,
+      "train_val_exact_duplicates": 0,
+      "train_class_counts": {
+        "4": 42,
+        "3": 36,
+        "5": 37,
+        "0": 46,
+        "2": 37,
+        "1": 37
+      },
+      "val_class_counts": {
+        "4": 11,
+        "3": 9,
+        "5": 10,
+        "0": 12,
+        "2": 9,
+        "1": 10
+      }
+    },
+    "2": {
+      "n": 341,
+      "n_with_overlap_successor": 312,
+      "n_successor_is_next_index": 312,
+      "n_train": 267,
+      "n_val": 68,
+      "n_purged": 6,
+      "train_val_overlap_pairs_after_purge": 0,
+      "train_val_exact_duplicates": 0,
+      "train_class_counts": {
+        "4": 48,
+        "3": 41,
+        "5": 49,
+        "0": 45,
+        "2": 38,
+        "1": 46
+      },
+      "val_class_counts": {
+        "4": 12,
+        "3": 10,
+        "5": 12,
+        "0": 12,
+        "2": 10,
+        "1": 12
+      }
+    },
+    "4": {
+      "n": 302,
+      "n_with_overlap_successor": 274,
+      "n_successor_is_next_index": 274,
+      "n_train": 237,
+      "n_val": 59,
+      "n_purged": 6,
+      "train_val_overlap_pairs_after_purge": 0,
+      "train_val_exact_duplicates": 0,
+      "train_class_counts": {
+        "4": 44,
+        "3": 34,
+        "5": 41,
+        "0": 44,
+        "2": 37,
+        "1": 37
+      },
+      "val_class_counts": {
+        "4": 11,
+        "3": 9,
+        "5": 10,
+        "0": 11,
+        "2": 9,
+        "1": 9
+      }
+    }
+  },
+  "env": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "numpy": "2.4.6",
+    "device": "cuda:0",
+    "gpu": "Tesla T4",
+    "cudnn_deterministic": true,
+    "code_sha256_16": {
+      "stage3/run_stage3.py": "0f4414caa2fb7bdb",
+      "stage3/p3_variants.py": "1d52bfffe11fa1a2",
+      "model_GILE_ucihar.py": "e0729904ceb905f1",
+      "data_preprocess_ucihar.py": "5c81526c9c126370"
+    }
+  },
+  "run_dir": "/content/p3/code/stage3/runs_p3/ucihar/fix/target3/seed2",
+  "started_unix": 1794857302.3109133
+}

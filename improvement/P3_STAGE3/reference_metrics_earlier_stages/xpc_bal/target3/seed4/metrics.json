@@ -1,0 +1,276 @@
+{
+  "variant": "xpc_bal",
+  "target": "3",
+  "seed": 4,
+  "epochs": 150,
+  "stage": 2,
+  "lam": 6012.3811770276325,
+  "tau": 0.1,
+  "runner": "XPCB_TRANSFER_PACKAGE resumable run_stage2.py",
+  "resume": {
+    "resumed_after_epoch": null,
+    "note": null,
+    "environment": {
+      "device": "cuda",
+      "gpu": "Tesla T4",
+      "torch": "2.14.1+cu130"
+    }
+  },
+  "selection": {
+    "criterion": "max mean source-val accuracy, tie -> min source-val CE_y",
+    "selected_epoch": 146,
+    "source_val_acc": 95.15738498789347,
+    "source_val_ce_y": 0.3384567985776812
+  },
+  "target_at_selected_epoch": {
+    "n": 317,
+    "accuracy": 80.7570977917981,
+    "macro_f1": 80.09940842857543,
+    "weighted_f1": 80.23160926578203,
+    "confusion_matrix": [
+      [
+        59,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        13,
+        29,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        21,
+        35,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        54
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.7564102564102564,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.855072463768116,
+        "support": 60.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.5576923076923077,
+        "f1-score": 0.7160493827160493,
+        "support": 52.0
+      },
+      "2": {
+        "precision": 0.78,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.8210526315789474,
+        "support": 45.0
+      },
+      "3": {
+        "precision": 0.6557377049180327,
+        "recall": 0.8,
+        "f1-score": 0.7207207207207207,
+        "support": 50.0
+      },
+      "4": {
+        "precision": 0.7777777777777778,
+        "recall": 0.625,
+        "f1-score": 0.693069306930693,
+        "support": 56.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "accuracy": 0.807570977917981,
+      "macro avg": {
+        "precision": 0.8283209565176778,
+        "recall": 0.805448717948718,
+        "f1-score": 0.8009940842857542,
+        "support": 317.0
+      },
+      "weighted avg": {
+        "precision": 0.8291074327636359,
+        "recall": 0.807570977917981,
+        "f1-score": 0.8023160926578202,
+        "support": 317.0
+      }
+    }
+  },
+  "target_at_last_epoch": {
+    "n": 317,
+    "accuracy": 82.01892744479495,
+    "macro_f1": 81.54773833391279,
+    "weighted_f1": 81.67481794004703,
+    "confusion_matrix": [
+      [
+        59,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        33,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        41,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22,
+        34,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        54
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.7866666666666666,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.8740740740740741,
+        "support": 60.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.6346153846153846,
+        "f1-score": 0.7764705882352941,
+        "support": 52.0
+      },
+      "2": {
+        "precision": 0.7959183673469388,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.8297872340425532,
+        "support": 45.0
+      },
+      "3": {
+        "precision": 0.6507936507936508,
+        "recall": 0.82,
+        "f1-score": 0.7256637168141593,
+        "support": 50.0
+      },
+      "4": {
+        "precision": 0.7906976744186046,
+        "recall": 0.6071428571428571,
+        "f1-score": 0.6868686868686869,
+        "support": 56.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "accuracy": 0.8201892744479495,
+      "macro avg": {
+        "precision": 0.8373460598709768,
+        "recall": 0.8186263736263736,
+        "f1-score": 0.8154773833391279,
+        "support": 317.0
+      },
+      "weighted avg": {
+        "precision": 0.8385964632105256,
+        "recall": 0.8201892744479495,
+        "f1-score": 0.8167481794004703,
+        "support": 317.0
+      }
+    }
+  },
+  "DIAGNOSTIC_ONLY_leaky_best_target_epoch": {
+    "warning": "epoch chosen by TARGET accuracy (released protocol) - for comparison with the paper only",
+    "epoch": 51,
+    "accuracy": 89.27444794952682,
+    "macro_f1": 87.96225205300385,
+    "weighted_f1": 88.47014681204686
+  },
+  "final_epoch_cross_accuracy": {
+    "person_from_z_val": 20.72352030559376,
+    "activity_from_zd_val": 24.32103280322966
+  },
+  "probes_selected_epoch": {
+    "person_from_activity_code_z": {
+      "majority_baseline": 27.131782945736433,
+      "linear": 60.46511627906976,
+      "mlp": 69.76744186046511
+    },
+    "activity_from_person_code_zd": {
+      "majority_baseline": 20.930232558139537,
+      "linear": 71.31782945736434,
+      "mlp": 75.5813953488372
+    },
+    "person_from_person_code_zd": {
+      "majority_baseline": 27.131782945736433,
+      "linear": 76.74418604651163,
+      "mlp": 77.13178294573643
+    },
+    "note": "fit on source-train codes (posterior means, selected epoch), scored on source-val codes",
+    "n_probe_train": 1010,
+    "n_probe_test": 258,
+    "leak_check": {
+      "identical_windows_train_test": 0,
+      "target_windows_used": 0
+    }
+  },
+  "train_seconds": 123.22809171676636,
+  "mean_epoch_seconds": 0.7358899148305257
+}

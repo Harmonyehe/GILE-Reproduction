@@ -1,0 +1,277 @@
+{
+  "variant": "aug",
+  "arm": "aug",
+  "layout_fix": false,
+  "augmentation": true,
+  "target": "3",
+  "seed": 2,
+  "epochs": 150,
+  "stage": 3,
+  "runner": "P3_STAGE3 run_stage3.py",
+  "resume": {
+    "resumed_after_epoch": null,
+    "note": null,
+    "environment": {
+      "device": "cuda",
+      "gpu": "Tesla T4",
+      "torch": "2.14.1+cu130"
+    }
+  },
+  "selection": {
+    "criterion": "max mean source-val accuracy, tie -> min source-val CE_y",
+    "selected_epoch": 141,
+    "source_val_acc": 91.86531447811133,
+    "source_val_ce_y": 0.3186289966106415
+  },
+  "target_at_selected_epoch": {
+    "n": 317,
+    "accuracy": 89.90536277602523,
+    "macro_f1": 89.58040052050563,
+    "weighted_f1": 89.79968365906902,
+    "confusion_matrix": [
+      [
+        59,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        39,
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        2,
+        37,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        45,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        51,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        54
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8194444444444444,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.8939393939393939,
+        "support": 60.0
+      },
+      "1": {
+        "precision": 0.9512195121951219,
+        "recall": 0.75,
+        "f1-score": 0.8387096774193549,
+        "support": 52.0
+      },
+      "2": {
+        "precision": 0.8409090909090909,
+        "recall": 0.8222222222222222,
+        "f1-score": 0.8314606741573034,
+        "support": 45.0
+      },
+      "3": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 50.0
+      },
+      "4": {
+        "precision": 0.9107142857142857,
+        "recall": 0.9107142857142857,
+        "f1-score": 0.9107142857142857,
+        "support": 56.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "accuracy": 0.8990536277602523,
+      "macro avg": {
+        "precision": 0.9037145555438238,
+        "recall": 0.8943783068783069,
+        "f1-score": 0.8958040052050563,
+        "support": 317.0
+      },
+      "weighted avg": {
+        "precision": 0.9036939759991234,
+        "recall": 0.8990536277602523,
+        "f1-score": 0.8979968365906902,
+        "support": 317.0
+      }
+    }
+  },
+  "target_at_last_epoch": {
+    "n": 317,
+    "accuracy": 85.48895899053628,
+    "macro_f1": 84.32790518466908,
+    "weighted_f1": 84.89524184666202,
+    "confusion_matrix": [
+      [
+        58,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        48,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        9,
+        12,
+        24,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        39,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        8,
+        48,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        54
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8169014084507042,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.8854961832061069,
+        "support": 60.0
+      },
+      "1": {
+        "precision": 0.7868852459016393,
+        "recall": 0.9230769230769231,
+        "f1-score": 0.8495575221238938,
+        "support": 52.0
+      },
+      "2": {
+        "precision": 0.96,
+        "recall": 0.5333333333333333,
+        "f1-score": 0.6857142857142857,
+        "support": 45.0
+      },
+      "3": {
+        "precision": 0.8297872340425532,
+        "recall": 0.78,
+        "f1-score": 0.8041237113402062,
+        "support": 50.0
+      },
+      "4": {
+        "precision": 0.8135593220338984,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8347826086956521,
+        "support": 56.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 54.0
+      },
+      "accuracy": 0.8548895899053628,
+      "macro avg": {
+        "precision": 0.8678555350714658,
+        "recall": 0.8433699633699633,
+        "f1-score": 0.8432790518466907,
+        "support": 317.0
+      },
+      "weighted avg": {
+        "precision": 0.8649236625550584,
+        "recall": 0.8548895899053628,
+        "f1-score": 0.8489524184666202,
+        "support": 317.0
+      }
+    }
+  },
+  "DIAGNOSTIC_ONLY_leaky_best_target_epoch": {
+    "warning": "epoch chosen by TARGET accuracy (released protocol) - for comparison with the paper only",
+    "epoch": 148,
+    "accuracy": 92.11356466876973,
+    "macro_f1": 91.78221389824076,
+    "weighted_f1": 92.0652510361962
+  },
+  "final_epoch_cross_accuracy": {
+    "person_from_z_val": 31.96331380565563,
+    "activity_from_zd_val": 24.475557519479036
+  },
+  "probes_selected_epoch": {
+    "person_from_activity_code_z": {
+      "majority_baseline": 27.131782945736433,
+      "linear": 45.73643410852713,
+      "mlp": 64.34108527131784
+    },
+    "activity_from_person_code_zd": {
+      "majority_baseline": 20.930232558139537,
+      "linear": 70.93023255813954,
+      "mlp": 74.8062015503876
+    },
+    "person_from_person_code_zd": {
+      "majority_baseline": 27.131782945736433,
+      "linear": 73.64341085271317,
+      "mlp": 72.86821705426357
+    },
+    "note": "fit on source-train codes (posterior means, selected epoch, NO augmentation), scored on source-val codes",
+    "n_probe_train": 1010,
+    "n_probe_test": 258,
+    "leak_check": {
+      "identical_windows_train_test": 0,
+      "target_windows_used": 0
+    }
+  },
+  "train_seconds": 282.4673602581024,
+  "mean_epoch_seconds": 1.563912313779195
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+# dataset (download with P3_STAGE3/tools/prepare_ucihar.py)
+P3_STAGE3/code/data/
+# model checkpoints are not versioned (kept in the author's local backup)
+*.pt
+# test scratch outputs
+P3_STAGE3/code/stage3/runs_tests/
+P3_STAGE3/code/stage3/runs_tests_resume/
+P3_STAGE3/code/stage2_ref/runs_tests/
+P3_STAGE3/code/stage3/runs_smoke/

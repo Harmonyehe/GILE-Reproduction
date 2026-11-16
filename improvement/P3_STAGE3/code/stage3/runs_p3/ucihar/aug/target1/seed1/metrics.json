@@ -1,0 +1,277 @@
+{
+  "variant": "aug",
+  "arm": "aug",
+  "layout_fix": false,
+  "augmentation": true,
+  "target": "1",
+  "seed": 1,
+  "epochs": 150,
+  "stage": 3,
+  "runner": "P3_STAGE3 run_stage3.py",
+  "resume": {
+    "resumed_after_epoch": null,
+    "note": null,
+    "environment": {
+      "device": "cuda",
+      "gpu": "Tesla T4",
+      "torch": "2.14.1+cu130"
+    }
+  },
+  "selection": {
+    "criterion": "max mean source-val accuracy, tie -> min source-val CE_y",
+    "selected_epoch": 88,
+    "source_val_acc": 92.69892702843849,
+    "source_val_ce_y": 0.20931176096200943
+  },
+  "target_at_selected_epoch": {
+    "n": 302,
+    "accuracy": 81.78807947019867,
+    "macro_f1": 77.18727888490285,
+    "weighted_f1": 78.15950558302734,
+    "confusion_matrix": [
+      [
+        58,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        43,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        5,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        41,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        54,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        48
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9508196721311475,
+        "recall": 0.9830508474576272,
+        "f1-score": 0.9666666666666667,
+        "support": 59.0
+      },
+      "1": {
+        "precision": 0.8958333333333334,
+        "recall": 0.8958333333333334,
+        "f1-score": 0.8958333333333334,
+        "support": 48.0
+      },
+      "2": {
+        "precision": 0.8666666666666667,
+        "recall": 0.8297872340425532,
+        "f1-score": 0.8478260869565217,
+        "support": 47.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 0.10869565217391304,
+        "f1-score": 0.19607843137254902,
+        "support": 46.0
+      },
+      "4": {
+        "precision": 0.5684210526315789,
+        "recall": 1.0,
+        "f1-score": 0.7248322147651006,
+        "support": 54.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 48.0
+      },
+      "accuracy": 0.8178807947019867,
+      "macro avg": {
+        "precision": 0.8802901207937878,
+        "recall": 0.8028945111679046,
+        "f1-score": 0.7718727888490285,
+        "support": 302.0
+      },
+      "weighted avg": {
+        "precision": 0.8759153338780672,
+        "recall": 0.8178807947019867,
+        "f1-score": 0.7815950558302733,
+        "support": 302.0
+      }
+    }
+  },
+  "target_at_last_epoch": {
+    "n": 302,
+    "accuracy": 76.82119205298014,
+    "macro_f1": 70.63286088760518,
+    "weighted_f1": 71.97617826581376,
+    "confusion_matrix": [
+      [
+        57,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        47,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        21,
+        23,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        43,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        54,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        48
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.95,
+        "recall": 0.9661016949152542,
+        "f1-score": 0.957983193277311,
+        "support": 59.0
+      },
+      "1": {
+        "precision": 0.6811594202898551,
+        "recall": 0.9791666666666666,
+        "f1-score": 0.8034188034188035,
+        "support": 48.0
+      },
+      "2": {
+        "precision": 0.92,
+        "recall": 0.48936170212765956,
+        "f1-score": 0.6388888888888888,
+        "support": 47.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 0.06521739130434782,
+        "f1-score": 0.12244897959183673,
+        "support": 46.0
+      },
+      "4": {
+        "precision": 0.5567010309278351,
+        "recall": 1.0,
+        "f1-score": 0.7152317880794702,
+        "support": 54.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 48.0
+      },
+      "accuracy": 0.7682119205298014,
+      "macro avg": {
+        "precision": 0.8513100752029484,
+        "recall": 0.7499745758356546,
+        "f1-score": 0.7063286088760518,
+        "support": 302.0
+      },
+      "weighted avg": {
+        "precision": 0.8478394299470733,
+        "recall": 0.7682119205298014,
+        "f1-score": 0.7197617826581376,
+        "support": 302.0
+      }
+    }
+  },
+  "DIAGNOSTIC_ONLY_leaky_best_target_epoch": {
+    "warning": "epoch chosen by TARGET accuracy (released protocol) - for comparison with the paper only",
+    "epoch": 82,
+    "accuracy": 85.43046357615894,
+    "macro_f1": 83.0088245368943,
+    "weighted_f1": 83.64843773649594
+  },
+  "final_epoch_cross_accuracy": {
+    "person_from_z_val": 24.3493922992926,
+    "activity_from_zd_val": 15.751179002674515
+  },
+  "probes_selected_epoch": {
+    "person_from_activity_code_z": {
+      "majority_baseline": 26.923076923076923,
+      "linear": 58.07692307692308,
+      "mlp": 62.30769230769231
+    },
+    "activity_from_person_code_zd": {
+      "majority_baseline": 20.76923076923077,
+      "linear": 61.92307692307693,
+      "mlp": 69.61538461538461
+    },
+    "person_from_person_code_zd": {
+      "majority_baseline": 26.923076923076923,
+      "linear": 66.92307692307692,
+      "mlp": 70.38461538461539
+    },
+    "note": "fit on source-train codes (posterior means, selected epoch, NO augmentation), scored on source-val codes",
+    "n_probe_train": 1023,
+    "n_probe_test": 260,
+    "leak_check": {
+      "identical_windows_train_test": 0,
+      "target_windows_used": 0
+    }
+  },
+  "train_seconds": 296.69774198532104,
+  "mean_epoch_seconds": 1.5551565329233805
+}

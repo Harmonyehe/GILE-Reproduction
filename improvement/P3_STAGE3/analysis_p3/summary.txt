@@ -1,0 +1,48 @@
+PRIMARY SEEDS (complete for all arms and targets): [0, 1, 2]
+runs found: ie_off=25, fix=15, aug=15, fix_aug=15, released=25, ie_on=25, ie_off_bal=25, xpc_bal=25
+runs outside the primary seeds (reported, not in the primary test): {'fix': [], 'aug': [], 'fix_aug': []}
+
+== ARM MEANS (primary seeds; target accuracy at source-val-selected epoch is PRIMARY) ==
+released   acc  78.75  mF1  77.17  wF1  77.28  last-ep acc  80.21  [leaky DIAG  87.01]  probe p<-z lin  52.94 mlp  65.93  sel.ep 123.9  sd(seeds) 4.21  95s/run
+ie_off     acc  79.17  mF1  77.86  wF1  77.97  last-ep acc  77.67  [leaky DIAG  87.06]  probe p<-z lin  52.93 mlp  65.91  sel.ep 120.9  sd(seeds) 2.27  85s/run
+ie_on      acc  76.58  mF1  75.18  wF1  74.81  last-ep acc  80.14  [leaky DIAG  88.31]  probe p<-z lin  54.52 mlp  61.37  sel.ep 121.1  sd(seeds) 2.69  87s/run
+ie_off_bal acc  76.37  mF1  74.91  wF1  74.63  last-ep acc  77.24  [leaky DIAG  86.97]  probe p<-z lin  54.83 mlp  65.18  sel.ep 117.4  sd(seeds) 2.86  102s/run
+xpc_bal    acc  77.93  mF1  76.78  wF1  76.39  last-ep acc  77.04  [leaky DIAG  85.64]  probe p<-z lin  54.08 mlp  65.66  sel.ep 106.9  sd(seeds) 3.06  122s/run
+fix        acc  87.63  mF1  86.63  wF1  86.49  last-ep acc  91.44  [leaky DIAG  95.84]  probe p<-z lin  53.58 mlp  63.10  sel.ep 126.7  sd(seeds) 5.52  250s/run
+aug        acc  83.16  mF1  81.81  wF1  81.97  last-ep acc  84.28  [leaky DIAG  90.74]  probe p<-z lin  52.15 mlp  62.06  sel.ep 109.5  sd(seeds) 4.19  270s/run
+fix_aug    acc  91.61  mF1  91.30  wF1  91.25  last-ep acc  91.89  [leaky DIAG  96.20]  probe p<-z lin  47.39 mlp  59.31  sel.ep 133.3  sd(seeds) 2.17  270s/run
+
+== PER TARGET accuracy (mean over primary seeds) ==
+target   ie_off      fix      aug  fix_aug
+  0       78.58    88.28    81.36    90.39
+  1       69.54    82.34    80.91    89.74
+  2       91.59    98.34    91.20    97.85
+  3       80.76    86.86    82.97    94.43
+  4       75.39    82.34    79.36    85.65
+
+== PREDECLARED CONTRASTS vs ie_off (target-level paired, n=5, df=4) ==
+fix      STRONG IMPROVEMENT     dAcc  +8.46 [+4.99, +11.93] up 5/5 p 0.002 Holm 0.007 | dMacroF1 +8.76 [+6.39, +11.13] | dWF1 +8.52 | dProbe lin +0.65 mlp -2.81
+         per-target dAcc: +9.70 +12.80 +6.74 +6.10 +6.95
+aug      IMPROVEMENT SUPPORTED  dAcc  +3.99 [-1.50, +9.48] up 4/5 p 0.114 Holm 0.114 | dMacroF1 +3.95 [-1.82, +9.72] | dWF1 +3.99 | dProbe lin -0.78 mlp -3.85
+         per-target dAcc: +2.79 +11.37 -0.39 +2.21 +3.97
+fix_aug  STRONG IMPROVEMENT     dAcc +12.44 [+6.08, +18.80] up 5/5 p 0.006 Holm 0.011 | dMacroF1 +13.44 [+5.87, +21.00] | dWF1 +13.28 | dProbe lin -5.55 mlp -6.60
+         per-target dAcc: +11.82 +20.20 +6.26 +13.67 +10.26
+
+== FACTORIAL EFFECTS (descriptive) ==
+acc       layout_main   +8.46 [+6.22, +10.69] positive for 5/5 targets
+acc       aug_main      +3.98 [-0.49, +8.46] positive for 4/5 targets
+acc       interaction   -0.01 [-4.19, +4.18] positive for 1/5 targets
+macro_f1  layout_main   +9.13 [+6.66, +11.60] positive for 5/5 targets
+macro_f1  aug_main      +4.31 [-1.31, +9.93] positive for 4/5 targets
+macro_f1  interaction   +0.73 [-2.96, +4.41] positive for 2/5 targets
+probe_mlp layout_main   -2.78 [-5.45, -0.11] positive for 1/5 targets
+probe_mlp aug_main      -3.82 [-8.82, +1.17] positive for 1/5 targets
+probe_mlp interaction   +0.06 [-4.29, +4.41] positive for 3/5 targets
+
+== CONTEXT: accuracy vs earlier arms (same seeds; not part of the predeclared rule) ==
+fix-released        +8.88 [+5.33, +12.43] up 5/5
+fix-xpc_bal         +9.70 [-1.09, +20.50] up 4/5
+fix-ie_on          +11.05 [+2.19, +19.91] up 5/5
+fix_aug-released   +12.86 [+6.16, +19.57] up 5/5
+fix_aug-xpc_bal    +13.68 [+1.21, +26.16] up 5/5
+fix_aug-ie_on      +15.03 [+2.59, +27.47] up 5/5

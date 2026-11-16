@@ -1,0 +1,17 @@
+Seed 3, PARTIAL. The Colab runtime disconnected at about 20:00 (laptop clock) while seed 3 was running. Its files were not
+downloaded (the zip is only written after all 15 runs of a seed). Recovered verbatim from the notebook's printed output
+(cell "# 10. SEED 3") at 20:16. Only the 10 runs that had printed DONE are listed. 5 runs were not completed:
+aug/fix_aug target 3; fix/aug/fix_aug target 4.
+Per the predeclared plan (section 5), partial seeds are REPORTED but EXCLUDED from the primary test. No probes,
+histories or checkpoints exist for these runs.
+
+seed 3 target 0 fix      exit 0   284s | DONE fix target0 seed3 | selected epoch 143 | target acc 84.73 macroF1 86.63 wF1 84.73 | train 255s
+seed 3 target 0 fix_aug  exit 0   304s | DONE fix_aug target0 seed3 | selected epoch 143 | target acc 72.91 macroF1 76.22 wF1 69.82 | train 274s
+seed 3 target 0 aug      exit 0   307s | DONE aug target0 seed3 | selected epoch 131 | target acc 82.42 macroF1 82.02 wF1 82.50 | train 278s
+seed 3 target 1 fix      exit 0   283s | DONE fix target1 seed3 | selected epoch 150 | target acc 78.48 macroF1 72.42 wF1 73.19 | train 254s
+seed 3 target 1 aug      exit 0   314s | DONE aug target1 seed3 | selected epoch 146 | target acc 82.45 macroF1 78.47 wF1 79.39 | train 286s
+seed 3 target 1 fix_aug  exit 0   317s | DONE fix_aug target1 seed3 | selected epoch 137 | target acc 89.40 macroF1 87.68 wF1 88.08 | train 284s
+seed 3 target 2 fix      exit 0   262s | DONE fix target2 seed3 | selected epoch 144 | target acc 99.41 macroF1 99.40 wF1 99.41 | train 236s
+seed 3 target 2 aug      exit 0   291s | DONE aug target2 seed3 | selected epoch 91 | target acc 87.68 macroF1 86.85 wF1 87.34 | train 261s
+seed 3 target 2 fix_aug  exit 0   287s | DONE fix_aug target2 seed3 | selected epoch 150 | target acc 97.36 macroF1 97.25 wF1 97.34 | train 260s
+seed 3 target 3 fix      exit 0   268s | DONE fix target3 seed3 | selected epoch 38 | target acc 81.70 macroF1 78.73 wF1 78.05 | train 239s
