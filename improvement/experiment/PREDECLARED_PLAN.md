@@ -1,4 +1,4 @@
-# Person 3, stage 3: predeclared experimental plan (written BEFORE any stage-3 result exists)
+# Stage 3: predeclared experimental plan (written BEFORE any stage-3 result exists)
 
 Written 16 Nov 2026, about 18:20 (laptop clock). No stage-3 run had been started when this file was written. This plan, the
 success rule and the analysis are fixed here and will not be changed after results are seen. Any later deviation is
@@ -115,7 +115,7 @@ A lower probe value is **not** treated as an accuracy improvement.
 - No result is discarded. Failed runs are kept with their logs and reported.
 
 ## 6. Isolation
-- All stage-3 work is in `improvement-code/P3_STAGE3/`.
+- All stage-3 work is in `improvement-code/experiment/`.
 - Shared modules are **copies** (byte-identical to stage 1). The layout fix is applied by replacing the encoders'
   `forward` on the model *instance* at run time; `model_GILE_ucihar.py` is not edited.
 - Nothing in `runs_full/`, `stage2_xpc/`, `XPCB_TRANSFER_PACKAGE/`, `original-code/` or `evaluation-code/` is
@@ -145,7 +145,7 @@ A lower probe value is **not** treated as an accuracy improvement.
     when the quota ended; only the individual runs' printed lines were visible in the notebook.
 - **Second seed-3 attempt** (16 Nov ~20:50, account a second Colab account, same notebook).
   - Tests passed and the anchor matched exactly, so seed 3 was restarted.
-  - About 20 minutes later, Person 3 instructed that no further seeds be run. The cell was interrupted and the
+  - About 20 minutes later, the author instructed that no further seeds be run. The cell was interrupted and the
     training processes stopped (GPU idle).
   - No output of this attempt was downloaded, retrieved or used.
   - **Final status:** main analysis = seeds 0–2; seed 3 = partial (10 recovered printed results, descriptive only);

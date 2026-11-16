@@ -1,4 +1,4 @@
-# Person 3: individual contributions (for the work-division page)
+# Individual contributions (for the work-division page)
 
 1. **Audited the released GILE code.**
    - Proved that the published Independent Excitation mechanism sends no gradient to any weight (0/53 parameter
@@ -35,13 +35,13 @@
    - test suites: 20 stage-3 checks plus stage-1/2 tests;
    - all results preserved with configs, histories, logs and checkpoints.
 8. **Wrote the improvement documentation** that underlies report Section 5:
-   - `PERSON3_IMPROVEMENT_FINAL_REPORT.md`;
-   - `PERSON3_RESULTS_SUMMARY.md`;
-   - `PERSON3_IMPLEMENTATION_NOTES.md`;
+   - `FINAL_REPORT.md`;
+   - `RESULTS_SUMMARY.md`;
+   - `IMPLEMENTATION_NOTES.md`;
    - `RESULTS_REPORT.md`;
    - `XPCB_FINAL_REPORT.md`;
    - `LITERATURE_REVIEW_AND_PROPOSALS.md`.
-9. **Prepared the GitHub-ready package** `person3-improvement/`:
+9. **Prepared the GitHub-ready package** `improvement/`:
    - code;
    - per-run results (configs, histories, logs, metrics);
    - SHA-256 manifests;

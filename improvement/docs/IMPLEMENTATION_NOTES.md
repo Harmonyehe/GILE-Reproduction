@@ -1,6 +1,6 @@
-# Person 3: implementation notes (all improvement stages)
+# Implementation notes (all improvement stages)
 
-This file covers the exact code for each improvement Person 3 tested, the model architecture, loss functions, data
+This file covers the exact code for each improvement tested, the model architecture, loss functions, data
 transformations, training configuration and tests. Detailed earlier notes: `IE_IMPLEMENTATION_NOTES.md` (stage 1) and
 `XPCB_IMPLEMENTATION_NOTES.md` (stage 2). Stage 3 is documented in full here.
 
@@ -45,7 +45,7 @@ See `XPCB_IMPLEMENTATION_NOTES.md`.
 - λ is set by the 10%-of-initial-loss rule.
 
 ## 3. Stage 3: input-layout correction (C) and person-style augmentation (B)
-Folder: `improvement-code/P3_STAGE3/` (isolated; the plan was written before any result: `P3_STAGE3/PREDECLARED_PLAN.md`).
+Folder: `improvement-code/experiment/` (isolated; the plan was written before any result: `experiment/PREDECLARED_PLAN.md`).
 
 ### 3.1 Files
 | File | Role |
@@ -55,7 +55,7 @@ Folder: `improvement-code/P3_STAGE3/` (isolated; the plan was written before any
 | `code/stage3/run_stage3.py` | runner, `--arm {ie_off, fix, aug, fix_aug}`; derived from the resumable stage-2 runner, keeping only the control's training path |
 | `code/stage3/checks/test_stage3.py` | 20 checks (layout, augmentation, runner equivalence, resume) |
 | `code/stage2_ref/` | read-only copy of the stage-2 runner, used only by test R1 |
-| `tools/build_p3_notebook.py`, `P3_STAGE3_COLAB.ipynb` | Colab notebook with embedded files, each verified by SHA-256 |
+| `tools/build_p3_notebook.py`, `colab_notebook.ipynb` | Colab notebook with embedded files, each verified by SHA-256 |
 | `tools/analyse_p3.py` | analysis exactly as predeclared |
 | `baseline_ie_off_metrics/` | read-only copies of the 25 stage-1 `ie_off` metrics (the control) |
 
@@ -142,10 +142,10 @@ Identical to the stage-1 `ie_off` control (section 0). The only differences are 
 | R3 | each new arm changes training |
 | R4 | `fix_aug` interrupted after epoch 1 and resumed is identical to the uninterrupted run |
 
-Results: 20 of 20 passed on the laptop CPU (`P3_STAGE3/code/stage3/checks/test_stage3_local_output.txt`). They also
+Results: 20 of 20 passed on the laptop CPU (`experiment/code/stage3/checks/test_stage3_local_output.txt`). They also
 passed on the Colab T4 (cell 4 completed its `ALL PASSED` assertion) before any experiment.
 
-### 3.6 Post-run integrity checks (`P3_STAGE3/tools/verify_runs_p3.py`)
+### 3.6 Post-run integrity checks (`experiment/tools/verify_runs_p3.py`)
 V1–V10:
 - arm flags;
 - target not among the sources;
@@ -158,4 +158,4 @@ V1–V10:
 - checkpoints present;
 - every manifest entry re-hashed.
 
-Result for the 46 returned runs: **ALL CHECKS PASSED** (`P3_STAGE3/analysis_p3/verify_runs_output.txt`).
+Result for the 46 returned runs: **ALL CHECKS PASSED** (`experiment/analysis_p3/verify_runs_output.txt`).

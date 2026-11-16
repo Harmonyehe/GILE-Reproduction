@@ -1,4 +1,4 @@
-# Person 3: results summary (all improvements tested)
+# Results summary (all improvements tested)
 
 **Setup for every row:**
 - UCI HAR, unseen-person (leave-one-person-out) accuracy;
@@ -7,7 +7,7 @@
 - Colab T4;
 - Δ is paired against the stated control with a target-level 95% CI (n = 5 persons).
 
-Full report: `PERSON3_IMPROVEMENT_FINAL_REPORT.md`.
+Full report: `FINAL_REPORT.md`.
 
 | Stage | Improvement | Runs | Control | ΔAccuracy [95% CI] | Persons up | Person ← z probe Δ (linear / MLP) | Predeclared criterion | Outcome |
 |---|---|---|---|---|---|---|---|---|

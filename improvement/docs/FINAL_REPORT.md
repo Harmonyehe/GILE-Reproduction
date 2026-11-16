@@ -1,6 +1,6 @@
-# Person 3: proposed improvements and their evaluation (GILE, cross-person HAR on UCI HAR)
+# Proposed improvements and their evaluation (GILE, cross-person HAR on UCI HAR)
 
-**Author's role:** Person 3 proposed, implemented and evaluated the improvements.
+**Scope:** proposing, implementing and evaluating improvements to GILE.
 **Status labels:** [MEASURED] = from our runs; [CODE] = verified by reading code or by a test; [REPORTED] = claimed in a
 paper; [HYPOTHESIS] = our interpretation, not tested.
 
@@ -26,7 +26,7 @@ paper; [HYPOTHESIS] = our interpretation, not tested.
 | 4 | Why did XPC-B fail its success rule? | `xpc_bal − ie_off_bal` accuracy +1.39 (CI −2.24 to +5.01), up for only 3/5 persons. The person probes did not fall (linear −0.33, MLP +0.19). | [MEASURED] `XPCB_FINAL_REPORT.md` |
 | 5 | Did the projection head absorb the contrastive objective? | Consistent with that, but not proven. The loss acted on g(μ). The XPC term reached 78% of the loss, yet person information in z did not change. Head outputs were not saved, so g(z) and z could not be compared directly. | [MEASURED] + [HYPOTHESIS] |
 | 6 | Did balanced batching help? | No. `ie_off_bal − ie_off` −1.81 (CI −8.48 to +4.85); person 1 −10.1. | [MEASURED] |
-| 7 | Is the encoder `.view()` a real bug? | **Yes.** `x.view(-1, 9, 1, 128)` on a contiguous `(B,128,9,1)` batch reinterprets memory. Each "channel" holds about 14 time steps × all 9 sensors, interleaved, and every width-5 convolution window spans 5 *different sensors* at nearly the same instant. The decoder outputs `(B,9,1,128)` and permutes back, which shows that the intended layout is channel = sensor, width = time. | [CODE] tests C1–C4, C6 (`P3_STAGE3/code/stage3/checks/test_stage3.py`) |
+| 7 | Is the encoder `.view()` a real bug? | **Yes.** `x.view(-1, 9, 1, 128)` on a contiguous `(B,128,9,1)` batch reinterprets memory. Each "channel" holds about 14 time steps × all 9 sensors, interleaved, and every width-5 convolution window spans 5 *different sensors* at nearly the same instant. The decoder outputs `(B,9,1,128)` and permutes back, which shows that the intended layout is channel = sensor, width = time. | [CODE] tests C1–C4, C6 (`experiment/code/stage3/checks/test_stage3.py`) |
 | 8 | Does the person-specific prior work? | No, during training. Batches contain one person, and the BatchNorm in `pzd` normalises a one-hot input that is identical across the batch, so every person gets the same prior. Mixed batches restore person-specific priors, but mixing (row 6) did not help accuracy. | [CODE] `checks/test_variants.py` test 6; [MEASURED] row 6 |
 | 9 | Does the protocol bias the results? | **Yes, strongly, in the released code:** the best epoch is chosen on the held-out person's own accuracy. In the same runs this inflates weighted-F1 by about 10 points (≈ 86.7 vs ≈ 77.0), which explains most of the gap to the paper's 88.17. Also, training accuracy divides by n_batches·64. All our results use source-only selection. | [MEASURED] `RESULTS_REPORT.md` §4; [CODE] `train.py` |
 
@@ -79,8 +79,8 @@ and 5.
 All values were fixed a priori from Um et al. [P15], never tuned. Time-warping and large rotations were excluded
 because they could change the activity label (cadence; the gravity orientation that separates the postures).
 
-## 4. Technical implementation (details: `PERSON3_IMPLEMENTATION_NOTES.md` §3)
-- **Isolation.** Everything is in `improvement-code/P3_STAGE3/`. The shared modules are byte-identical copies.
+## 4. Technical implementation (details: `IMPLEMENTATION_NOTES.md` §3)
+- **Isolation.** Everything is in `improvement-code/experiment/`. The shared modules are byte-identical copies.
 - **The layout fix** replaces `forward` on the encoder *instances* with an exact copy of the released forward, except the
   reshaping line. Test C6 proves that the copy is otherwise exact (bit-identical outputs).
 - **The augmentation** has its own RNG stream. Initial parameters, batch order and VAE noise are identical to the
@@ -92,7 +92,7 @@ because they could change the activity label (cadence; the gravity orientation t
 - **Reproducibility anchor on the T4:** `ie_off` target 0 seed 0 reproduced stage 1 exactly (selected epoch 99,
   accuracy 74.0634, weighted-F1 73.9257), so the existing 25 control runs are valid.
 
-## 5. Experimental methodology (predeclared in `P3_STAGE3/PREDECLARED_PLAN.md`, written before any result)
+## 5. Experimental methodology (predeclared in `experiment/PREDECLARED_PLAN.md`, written before any result)
 - **Arms:**
   - `ie_off` (control: 25 existing runs);
   - `fix`, `aug`, `fix_aug` (25 new runs each);
@@ -117,7 +117,7 @@ because they could change the activity label (cadence; the gravity orientation t
 | Seed | Status | Used in |
 |---|---|---|
 | 0, 1, 2 | **Complete:** 15 runs each, all files downloaded and verified | **the main analysis** (45 new runs vs the matching 15 `ie_off` runs: same seeds, same initial weights) |
-| 3 | **Partial, excluded.** The free Colab GPU quota of the first account ended after 10 of 15 runs; their printed metrics are recovered, but no files exist. A second attempt on another account was started on 16 Nov ~20:50 and **stopped on Person 3's instruction** before any seed-3 output was retrieved or used. | descriptive table §6.6 only |
+| 3 | **Partial, excluded.** The free Colab GPU quota of the first account ended after 10 of 15 runs; their printed metrics are recovered, but no files exist. A second attempt on another account was started on 16 Nov ~20:50 and **stopped on the author's instruction** before any seed-3 output was retrieved or used. | descriptive table §6.6 only |
 | 4 | **Not run** (GPU quota exhausted) | — |
 
 - Seeds 0–2 were fixed in advance as the minimum design (`PREDECLARED_PLAN.md` §5).
@@ -277,15 +277,15 @@ because they could change the activity label (cadence; the gravity orientation t
 ## 10. Files
 | Item | Path |
 |---|---|
-| Plan (written before the results) and deviations log | `P3_STAGE3/PREDECLARED_PLAN.md` |
-| Code | `P3_STAGE3/code/stage3/` (`run_stage3.py`, `p3_variants.py`, `checks/test_stage3.py`) |
-| Runs: config, history, log, metrics, `selected_model.pt` | `P3_STAGE3/code/stage3/runs_p3/ucihar/<arm>/target<t>/seed<s>/` |
-| Returned zips, per-seed manifests, partial seed 3 log | `P3_STAGE3/returned_results/`, `P3_STAGE3/code/stage3/manifests/` |
-| Analysis | `P3_STAGE3/analysis_p3/` (`summary.txt`, `arm_summary.csv`, `per_target.csv`, `decision.json`, `verify_runs_output.txt`) |
-| Notebook (as run) | `P3_STAGE3/P3_STAGE3_COLAB.ipynb` |
+| Plan (written before the results) and deviations log | `experiment/PREDECLARED_PLAN.md` |
+| Code | `experiment/code/stage3/` (`run_stage3.py`, `p3_variants.py`, `checks/test_stage3.py`) |
+| Runs: config, history, log, metrics, `selected_model.pt` | `experiment/code/stage3/runs_p3/ucihar/<arm>/target<t>/seed<s>/` |
+| Returned zips, per-seed manifests, partial seed 3 log | `experiment/returned_results/`, `experiment/code/stage3/manifests/` |
+| Analysis | `experiment/analysis_p3/` (`summary.txt`, `arm_summary.csv`, `per_target.csv`, `decision.json`, `verify_runs_output.txt`) |
+| Notebook (as run) | `experiment/colab_notebook.ipynb` |
 | Verified local backup (284 files incl. 46 checkpoints, internal SHA-256 manifest) | `BACKUPS/P3_STAGE3_final_backup_20261116_2106.zip` (+ `.sha256`) |
-| Number check: report vs analysis outputs (100/100 values match) | `P3_STAGE3/tools/check_report_numbers.py` |
-| GitHub-ready package (code, per-run results without checkpoints, docs, README with reproduction commands) | `PERSON3_GITHUB_SUBMISSION/person3-improvement/` |
+| Number check: report vs analysis outputs (100/100 values match) | `experiment/tools/check_report_numbers.py` |
+| GitHub-ready package (code, per-run results without checkpoints, docs, README with reproduction commands) | `improvement/` (this folder) |
 
 ## References (marked as in `LITERATURE_REVIEW_AND_PROPOSALS.md`)
 - [GILE] Qian, H., Pan, S. J., Miao, C. Latent Independent Excitation for Generalizable Sensor-based Cross-Person

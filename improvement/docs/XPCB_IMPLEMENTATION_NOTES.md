@@ -1,4 +1,4 @@
-# XPC-B implementation notes (stage 2, Person 3)
+# XPC-B implementation notes (stage 2)
 
 Date: 16 Nov 2026. Design and rationale: `LITERATURE_REVIEW_AND_PROPOSALS.md` §4–§6.
 

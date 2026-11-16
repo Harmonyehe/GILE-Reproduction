@@ -1,9 +1,9 @@
-# Person 3: improving GILE for unseen-person activity recognition (UCI HAR)
+# Improving GILE for unseen-person activity recognition (UCI HAR)
 
 **Context.** COMP41850 group project: reproduction and improvement of GILE (Qian, Pan & Miao, *Latent Independent
-Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*, AAAI 2021). This folder holds the work of
-**Person 3**, who proposed, implemented and evaluated the improvements.
-- Full write-up: [`docs/PERSON3_IMPROVEMENT_FINAL_REPORT.md`](docs/PERSON3_IMPROVEMENT_FINAL_REPORT.md).
+Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*, AAAI 2021). This folder holds the
+improvement work: proposing, implementing and evaluating changes to GILE.
+- Full write-up: [`docs/FINAL_REPORT.md`](docs/FINAL_REPORT.md).
 - The team's reproduction code is not modified by anything here.
 
 ## Main result
@@ -27,7 +27,7 @@ Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*, AA
 
 **How the comparison is done.** Differences are paired by (person, seed) and averaged per person. The confidence
 interval is a t-interval over the 5 persons (df = 4). The success rule was written before any result:
-[`P3_STAGE3/PREDECLARED_PLAN.md`](P3_STAGE3/PREDECLARED_PLAN.md).
+[`experiment/PREDECLARED_PLAN.md`](experiment/PREDECLARED_PLAN.md).
 
 **Earlier attempts, for comparison** (`docs/`):
 | Attempt | Δ accuracy | Runs | Outcome |
@@ -46,30 +46,30 @@ interval is a t-interval over the 5 persons (df = 4). The success rule was writt
 | Path | Content |
 |---|---|
 | `docs/` | Final report, results summary, implementation notes, contributions, literature review, stage-1 (IE) and stage-2 (XPC-B) reports |
-| `P3_STAGE3/PREDECLARED_PLAN.md` | Experimental plan and success rule (written before the results) + deviations log |
-| `P3_STAGE3/code/` | Shared GILE modules (copies of the team's `evaluation-code`; see below), `stage3/` (this work), `stage2_ref/` (stage-2 runner, used by a test) |
-| `P3_STAGE3/code/stage3/p3_variants.py` | The two changes: `apply_layout_fix(model)` and `PersonStyleAug` |
-| `P3_STAGE3/code/stage3/run_stage3.py` | Runner: `--arm {ie_off, fix, aug, fix_aug} --target {0..4} --seed k` |
-| `P3_STAGE3/code/stage3/checks/test_stage3.py` | 20 correctness checks (layout, augmentation physics, control equivalence, resume) |
-| `P3_STAGE3/code/stage3/runs_p3/ucihar/` | All 46 returned runs (45 + anchor): `config.json`, `history.csv` (150 epochs), `log.txt`, `metrics.json` |
-| `P3_STAGE3/code/stage3/manifests/` | SHA-256 manifests of every returned file (including the checkpoints not stored here) |
-| `P3_STAGE3/baseline_ie_off_metrics/` | Control runs (stage 1, `ie_off`, 5 targets × 5 seeds) |
-| `P3_STAGE3/reference_metrics_earlier_stages/` | Metrics of `released`, `ie_on`, `ie_off_bal`, `xpc_bal` (context rows) |
-| `P3_STAGE3/analysis_p3/` | `summary.txt`, `arm_summary.csv`, `per_target.csv`, `decision.json`, `verify_runs_output.txt` |
-| `P3_STAGE3/returned_results/` | Recovered printed metrics of the partial seed 3 |
-| `P3_STAGE3/P3_STAGE3_COLAB.ipynb` | The Colab notebook used for the GPU runs (code embedded and SHA-256 checked) |
-| `P3_STAGE3/tools/` | Data preparation, runner loop, analysis, verification, report-number check, notebook builder |
+| `experiment/PREDECLARED_PLAN.md` | Experimental plan and success rule (written before the results) + deviations log |
+| `experiment/code/` | Shared GILE modules (copies of the team's `evaluation-code`; see below), `stage3/` (this work), `stage2_ref/` (stage-2 runner, used by a test) |
+| `experiment/code/stage3/p3_variants.py` | The two changes: `apply_layout_fix(model)` and `PersonStyleAug` |
+| `experiment/code/stage3/run_stage3.py` | Runner: `--arm {ie_off, fix, aug, fix_aug} --target {0..4} --seed k` |
+| `experiment/code/stage3/checks/test_stage3.py` | 20 correctness checks (layout, augmentation physics, control equivalence, resume) |
+| `experiment/code/stage3/runs_p3/ucihar/` | All 46 returned runs (45 + anchor): `config.json`, `history.csv` (150 epochs), `log.txt`, `metrics.json` |
+| `experiment/code/stage3/manifests/` | SHA-256 manifests of every returned file (including the checkpoints not stored here) |
+| `experiment/baseline_ie_off_metrics/` | Control runs (stage 1, `ie_off`, 5 targets × 5 seeds) |
+| `experiment/reference_metrics_earlier_stages/` | Metrics of `released`, `ie_on`, `ie_off_bal`, `xpc_bal` (context rows) |
+| `experiment/analysis_p3/` | `summary.txt`, `arm_summary.csv`, `per_target.csv`, `decision.json`, `verify_runs_output.txt` |
+| `experiment/returned_results/` | Recovered printed metrics of the partial seed 3 |
+| `experiment/colab_notebook.ipynb` | The Colab notebook used for the GPU runs (code embedded and SHA-256 checked) |
+| `experiment/tools/` | Data preparation, runner loop, analysis, verification, report-number check, notebook builder |
 | `earlier_stages_code/` | Stage-1 and stage-2 runners and tests, as run (reference) |
 
 **Paths in the documents.** The reports were written in the author's local workspace, so some paths refer to it:
 | Path in `docs/` | Where it is in this repository |
 |---|---|
 | `improvement-code/` | this repository's root |
-| `improvement-code/P3_STAGE3/…` or `P3_STAGE3/…` | `P3_STAGE3/…` (same layout) |
-| `runs_full/ucihar/<arm>/…` (stage 1) | metrics only: `P3_STAGE3/baseline_ie_off_metrics/` (`ie_off`) and `P3_STAGE3/reference_metrics_earlier_stages/{released,ie_on}/` |
-| `XPCB_TRANSFER_PACKAGE/…/runs_xpc_t4/…` (stage 2) | metrics only: `P3_STAGE3/reference_metrics_earlier_stages/{ie_off_bal,xpc_bal}/` |
+| `improvement-code/experiment/…` | `experiment/…` (same layout) |
+| `runs_full/ucihar/<arm>/…` (stage 1) | metrics only: `experiment/baseline_ie_off_metrics/` (`ie_off`) and `experiment/reference_metrics_earlier_stages/{released,ie_on}/` |
+| `XPCB_TRANSFER_PACKAGE/…/runs_xpc_t4/…` (stage 2) | metrics only: `experiment/reference_metrics_earlier_stages/{ie_off_bal,xpc_bal}/` |
 | `run_experiment.py`, `checks/…` (stage 1) | `earlier_stages_code/stage1_ie/` |
-| `stage2_xpc/run_stage2.py`, `xpc.py` (stage 2) | `earlier_stages_code/stage2_xpcb/` (also `P3_STAGE3/code/stage2_ref/`) |
+| `stage2_xpc/run_stage2.py`, `xpc.py` (stage 2) | `earlier_stages_code/stage2_xpcb/` (also `experiment/code/stage2_ref/`) |
 | `Person3_checks/ie_gradient_check.py` | `earlier_stages_code/audit/ie_gradient_check.py` |
 | `original-code/`, `evaluation-code/` | the team's reproduction code, elsewhere in the team repository (not modified) |
 
@@ -101,12 +101,12 @@ pip install -r requirements.txt
 - **SHA-256:** `c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031`
 
 **Expected layout** (the released loader's relative paths):
-`P3_STAGE3/code/data/ucihar/{train,test}/InertialSignals/*.txt` plus `y_{train,test}.txt` and
+`experiment/code/data/ucihar/{train,test}/InertialSignals/*.txt` plus `y_{train,test}.txt` and
 `subject_{train,test}.txt`, 22 files in total.
 
 ```bash
-python P3_STAGE3/tools/prepare_ucihar.py                      # downloads, verifies SHA-256, arranges the files
-python P3_STAGE3/tools/prepare_ucihar.py --zip <downloaded.zip>  # or use an archive you already have (the inner
+python experiment/tools/prepare_ucihar.py                      # downloads, verifies SHA-256, arranges the files
+python experiment/tools/prepare_ucihar.py --zip <downloaded.zip>  # or use an archive you already have (the inner
                                                                  # "UCI HAR Dataset.zip" also works, without the SHA check)
 ```
 
@@ -120,33 +120,33 @@ Run all commands from the repository root (this folder).
 
 1. **Tests** (CPU is enough, about 7 min; synthetic data, no dataset needed):
    ```bash
-   python P3_STAGE3/code/stage3/checks/test_stage3.py
+   python experiment/code/stage3/checks/test_stage3.py
    ```
 2. **One run** (GPU strongly recommended; about 1.5–2 min on a T4, much slower on a CPU):
    ```bash
-   python P3_STAGE3/code/stage3/run_stage3.py --arm fix_aug --target 1 --seed 0 --out_root runs_p3_rerun --no_last_ckpt
+   python experiment/code/stage3/run_stage3.py --arm fix_aug --target 1 --seed 0 --out_root runs_p3_rerun --no_last_ckpt
    ```
 3. **The full main design**: the anchor + 3 arms × 5 persons × seeds 0–2. A new `--out_root` keeps the shipped results
    untouched; completed runs are skipped and interrupted runs resume.
    ```bash
-   python P3_STAGE3/tools/run_all_p3.py --anchor --seeds 0 1 2 --out_root runs_p3_rerun
+   python experiment/tools/run_all_p3.py --anchor --seeds 0 1 2 --out_root runs_p3_rerun
    ```
    The anchor must print `EXACT MATCH ... True` on a T4 with torch 2.14.1+cu130.
-   - *Colab alternative:* upload `P3_STAGE3/P3_STAGE3_COLAB.ipynb`, choose a T4 runtime, run the cells one at a time.
+   - *Colab alternative:* upload `experiment/colab_notebook.ipynb`, choose a T4 runtime, run the cells one at a time.
 4. **Analysis**, exactly as predeclared:
    ```bash
-   python P3_STAGE3/tools/analyse_p3.py P3_STAGE3/code/stage3/runs_p3_rerun/ucihar --out P3_STAGE3/analysis_rerun
+   python experiment/tools/analyse_p3.py experiment/code/stage3/runs_p3_rerun/ucihar --out experiment/analysis_rerun
    ```
    To re-analyse the shipped runs instead:
    ```bash
-   python P3_STAGE3/tools/analyse_p3.py P3_STAGE3/code/stage3/runs_p3/ucihar --out P3_STAGE3/analysis_check
+   python experiment/tools/analyse_p3.py experiment/code/stage3/runs_p3/ucihar --out experiment/analysis_check
    ```
 5. **Integrity and report checks:**
    ```bash
-   python P3_STAGE3/tools/verify_runs_p3.py P3_STAGE3/code/stage3/runs_p3/ucihar --no_ckpt
+   python experiment/tools/verify_runs_p3.py experiment/code/stage3/runs_p3/ucihar --no_ckpt
    ```
    ```bash
-   python P3_STAGE3/tools/check_report_numbers.py docs/PERSON3_IMPROVEMENT_FINAL_REPORT.md
+   python experiment/tools/check_report_numbers.py docs/FINAL_REPORT.md
    ```
 
 ## Protocol (all arms)

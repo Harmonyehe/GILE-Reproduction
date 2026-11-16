@@ -1,4 +1,4 @@
-# XPC-B final report: person-balanced batches + cross-person supervised contrastive learning (Person 3, stage 2)
+# XPC-B final report: person-balanced batches + cross-person supervised contrastive learning (stage 2)
 
 Date: 16 Nov 2026 (final, full 50-run design). The previous version, which relied on recovered log lines and had no probes, is preserved at `XPCB_TRANSFER_PACKAGE/snapshot/reports/XPCB_FINAL_REPORT.md`.
 - Implementation: `XPCB_IMPLEMENTATION_NOTES.md`.

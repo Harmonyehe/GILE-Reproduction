@@ -1,4 +1,4 @@
-# Full experiment results — repaired Independent Excitation on UCI HAR (Person 3)
+# Full experiment results — repaired Independent Excitation on UCI HAR
 
 Date: 15 Nov 2026. 75 runs = 5 target persons × 3 variants × 5 seeds, 150 epochs each, Colab Tesla T4, torch 2.14.1+cu130.
 Raw data: `runs_full/ucihar/<variant>/target<t>/seed<k>/` (config.json, history.csv, log.txt, metrics.json, selected_model.pt).

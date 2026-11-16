@@ -1,4 +1,4 @@
-# GILE, stage 2: literature review, diagnosis and improvement proposals (Person 3)
+# GILE, stage 2: literature review, diagnosis and improvement proposals
 
 Date: 16 Nov 2026. Status: **research only**. No code was changed, nothing was run on a GPU, and no result was overwritten.
 
