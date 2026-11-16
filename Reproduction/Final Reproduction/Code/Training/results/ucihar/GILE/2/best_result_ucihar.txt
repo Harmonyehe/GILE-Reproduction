@@ -1,0 +1,4 @@
+
+Setting: Model: GILE Target: 2
+aux_loss_multiplier_d:1000.0 aux_loss_multiplier_y:1000.0 batch_size:64 beta:1.0 beta_d:1.0 beta_x:0.0 beta_y:1.0 d_AE:50 dataset:ucihar device:cuda:0 eval_checkpoint_dir:/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_2 len_sw:128 n_class:6 n_domains:5 n_epoch:100 n_feature:9 n_target_domains:1 now_model_name:GILE sigma:1 target_domain:2 test_every:1 weight_false:1000.0 weight_mmd:1.0 weight_true:1000.0 x_dim:1152 e_acc: 0.8359	 best_iter: 62
+

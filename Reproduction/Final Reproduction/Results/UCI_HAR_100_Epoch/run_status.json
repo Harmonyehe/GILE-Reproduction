@@ -1,0 +1,52 @@
+[
+  {
+    "dataset": "UCI HAR",
+    "target_domain": "0",
+    "epochs": 100,
+    "status": "SUCCESS",
+    "return_code": 0,
+    "elapsed_minutes": 1.89,
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_0.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_0"
+  },
+  {
+    "dataset": "UCI HAR",
+    "target_domain": "1",
+    "epochs": 100,
+    "status": "SUCCESS",
+    "return_code": 0,
+    "elapsed_minutes": 1.89,
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_1.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_1"
+  },
+  {
+    "dataset": "UCI HAR",
+    "target_domain": "2",
+    "epochs": 100,
+    "status": "SUCCESS",
+    "return_code": 0,
+    "elapsed_minutes": 1.8,
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_2.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_2"
+  },
+  {
+    "dataset": "UCI HAR",
+    "target_domain": "3",
+    "epochs": 100,
+    "status": "SUCCESS",
+    "return_code": 0,
+    "elapsed_minutes": 1.88,
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_3.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_3"
+  },
+  {
+    "dataset": "UCI HAR",
+    "target_domain": "4",
+    "epochs": 100,
+    "status": "SUCCESS",
+    "return_code": 0,
+    "elapsed_minutes": 1.89,
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_4.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_4"
+  }
+]

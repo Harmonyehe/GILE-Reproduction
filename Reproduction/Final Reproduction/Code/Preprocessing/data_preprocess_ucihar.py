@@ -15,7 +15,7 @@ from sklearn.model_selection import StratifiedShuffleSplit
 def format_data_x(datafile):
     x_data = None
     for item in datafile:
-        item_data = np.loadtxt(item, dtype=np.float)
+        item_data = np.loadtxt(item, dtype=float)
         if x_data is None:
             x_data = np.zeros((len(item_data), 1))
         x_data = np.hstack((x_data, item_data))
@@ -32,7 +32,7 @@ def format_data_x(datafile):
     return X
 
 def format_data_y(datafile):
-    data = np.loadtxt(datafile, dtype=np.int) - 1
+    data = np.loadtxt(datafile, dtype=int) - 1
     return data
 
 
