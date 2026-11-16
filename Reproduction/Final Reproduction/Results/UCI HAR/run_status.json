@@ -6,8 +6,8 @@
     "status": "SUCCESS",
     "return_code": 0,
     "elapsed_minutes": 1.89,
-    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_0.log",
-    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_0"
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI HAR/target_0.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_0"
   },
   {
     "dataset": "UCI HAR",
@@ -16,8 +16,8 @@
     "status": "SUCCESS",
     "return_code": 0,
     "elapsed_minutes": 1.89,
-    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_1.log",
-    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_1"
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI HAR/target_1.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_1"
   },
   {
     "dataset": "UCI HAR",
@@ -26,8 +26,8 @@
     "status": "SUCCESS",
     "return_code": 0,
     "elapsed_minutes": 1.8,
-    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_2.log",
-    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_2"
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI HAR/target_2.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_2"
   },
   {
     "dataset": "UCI HAR",
@@ -36,8 +36,8 @@
     "status": "SUCCESS",
     "return_code": 0,
     "elapsed_minutes": 1.88,
-    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_3.log",
-    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_3"
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI HAR/target_3.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_3"
   },
   {
     "dataset": "UCI HAR",
@@ -46,7 +46,7 @@
     "status": "SUCCESS",
     "return_code": 0,
     "elapsed_minutes": 1.89,
-    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI_HAR_100_Epoch/target_4.log",
-    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI_HAR_100_Epoch/target_4"
+    "log": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Logs/UCI HAR/target_4.log",
+    "checkpoint_dir": "/content/GILE-Reproduction/Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_4"
   }
 ]
