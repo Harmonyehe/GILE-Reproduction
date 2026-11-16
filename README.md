@@ -1,6 +1,6 @@
 # GILE: Cross-Person Human Activity Recognition
 
-This repository contains the original GILE implementation and the completed reproduction of the method introduced by Qian, Pan and Miao (AAAI 2021).
+This repository contains the original GILE implementation, the completed reproduction of the method introduced by Qian, Pan and Miao (AAAI 2021), and an evaluated improvement to the method.
 
 **Paper:** *Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*
 **Authors:** Hangwei Qian, Sinno Jialin Pan and Chunyan Miao
@@ -65,18 +65,62 @@ The original training-accuracy calculation uses `len(predictions_y) * batch_size
 
 The final UCI HAR metrics come from fresh CPU evaluation JSONs. This CPU evaluation is an evaluation step; model training was performed on Colab GPU. Opportunity and UniMiB-SHAR final metrics use the Run 2 evaluation outputs.
 
-## 6. Repository map
+## 6. Improvement work (UCI HAR)
+
+The `improvement/` folder contains the proposed improvements and their evaluation. All improvement experiments use **source-only model selection**:
+- each source participant is split into training and validation data, with overlapping windows removed;
+- the epoch is chosen on source validation accuracy;
+- the held-out participant is never used for training, selection or tuning.
+
+**Findings from auditing the released code:**
+- **Independent Excitation (IE) has no effect in the released code.** Its loss is computed from detached predictions, so it sends no gradient to any weight. The released training is therefore effectively GILE without IE.
+- **The encoders scramble the input.** They reshape each `(128 time × 9 sensor)` window with `.view()` instead of a transpose, so every convolution window mixes five different sensors instead of following one sensor over time. The decoder shows that the intended layout is channels = sensors, width = time.
+- **Target-based checkpoint selection (section 5) inflates results.** In our runs it raised UCI HAR weighted-F1 by about 10 points compared with source-only selection.
+
+**Improvements tested.** All runs on a Colab Tesla T4, 150 epochs, UCI HAR targets 0–4.
+
+| Improvement | Runs | Result vs control |
+|---|---:|---|
+| Repaired, differentiable IE | 75 | −0.99 accuracy; lowered non-linear person information in the activity code, but no accuracy gain |
+| XPC-B: cross-person contrastive loss with person-balanced batches | 50 | +1.39 vs its control; inconclusive under the predeclared rule |
+| **Input-layout fix + person-style sensor augmentation** | 45 | **79.17% → 91.61% accuracy** |
+
+The success rule for the final experiment was written before any results. Results below are for seeds 0–2, accuracy at the source-selected epoch:
+
+| Arm | Accuracy (%) | Macro-F1 (%) | Weighted-F1 (%) | Δ accuracy vs control [95% CI] | Targets improved |
+|---|---:|---:|---:|---|---:|
+| Control (released GILE behaviour) | 79.17 | 77.86 | 77.97 | — | — |
+| Layout fix | 87.63 | 86.63 | 86.49 | +8.46 [+4.99, +11.93] | 5/5 |
+| Augmentation only | 83.16 | 81.81 | 81.97 | +3.99 [−1.50, +9.48] | 4/5 |
+| **Layout fix + augmentation** | **91.61** | **91.30** | **91.25** | **+12.44 [+6.08, +18.80]** | **5/5** |
+
+**Not directly comparable with section 3.** The improvement numbers use source-only selection and 150 epochs; the reproduction numbers in section 3 use target-based selection and 100 epochs. Under target-based selection, our control reaches about 87% accuracy, comparable to the reproduced 88.4%.
+
+**Limitations:**
+- UCI HAR only;
+- 3 seeds: seed 3 was partial and excluded, and seed 4 was not run because the Colab GPU quota was exhausted;
+- 5 participants, so the confidence intervals are wide.
+
+Full details, per-target tables, statistics and limitations are in `improvement/docs/FINAL_REPORT.md`.
+
+## 7. Repository map
 
 - `Original Code/` — source implementation supplied with the paper.
 - `Reproduction/Final Reproduction/` — final experiment results, evaluation artefacts, analysis, setup and methodology documentation.
 - `Reproduction/Experiment Archive/Run 1/` — interrupted initial attempt, retained for traceability and excluded from final metrics.
 - `Reproduction/Experiment Archive/Run 2/` — main execution records and analysis.
 - `Reproduction/Experiment Archive/Source Archive/` — source snapshots and supporting records.
+- `improvement/` — improvement work. It contains:
+  - `docs/`: reports;
+  - `experiment/`: code, tests, per-run results, analysis and the Colab notebook;
+  - `earlier_stages_code/`: the IE and XPC-B experiments.
 
 Start with:
 1. `Reproduction/Final Reproduction/README.md` for the final experiment scope and results.
 2. `Reproduction/Final Reproduction/SETUP.md` for environment, data layout and commands.
 3. `Reproduction/Final Reproduction/ANALYSIS_GUIDE.md` for interpretation of the evaluation artefacts.
+4. `improvement/README.md` for the improvement results, setup and reproduction commands.
+5. `improvement/docs/FINAL_REPORT.md` for the full improvement report.
 
 Raw datasets are not included. Follow the setup guide and original dataset preparation instructions before attempting a new run.
 
