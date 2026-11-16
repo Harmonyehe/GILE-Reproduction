@@ -1,0 +1,38 @@
+
+GILE REPRODUCTION — ACCURACY CALCULATION AUDIT
+================================================
+
+Finding:
+The original training implementation calculates classification
+accuracy using:
+
+accuracy_y = accurate_preds_y / (len(predictions_y) * batch_size)
+
+However, the target DataLoader does not use drop_last=True.
+Consequently, the final batch may contain fewer samples than
+the configured batch size.
+
+The denominator therefore overestimates the number of evaluated
+samples, causing historical training accuracy to be underestimated.
+
+Evidence:
+- Original Code/cross-person-HAR/train.py, accuracy calculation.
+- Original Code/cross-person-HAR/data_preprocess_ucihar.py,
+  target DataLoader configuration.
+- Fresh UCI HAR evaluation metrics.
+- Identical SHA256 hashes for all five UCI HAR checkpoints.
+
+Impact:
+Historical training-history accuracy values should not be treated
+as directly equivalent to the fresh evaluation accuracy values.
+
+Reporting decision:
+1. Preserve all original training-history CSV files.
+2. Preserve all existing checkpoint files.
+3. Use fresh evaluation metrics as the authoritative UCI HAR results.
+4. Retain historical training plots as historical records.
+5. Document the denominator issue as an implementation limitation.
+6. Do not claim that the historical values are exact corrected
+   accuracies because the CSV values were rounded to two decimals.
+
+No retraining or modification of original results was performed.

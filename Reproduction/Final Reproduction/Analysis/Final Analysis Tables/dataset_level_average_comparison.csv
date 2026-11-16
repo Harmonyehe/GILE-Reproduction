@@ -1,0 +1,4 @@
+Dataset,Number of Targets,Mean Reproduced Accuracy (%),Mean Paper Accuracy (%),Mean Difference (percentage points),Mean Macro-F1 (%),Mean Weighted-F1 (%),Evidence
+UCI HAR,5,88.42557245152305,88.172,0.2535724515230527,87.1253770450455,87.28691130678283,Fresh CPU evaluation
+Opportunity,4,80.42127588342375,81.395,-0.9737241165762534,52.326434377602936,79.38542005860413,Archived Run 2 evaluation
+UniMiB-SHAR,4,52.23237906964145,55.725,-3.49262093035855,41.03152401086679,48.14256681044177,Archived Run 2 evaluation

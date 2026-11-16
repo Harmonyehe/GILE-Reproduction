@@ -1,0 +1,14 @@
+Dataset,Target,Historical best test accuracy (%),Evaluated checkpoint accuracy (%),Difference (percentage points),Status
+UCI HAR,Target 0,77.0,85.3026,8.3026,REVIEW
+UCI HAR,Target 1,75.0,79.4702,4.4702,REVIEW
+UCI HAR,Target 2,84.0,94.1349,10.1349,REVIEW
+UCI HAR,Target 3,90.0,91.1672,1.1672,REVIEW
+UCI HAR,Target 4,87.0,92.053,5.053,REVIEW
+Opportunity,Target S1,82.0,82.6568,0.6568,Close
+Opportunity,Target S2,81.0,81.2404,0.2404,Close
+Opportunity,Target S3,78.0,78.1959,0.1959,Close
+Opportunity,Target S4,79.0,79.592,0.592,Close
+UniMiB-SHAR,Target 1,46.0,46.3542,0.3542,Close
+UniMiB-SHAR,Target 2,49.0,53.8593,4.8593,REVIEW
+UniMiB-SHAR,Target 3,64.0,67.1053,3.1053,REVIEW
+UniMiB-SHAR,Target 5,39.0,41.6107,2.6107,REVIEW
