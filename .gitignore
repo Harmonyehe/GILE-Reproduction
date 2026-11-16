@@ -25,3 +25,17 @@ datasets/
 *.tmp
 *.before_checkpoint.py
 *.pre_numpy_fix
+
+# Include final UCI HAR model checkpoints
+!Reproduction/Final Reproduction/Checkpoints/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_0/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_1/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_2/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_3/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_4/
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_0/best_model.pt
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_1/best_model.pt
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_2/best_model.pt
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_3/best_model.pt
+!Reproduction/Final Reproduction/Checkpoints/UCI HAR/target_4/best_model.pt

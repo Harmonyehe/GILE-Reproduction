@@ -398,7 +398,8 @@ class GILE(nn.Module):
         self.beta_x = args.beta_x
         self.beta_y = args.beta_y
 
-        self.cuda()
+        if torch.cuda.is_available():
+            self.cuda()
 
     def forward(self, d, x, y):
         # Encode
@@ -426,8 +427,14 @@ class GILE(nn.Module):
         zd_p_loc, zd_p_scale = self.pzd(d)
 
         if self.zx_dim != 0:
-            zx_p_loc, zx_p_scale = torch.zeros(zd_p_loc.size()[0], self.zx_dim).cuda(),\
-                                   torch.ones(zd_p_loc.size()[0], self.zx_dim).cuda()
+            zx_p_loc = torch.zeros(
+                zd_p_loc.size()[0], self.zx_dim,
+                device=zd_p_loc.device
+            )
+            zx_p_scale = torch.ones(
+                zd_p_loc.size()[0], self.zx_dim,
+                device=zd_p_loc.device
+            )
         zy_p_loc, zy_p_scale = self.pzy(y)
 
         # Reparameterization trick

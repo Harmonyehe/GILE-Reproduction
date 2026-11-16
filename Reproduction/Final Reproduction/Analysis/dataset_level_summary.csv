@@ -1,0 +1,4 @@
+dataset,targets_with_metrics,mean_accuracy,mean_macro_f1
+Opportunity,4,0.8042127588342375,0.5232643437760294
+UCI HAR,0,,
+UniMiB-SHAR,4,0.5223237906964144,0.4103152401086679

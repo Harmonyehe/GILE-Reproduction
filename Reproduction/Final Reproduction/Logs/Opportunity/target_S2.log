@@ -1,0 +1,48 @@
+COMMAND: /usr/bin/python3 /content/drive/MyDrive/GILE-Reproduction/Reproduction/Final Reproduction/Code/Training/main_oppor.py --n_epoch 100 --target_domain S2\nSTART: 2026-11-16T06:23:35.496373\nsource_domain: S1
+source_loader batch:  244
+source_domain: S3
+source_loader batch:  225
+source_domain: S4
+source_loader batch:  200
+target_domain: S2
+Epoch: [1/100], avg loss: 1031.36, y loss: 0.73%
+Epoch:[1/100], train acc d:0.30 y:0.74 | d_false:0.31 y_false:0.05
+Epoch:[1/100], TEST acc d:0.00 y:0.65 | d_false:0.06 y_false:0.01
+Epoch: [2/100], avg loss: 835.30, y loss: 0.29%
+Epoch:[2/100], train acc d:0.30 y:0.84 | d_false:0.34 y_false:0.06
+Epoch:[2/100], TEST acc d:0.00 y:0.67 | d_false:0.00 y_false:0.01
+Epoch: [3/100], avg loss: 433.09, y loss: 0.20%
+Epoch:[3/100], train acc d:0.30 y:0.87 | d_false:0.37 y_false:0.06
+Epoch:[3/100], TEST acc d:0.00 y:0.64 | d_false:0.00 y_false:0.72
+Epoch: [4/100], avg loss: 358.79, y loss: 0.16%
+Epoch:[4/100], train acc d:0.30 y:0.89 | d_false:0.33 y_false:0.07
+Epoch:[4/100], TEST acc d:0.00 y:0.68 | d_false:0.00 y_false:0.20
+Epoch: [5/100], avg loss: 309.62, y loss: 0.13%
+Epoch:[5/100], train acc d:0.30 y:0.93 | d_false:0.30 y_false:0.05
+Epoch:[5/100], TEST acc d:0.00 y:0.66 | d_false:0.00 y_false:0.25
+Epoch: [6/100], avg loss: 288.90, y loss: 0.11%
+Epoch:[6/100], train acc d:0.30 y:0.95 | d_false:0.32 y_false:0.06
+Epoch:[6/100], TEST acc d:0.00 y:0.61 | d_false:0.00 y_false:0.72
+Epoch: [7/100], avg loss: 295.17, y loss: 0.11%
+Epoch:[7/100], train acc d:0.30 y:0.93 | d_false:0.34 y_false:0.06
+Epoch:[7/100], TEST acc d:0.00 y:0.58 | d_false:0.00 y_false:0.02
+Epoch: [8/100], avg loss: 264.95, y loss: 0.10%
+Epoch:[8/100], train acc d:0.30 y:0.92 | d_false:0.29 y_false:0.06
+Epoch:[8/100], TEST acc d:0.00 y:0.71 | d_false:0.00 y_false:0.11
+Epoch: [9/100], avg loss: 298.08, y loss: 0.09%
+Epoch:[9/100], train acc d:0.30 y:0.97 | d_false:0.30 y_false:0.06
+Epoch:[9/100], TEST acc d:0.00 y:0.69 | d_false:0.00 y_false:0.02
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/GILE-Reproduction/Reproduction/Final Reproduction/Code/Training/main_oppor.py", line 56, in <module>
+  File "/content/drive/MyDrive/GILE-Reproduction/Reproduction/Final Reproduction/Code/Training/train.py", line 145, in train
+  File "/content/drive/MyDrive/GILE-Reproduction/Reproduction/Final Reproduction/Code/Training/train.py", line 138, in train_GILE
+  File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 1553, in savetxt
+    fh = np.lib._datasource.open(fname, 'wt', encoding=encoding)
+  File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_datasource.py", line 191, in open
+    ds = DataSource(destpath)
+  File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_datasource.py", line 248, in __init__
+    self._destpath = os.path.abspath(destpath)
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<frozen posixpath>", line 381, in abspath
+FileNotFoundError: [Errno 2] No such file or directory
+\nEXIT_CODE: 1\nELAPSED_SECONDS: 200.7\n

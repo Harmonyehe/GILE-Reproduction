@@ -1,0 +1,114 @@
+dataset,experiment,actual_activity,predicted_activity,errors,actual_class_support,within_class_error_rate
+Opportunity,oppor_S1,Drink from Cup,Null / Background,594,1099,0.54049135577798
+Opportunity,oppor_S1,Open Fridge,Null / Background,151,238,0.634453781512605
+Opportunity,oppor_S1,Close Fridge,Null / Background,131,237,0.5527426160337553
+Opportunity,oppor_S1,Null / Background,Drink from Cup,130,11299,0.011505442959553943
+Opportunity,oppor_S1,Close Door 1,Null / Background,108,270,0.4
+Opportunity,oppor_S1,Toggle Switch,Null / Background,80,173,0.4624277456647399
+Opportunity,oppor_S1,Open Dishwasher,Null / Background,76,169,0.44970414201183434
+Opportunity,oppor_S1,Open Door 1,Null / Background,71,287,0.24738675958188153
+Opportunity,oppor_S1,Close Dishwasher,Null / Background,54,172,0.313953488372093
+Opportunity,oppor_S1,Clean Table,Null / Background,54,209,0.2583732057416268
+Opportunity,oppor_S2,Drink from Cup,Null / Background,274,851,0.3219741480611046
+Opportunity,oppor_S2,Open Fridge,Null / Background,245,328,0.7469512195121951
+Opportunity,oppor_S2,Clean Table,Null / Background,204,380,0.5368421052631579
+Opportunity,oppor_S2,Open Dishwasher,Null / Background,187,256,0.73046875
+Opportunity,oppor_S2,Close Fridge,Null / Background,178,289,0.615916955017301
+Opportunity,oppor_S2,Null / Background,Drink from Cup,148,10805,0.013697362332253587
+Opportunity,oppor_S2,Close Dishwasher,Null / Background,103,220,0.4681818181818182
+Opportunity,oppor_S2,Toggle Switch,Null / Background,100,216,0.46296296296296297
+Opportunity,oppor_S2,Null / Background,Close Drawer 3,86,10805,0.007959278111985192
+Opportunity,oppor_S2,Open Drawer 1,Null / Background,86,158,0.5443037974683544
+Opportunity,oppor_S3,Drink from Cup,Null / Background,588,897,0.6555183946488294
+Opportunity,oppor_S3,Open Fridge,Null / Background,164,355,0.4619718309859155
+Opportunity,oppor_S3,Null / Background,Close Fridge,145,10331,0.014035427354563933
+Opportunity,oppor_S3,Null / Background,Drink from Cup,129,10331,0.012486690543025845
+Opportunity,oppor_S3,Toggle Switch,Null / Background,109,202,0.5396039603960396
+Opportunity,oppor_S3,Null / Background,Open Fridge,104,10331,0.01006678927499758
+Opportunity,oppor_S3,Close Fridge,Null / Background,104,276,0.37681159420289856
+Opportunity,oppor_S3,Null / Background,Close Dishwasher,97,10331,0.009389216919949666
+Opportunity,oppor_S3,Close Door 2,Open Door 2,90,235,0.3829787234042553
+Opportunity,oppor_S3,Open Dishwasher,Null / Background,89,182,0.489010989010989
+Opportunity,oppor_S4,Drink from Cup,Null / Background,224,714,0.3137254901960784
+Opportunity,oppor_S4,Open Fridge,Null / Background,223,260,0.8576923076923076
+Opportunity,oppor_S4,Close Fridge,Null / Background,212,267,0.7940074906367042
+Opportunity,oppor_S4,Null / Background,Drink from Cup,138,9426,0.01464035646085296
+Opportunity,oppor_S4,Null / Background,Open Drawer 3,127,9426,0.013473371525567579
+Opportunity,oppor_S4,Toggle Switch,Null / Background,88,150,0.5866666666666667
+Opportunity,oppor_S4,Open Door 1,Null / Background,78,213,0.36619718309859156
+Opportunity,oppor_S4,Close Door 1,Null / Background,70,196,0.35714285714285715
+Opportunity,oppor_S4,Clean Table,Null / Background,65,279,0.23297491039426524
+Opportunity,oppor_S4,Open Dishwasher,Null / Background,64,149,0.42953020134228187
+UniMiB SHAR,shar_1,GoingDownS,Walking,40,42,0.9523809523809523
+UniMiB SHAR,shar_1,GoingUpS,Walking,30,31,0.967741935483871
+UniMiB SHAR,shar_1,FallingBackSC,HittingObstacle,13,15,0.8666666666666667
+UniMiB SHAR,shar_1,FallingWithPS,FallingRight,11,14,0.7857142857142857
+UniMiB SHAR,shar_1,FallingRight,FallingForw,8,17,0.47058823529411764
+UniMiB SHAR,shar_1,Syncope,FallingBack,8,20,0.4
+UniMiB SHAR,shar_1,FallingBack,HittingObstacle,7,15,0.4666666666666667
+UniMiB SHAR,shar_1,FallingForw,FallingRight,6,11,0.5454545454545454
+UniMiB SHAR,shar_1,FallingLeft,FallingBack,6,18,0.3333333333333333
+UniMiB SHAR,shar_1,HittingObstacle,Syncope,5,19,0.2631578947368421
+UniMiB SHAR,shar_2,Walking,GoingUpS,36,143,0.2517482517482518
+UniMiB SHAR,shar_2,Walking,GoingDownS,21,143,0.14685314685314685
+UniMiB SHAR,shar_2,GoingDownS,Running,19,49,0.3877551020408163
+UniMiB SHAR,shar_2,FallingLeft,HittingObstacle,12,27,0.4444444444444444
+UniMiB SHAR,shar_2,FallingWithPS,FallingForw,11,32,0.34375
+UniMiB SHAR,shar_2,GoingDownS,Jumping,10,49,0.20408163265306123
+UniMiB SHAR,shar_2,FallingBackSC,LyingDownFS,10,25,0.4
+UniMiB SHAR,shar_2,Syncope,FallingBackSC,9,27,0.3333333333333333
+UniMiB SHAR,shar_2,Walking,Running,8,143,0.055944055944055944
+UniMiB SHAR,shar_2,FallingForw,FallingWithPS,7,21,0.3333333333333333
+UniMiB SHAR,shar_3,Walking,GoingDownS,8,22,0.36363636363636365
+UniMiB SHAR,shar_3,FallingWithPS,FallingForw,7,13,0.5384615384615384
+UniMiB SHAR,shar_3,Syncope,HittingObstacle,7,10,0.7
+UniMiB SHAR,shar_3,Jumping,GoingDownS,6,30,0.2
+UniMiB SHAR,shar_3,LyingDownFS,Syncope,6,11,0.5454545454545454
+UniMiB SHAR,shar_3,FallingRight,FallingWithPS,6,12,0.5
+UniMiB SHAR,shar_3,FallingBack,Syncope,5,10,0.5
+UniMiB SHAR,shar_3,HittingObstacle,FallingForw,5,14,0.35714285714285715
+UniMiB SHAR,shar_3,Jumping,GoingUpS,4,30,0.13333333333333333
+UniMiB SHAR,shar_3,GoingDownS,GoingUpS,4,39,0.10256410256410256
+UniMiB SHAR,shar_5,GoingUpS,Walking,14,19,0.7368421052631579
+UniMiB SHAR,shar_5,Jumping,Walking,13,20,0.65
+UniMiB SHAR,shar_5,GoingDownS,Running,13,32,0.40625
+UniMiB SHAR,shar_5,Syncope,FallingBack,10,15,0.6666666666666666
+UniMiB SHAR,shar_5,GoingDownS,StandingUpFL,9,32,0.28125
+UniMiB SHAR,shar_5,GoingDownS,Walking,9,32,0.28125
+UniMiB SHAR,shar_5,FallingBack,FallingLeft,8,21,0.38095238095238093
+UniMiB SHAR,shar_5,Jumping,Running,7,20,0.35
+UniMiB SHAR,shar_5,FallingForw,FallingRight,7,16,0.4375
+UniMiB SHAR,shar_5,FallingForw,FallingBack,7,16,0.4375
+UCI HAR,ucihar_0,Walking,Walking Upstairs,13,95,0.1368421052631579
+UCI HAR,ucihar_0,Laying,Sitting,8,50,0.16
+UCI HAR,ucihar_0,Walking Upstairs,Walking,4,53,0.07547169811320754
+UCI HAR,ucihar_0,Walking Downstairs,Walking,4,49,0.08163265306122448
+UCI HAR,ucihar_0,Walking Downstairs,Walking Upstairs,4,49,0.08163265306122448
+UCI HAR,ucihar_0,Walking,Walking Downstairs,3,95,0.031578947368421054
+UCI HAR,ucihar_0,Walking Upstairs,Walking Downstairs,3,53,0.05660377358490566
+UCI HAR,ucihar_0,Laying,Standing,3,50,0.06
+UCI HAR,ucihar_0,Laying,Walking Downstairs,2,50,0.04
+UCI HAR,ucihar_0,Sitting,Walking,1,47,0.02127659574468085
+UCI HAR,ucihar_1,Sitting,Standing,36,46,0.782608695652174
+UCI HAR,ucihar_1,Walking Downstairs,Walking Upstairs,9,47,0.19148936170212766
+UCI HAR,ucihar_1,Walking,Walking Upstairs,5,59,0.0847457627118644
+UCI HAR,ucihar_1,Walking Upstairs,Walking,3,48,0.0625
+UCI HAR,ucihar_1,Walking Upstairs,Walking Downstairs,3,48,0.0625
+UCI HAR,ucihar_2,Walking Downstairs,Walking,3,49,0.061224489795918366
+UCI HAR,ucihar_2,Walking Upstairs,Walking Downstairs,2,59,0.03389830508474576
+UCI HAR,ucihar_2,Walking Downstairs,Walking Upstairs,2,49,0.04081632653061224
+UCI HAR,ucihar_2,Walking,Walking Upstairs,1,58,0.017241379310344827
+UCI HAR,ucihar_2,Walking,Walking Downstairs,1,58,0.017241379310344827
+UCI HAR,ucihar_2,Walking Upstairs,Walking,1,59,0.01694915254237288
+UCI HAR,ucihar_2,Sitting,Walking,1,52,0.019230769230769232
+UCI HAR,ucihar_2,Sitting,Standing,1,52,0.019230769230769232
+UCI HAR,ucihar_3,Sitting,Standing,17,50,0.34
+UCI HAR,ucihar_3,Walking Upstairs,Walking Downstairs,5,52,0.09615384615384616
+UCI HAR,ucihar_3,Walking Upstairs,Walking,2,52,0.038461538461538464
+UCI HAR,ucihar_3,Walking Downstairs,Walking,2,45,0.044444444444444446
+UCI HAR,ucihar_3,Walking,Walking Downstairs,1,60,0.016666666666666666
+UCI HAR,ucihar_3,Walking,Standing,1,60,0.016666666666666666
+UCI HAR,ucihar_4,Standing,Sitting,7,56,0.125
+UCI HAR,ucihar_4,Walking Upstairs,Walking,6,47,0.1276595744680851
+UCI HAR,ucihar_4,Walking Upstairs,Walking Downstairs,6,47,0.1276595744680851
+UCI HAR,ucihar_4,Sitting,Standing,6,44,0.13636363636363635
