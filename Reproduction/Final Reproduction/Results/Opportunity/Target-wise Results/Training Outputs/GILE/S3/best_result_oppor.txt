@@ -1,0 +1,4 @@
+
+Setting: Model: GILE Target: S3
+aux_loss_multiplier_d:1000.0 aux_loss_multiplier_y:1000.0 batch_size:64 beta:1.0 beta_d:0.002 beta_x:0.0 beta_y:10.0 d_AE:50 dataset:oppor device:cuda:0 eval_checkpoint_dir:/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction/evaluation-code/checkpoints/oppor_targetS3 len_sw:30 n_class:18 n_domains:4 n_epoch:100 n_feature:77 n_target_domains:1 now_model_name:GILE sigma:1 target_domain:S3 test_every:1 weight_false:1000.0 weight_mmd:1.0 weight_true:1000.0 x_dim:1152 e_acc: 0.7815	 best_iter: 93
+

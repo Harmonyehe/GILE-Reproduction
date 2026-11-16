@@ -1,0 +1,14 @@
+dataset,target,metrics_present,accuracy_present,macro_f1_present,weighted_f1_present,provenance
+UCI HAR,0,True,True,True,True,Fresh UCI HAR evaluation
+UCI HAR,1,True,True,True,True,Fresh UCI HAR evaluation
+UCI HAR,2,True,True,True,True,Fresh UCI HAR evaluation
+UCI HAR,3,True,True,True,True,Fresh UCI HAR evaluation
+UCI HAR,4,True,True,True,True,Fresh UCI HAR evaluation
+Opportunity,S1,True,True,True,True,Run 2 archived evaluation
+Opportunity,S2,True,True,True,True,Run 2 archived evaluation
+Opportunity,S3,True,True,True,True,Run 2 archived evaluation
+Opportunity,S4,True,True,True,True,Run 2 archived evaluation
+UniMiB-SHAR,1,True,True,True,True,Run 2 archived evaluation
+UniMiB-SHAR,2,True,True,True,True,Run 2 archived evaluation
+UniMiB-SHAR,3,True,True,True,True,Run 2 archived evaluation
+UniMiB-SHAR,5,True,True,True,True,Run 2 archived evaluation

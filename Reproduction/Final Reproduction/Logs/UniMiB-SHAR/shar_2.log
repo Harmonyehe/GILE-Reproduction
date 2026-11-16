@@ -1,0 +1,24 @@
+COMMAND:
+/content/bin/micromamba run -p /content/mamba-root/envs/gile310 python evaluate_shar.py --target_domain 2 --checkpoint /content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/checkpoints/shar/2/best_model.pt --output /content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_evaluation/shar_2.json
+
+STDOUT:
+source_domain: 1
+source_loader batch:  6
+source_domain: 3
+source_loader batch:  4
+source_domain: 5
+source_loader batch:  4
+target_domain: 2
+target_loader batch:  10
+{
+  "dataset": "shar",
+  "target_domain": "2",
+  "num_samples": 583,
+  "accuracy": 0.5385934819897084,
+  "macro_f1": 0.4720201535026965,
+  "weighted_f1": 0.5246193125864449,
+  "output": "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/results-and-report/run2_evaluation/shar_2.json"
+}
+
+
+STDERR:

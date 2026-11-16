@@ -1,14 +1,14 @@
-Dataset,Target,Samples,Accuracy,Macro F1,Weighted F1,Source,Source File
-UCI HAR,0,,0.899135446685879,0.8937005769978271,0.8955631929838467,Archived evaluation JSON,ucihar_target0_metrics.json
-UCI HAR,1,,0.804635761589404,0.742112994778827,0.7543556188663484,Archived evaluation JSON,ucihar_target1_metrics.json
-UCI HAR,2,,0.9765395894428153,0.9754278678327708,0.9766090559605023,Archived evaluation JSON,ucihar_target2_metrics.json
-UCI HAR,3,,0.8927444794952681,0.8887461811910029,0.8903806877434852,Archived evaluation JSON,ucihar_target3_metrics.json
-UCI HAR,4,,0.8940397350993378,0.8935806024041318,0.8952028752963694,Archived evaluation JSON,ucihar_target4_metrics.json
-Opportunity,S1,15643.0,0.8265677939014255,0.6183669577012678,0.821895081920416,Archived evaluation JSON,oppor_targetS1_metrics.json
-Opportunity,S2,15011.0,0.8124042368929452,0.5350843080162853,0.7985477027322481,Archived evaluation JSON,oppor_targetS2_metrics.json
-Opportunity,S3,14456.0,0.7819590481460985,0.4382288589904105,0.7636509097137113,Archived evaluation JSON,oppor_targetS3_metrics.json
-Opportunity,S4,12843.0,0.7959199563964806,0.5013772503961538,0.7913231079777894,Archived evaluation JSON,oppor_targetS4_metrics.json
-UniMiB-SHAR,1,384.0,0.4635416666666667,0.33827973955144996,0.4026120058282798,Archived evaluation JSON,shar_target1_metrics.json
-UniMiB-SHAR,2,583.0,0.5385934819897084,0.4720201535026965,0.5246193125864449,Archived evaluation JSON,shar_target2_metrics.json
-UniMiB-SHAR,3,304.0,0.6710526315789473,0.48812124162081705,0.6578573326902637,Archived evaluation JSON,shar_target3_metrics.json
-UniMiB-SHAR,5,298.0,0.4161073825503356,0.3428398257597081,0.3406140213126823,Archived evaluation JSON,shar_target5_metrics.json
+dataset,target,samples,accuracy,macro_f1,weighted_f1,provenance,source_file
+UCI HAR,0,347,0.8530259365994236,0.8598204312419124,0.8518271466292917,Fresh UCI HAR evaluation,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_0_fresh_metrics.json
+UCI HAR,1,302,0.7947019867549668,0.7265936677701385,0.7401231413697328,Fresh UCI HAR evaluation,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_1_fresh_metrics.json
+UCI HAR,2,341,0.9413489736070382,0.9390217788703369,0.9412316284057486,Fresh UCI HAR evaluation,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_2_fresh_metrics.json
+UCI HAR,3,317,0.9116719242902208,0.9106165769978736,0.9104809844129383,Fresh UCI HAR evaluation,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_3_fresh_metrics.json
+UCI HAR,4,302,0.9205298013245033,0.9202163973720139,0.9206826645214299,Fresh UCI HAR evaluation,Reproduction/Final Reproduction/Results/UCI HAR/Fresh CPU Evaluation/ucihar_target_4_fresh_metrics.json
+Opportunity,S1,15643,0.8265677939014255,0.6183669577012678,0.821895081920416,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS1_metrics.json
+Opportunity,S2,15011,0.8124042368929452,0.5350843080162853,0.7985477027322481,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS2_metrics.json
+Opportunity,S3,14456,0.7819590481460985,0.4382288589904105,0.7636509097137113,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS3_metrics.json
+Opportunity,S4,12843,0.7959199563964806,0.5013772503961538,0.7913231079777894,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/oppor_targetS4_metrics.json
+UniMiB-SHAR,1,384,0.4635416666666667,0.33827973955144996,0.4026120058282798,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target1_metrics.json
+UniMiB-SHAR,2,583,0.5385934819897084,0.4720201535026965,0.5246193125864449,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target2_metrics.json
+UniMiB-SHAR,3,304,0.6710526315789473,0.48812124162081705,0.6578573326902637,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target3_metrics.json
+UniMiB-SHAR,5,298,0.4161073825503356,0.3428398257597081,0.3406140213126823,Run 2 archived evaluation,Reproduction/Experiment Archive/Run 2 Root Artifacts/shar_target5_metrics.json

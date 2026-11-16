@@ -1,0 +1,30 @@
+source_domain: 1
+source_loader batch:  4
+source_domain: 2
+source_loader batch:  5
+source_domain: 3
+source_loader batch:  4
+source_domain: 4
+source_loader batch:  4
+target_domain: 0
+target_loader batch:  6
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/main_ucihar.py", line 56, in <module>
+    train(model, DEVICE, optimizer, source_loaders, target_loader, result_csv, result_txt, args)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/train.py", line 145, in train
+    return train_GILE(model, DEVICE, optimizer, source_loaders, target_loader, result_csv, result_txt, args)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/train.py", line 111, in train_GILE
+    avg_epoch_loss, avg_epoch_class_y_loss = train_auxi(args, source_loaders, DEVICE, model, optimizer, e, false_optimizer)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/train.py", line 19, in train_auxi
+    loss_origin, class_y_loss = model.loss_function(d, x, y)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/model_GILE_ucihar.py", line 460, in loss_function
+    x_recon, d_hat, y_hat, qzd, pzd, zd_q, qzx, pzx, zx_q, qzy, pzy, zy_q = self.forward(d, x, y)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/model_GILE_ucihar.py", line 426, in forward
+    zd_p_loc, zd_p_scale = self.pzd(d)
+  File "/content/mamba-root/envs/gile310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/content/mamba-root/envs/gile310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/drive/MyDrive/ATS PROJECT/GILE-Reproduction-Run2/evaluation-code/model_GILE_ucihar.py", line 87, in forward
+    d_onehot = a[d]
+RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)
