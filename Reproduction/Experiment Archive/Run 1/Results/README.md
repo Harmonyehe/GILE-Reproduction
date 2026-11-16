@@ -1,7 +1,7 @@
 # Run 1 — Available Results
 
-This directory represents the results category of the initial experimental attempt. The attempt was interrupted, and its available outputs do not constitute the completed 13-target reproduction.
+This directory contains the available outputs from the initial Run 1 attempt. Run 1 was interrupted and used a 150-epoch UCI HAR configuration. It was excluded from the final results because the final reproduction uses a consistent 100-epoch configuration.
 
-Original result files that are stored elsewhere in the repository are referenced through `../RUN1_FILE_INDEX.csv`. The index identifies each file's original path and current physical location.
+These outputs are preserved for traceability only. They must not be combined with the final 13-target metrics.
 
-The final reproduction results are reported separately in `Reproduction/Final Reproduction/` and comprise the Run 2 Opportunity and UniMiB-SHAR experiments together with the UCI HAR experiments conducted using the corrected 100-epoch configuration.
+The final result set uses the corrected 100-epoch UCI HAR experiments and the completed 100-epoch Run 2 Opportunity and UniMiB-SHAR experiments. See `Reproduction/Final Reproduction/` for the consolidated results.

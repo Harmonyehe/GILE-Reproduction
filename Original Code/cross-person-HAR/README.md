@@ -1,25 +1,12 @@
 # GILE — Original Implementation
 
-This directory contains the original implementation of Generalizable Independent Latent Excitation (GILE), introduced in:
+This directory contains the source implementation associated with the AAAI 2021 paper *Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition* by Hangwei Qian, Sinno Jialin Pan and Chunyan Miao.
 
-**Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition**
-Hangwei Qian, Sinno Jialin Pan and Chunyan Miao, AAAI 2021.
+The implementation provides dataset-specific preprocessing, model and training scripts for UCI HAR, Opportunity and UniMiB-SHAR.
 
-The implementation provides the model and dataset-specific scripts used for cross-person human activity recognition with UCI HAR, Opportunity and UniMiB-SHAR.
+## Original environment
 
-## Datasets
-
-The original project uses three datasets:
-
-- UCI HAR
-- Opportunity
-- UniMiB-SHAR
-
-Download and preprocess the datasets using the instructions and scripts supplied with the original implementation. Place the processed data in the expected `./data` directory.
-
-## Environment
-
-The original implementation specifies a Python 3.6 environment and the following packages:
+The original code documents a Python 3.6 environment and an older PyTorch stack. The commands below reproduce that historical environment specification; they are not a guarantee that the same versions are required or compatible in a current Colab runtime.
 
 ```bash
 conda create --name gile python=3.6
@@ -31,11 +18,13 @@ conda install -c conda-forge tqdm
 conda install -c pytorch torchvision
 ```
 
-These commands document the original environment. The reproduction may require compatibility adjustments for newer Python and library versions.
+## Datasets
 
-## Running the original scripts
+The original project uses UCI HAR, Opportunity and UniMiB-SHAR. Download and preprocess each dataset using its official distribution and the scripts supplied with the implementation. The scripts expect preprocessed files in the relevant `data` subdirectories. See the reproduction `SETUP.md` for the directory layout used by the final project.
 
-Specify the target participant when launching a dataset-specific script:
+## Original command interface
+
+The original dataset-specific entry points accept a target participant argument. Examples:
 
 ```bash
 python main_ucihar.py --beta_d 5.0 --beta_y 5.0 --target_domain 0
@@ -43,11 +32,11 @@ python main_oppor.py --target_domain S1
 python main_shar.py --target_domain 3
 ```
 
-The commands above illustrate the original script interface. For the completed reproduction, use the organised code and experiment documentation under `Reproduction/Final Reproduction/`.
+These are examples of the original interface, not a complete reproduction workflow. For the final experiment configuration and the 100-epoch commands, use `Reproduction/Final Reproduction/SETUP.md`.
 
 ## Relationship to the reproduction
 
-The original implementation is retained as the source reference for the reproduction. The completed experimental configuration and consolidated results are documented in the repository root README and in `Reproduction/Final Reproduction/README.md`.
+All model-training experiments in the reproduction were run in Google Colab with GPU acceleration. Run 1 was excluded because it was interrupted and its UCI HAR run used 150 epochs. The final result set uses the corrected 100-epoch UCI HAR experiments plus the completed 100-epoch Run 2 Opportunity and UniMiB-SHAR experiments.
 
 ## Citation
 

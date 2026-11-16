@@ -1,15 +1,23 @@
-# Evaluation and cleanup audit
+# Evaluation and Cleanup Audit
 
-Generated: 2026-11-16T13:02:06.143720+00:00
+## Scope of this audit
 
-## Scope
-This notebook performed repository inspection, metric consolidation and analysis only. It did not invoke model training or run any training epochs.
+This audit notebook performed repository inspection, metric consolidation, provenance checks and analysis only. It did not invoke model-training entry points or run training epochs. This statement applies to the audit notebook, not to the reproduction project as a whole.
 
-## Provenance
-- Fresh UCI HAR metrics are selected from the Fresh CPU Evaluation folder when present.
-- Opportunity and UniMiB-SHAR metrics are labelled archived unless a fresh evaluation source is explicitly found.
-- Missing values remain blank; no metrics are fabricated.
-- `experiment_evidence_audit.csv` lists metric JSONs, matching checkpoints and logs found.
+The model-training experiments had already been conducted in Google Colab using GPU acceleration. Run 1 was excluded because it was interrupted and its UCI HAR run used 150 epochs. The final result set uses corrected 100-epoch UCI HAR experiments and completed 100-epoch Run 2 Opportunity and UniMiB-SHAR experiments.
 
-## Limitations
-The repository audit must be reviewed before describing all 13 experiments as independently evaluated. A metric JSON alone is not proof that the corresponding model checkpoint was freshly evaluated.
+## Metric sources
+
+- UCI HAR: fresh CPU evaluation JSON files in `Results/UCI HAR/Fresh CPU Evaluation/`, associated with the corrected 100-epoch UCI HAR experiments.
+- Opportunity: Run 2 evaluation JSON files.
+- UniMiB-SHAR: Run 2 evaluation JSON files.
+
+Accuracy, Macro-F1, Weighted-F1, sample counts and per-class precision/recall/F1 are taken from the source evaluation files when present. Missing values are not inferred or fabricated.
+
+## Provenance and checkpoints
+
+The audit inventories metric JSONs, matching checkpoints and logs. A recovered checkpoint is not automatically assumed to be the source of an archived metric JSON. Independent evaluation requires a target-matched checkpoint, the required dataset inputs and an evaluation-only script.
+
+## Interpretation limits
+
+The final report distinguishes fresh UCI HAR evaluation from archived Run 2 Opportunity and UniMiB-SHAR evaluation outputs. The source of a metric must remain visible. A metric JSON alone does not prove that the finalisation notebook freshly evaluated a checkpoint.

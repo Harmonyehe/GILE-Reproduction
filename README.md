@@ -1,38 +1,40 @@
 # GILE: Cross-Person Human Activity Recognition
 
-This repository contains the original GILE implementation and the completed reproduction of the method described by Qian, Pan and Miao (AAAI 2021).
+This repository contains the original GILE implementation and the completed reproduction of the method introduced by Qian, Pan and Miao (AAAI 2021).
 
 **Paper:** *Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*
 **Authors:** Hangwei Qian, Sinno Jialin Pan and Chunyan Miao
 **Venue:** AAAI 2021
 
-## Reproduction overview
+## 1. Project overview
 
-The reproduction evaluates cross-person human activity recognition on three wearable-sensor datasets:
+GILE addresses cross-person human activity recognition (HAR) from wearable-sensor time series. The central reproduction question is whether a model trained using data from source participants can recognise activities for a different target participant. The target participant is treated as a separate domain because sensor patterns can vary between people even when they perform the same activity.
 
-- UCI Human Activity Recognition (UCI HAR)
-- Opportunity
-- UniMiB-SHAR
+The reproduction covers three datasets and 13 target participants:
 
-The evaluation covers 13 target participants in total.
+| Dataset | Target participants | Targets |
+|---|---|---:|
+| UCI HAR | 0, 1, 2, 3, 4 | 5 |
+| Opportunity | S1, S2, S3, S4 | 4 |
+| UniMiB-SHAR | 1, 2, 3, 5 | 4 |
 
-| Dataset | Target participants | Number of targets | Final training configuration |
-|---|---|---:|---:|
-| UCI HAR | 0, 1, 2, 3, 4 | 5 | 100 epochs |
-| Opportunity | S1, S2, S3, S4 | 4 | 100 epochs |
-| UniMiB-SHAR | 1, 2, 3, 5 | 4 | 100 epochs |
+## 2. Experimental history and final selection
 
-### Final experimental sequence
+All model-training experiments were run in Google Colab using GPU acceleration.
 
-The first experimental attempt was interrupted before the complete reproduction was obtained. The subsequent Run 2 execution was carried out as the main experiment. During the comparison with the paper, the UCI HAR training duration was checked and aligned to the 100-epoch configuration used for the final reproduction. The UCI HAR target experiments were therefore run with the corrected 100-epoch setting.
+**Run 1 — excluded.** The initial attempt was interrupted, and its UCI HAR execution used 150 epochs rather than the intended 100-epoch configuration. Run 1 is retained as a historical record, but its outputs are not included in the final metrics.
 
-The final reproduction consists of the Run 2 Opportunity and UniMiB-SHAR experiments together with the UCI HAR results produced using the corrected 100-epoch configuration. These results form one final 13-target evaluation across the three datasets.
+**Run 2 — main execution.** Opportunity and UniMiB-SHAR were run for 100 epochs for every target. The Run 2 UCI HAR experiments used 150 epochs, so those UCI HAR results were not retained as the final UCI HAR results.
 
-The initial interrupted attempt is retained in the experiment records for traceability. It is not included in the final 13-target result tables.
+**Corrected UCI HAR execution.** After comparing the experiment configuration with the paper, UCI HAR was rerun for targets 0–4 using 100 epochs.
 
-## Final results
+**Final 13-target set.** The final results combine the five corrected UCI HAR target experiments with the four Opportunity and four UniMiB-SHAR Run 2 target experiments. This is the basis for the final cross-dataset comparison.
 
-The following values are unweighted means across the target participants within each dataset. Accuracy is compared with the corresponding paper result. Macro-F1 and weighted-F1 are reported for the reproduction.
+The report-generation and evaluation-consolidation notebooks did not train models. That statement describes those later analysis steps only; it does not mean the reproduction project lacked training.
+
+## 3. Final dataset-level results
+
+The following are unweighted means across target participants within each dataset. The paper comparison is for accuracy only.
 
 | Dataset | Paper accuracy (%) | Reproduced accuracy (%) | Difference (percentage points) | Macro-F1 (%) | Weighted-F1 (%) |
 |---|---:|---:|---:|---:|---:|
@@ -40,40 +42,45 @@ The following values are unweighted means across the target participants within 
 | Opportunity | 81.395 | 80.421 | -0.974 | 52.326 | 79.385 |
 | UniMiB-SHAR | 55.725 | 52.232 | -3.493 | 41.032 | 48.143 |
 
-The target-level results and per-class metrics are available in the final analysis tables. The comparison uses the paper's reported accuracy values; paper F1 values are not supplied in the comparison.
+The F1 values describe the reproduction. Paper F1 baselines are not asserted.
 
-## Evaluation protocol and interpretation
+## 4. How to read the analysis
 
-The final UCI HAR metrics were calculated from a fresh CPU evaluation of the selected checkpoints. The Opportunity and UniMiB-SHAR metrics are the results of their Run 2 target experiments. All 13 target results are brought together in the final analysis tables.
+- **Target-wise tables** show performance for each held-out participant separately. They reveal whether the average is consistent or driven by a subset of targets.
+- **Dataset-level tables** are unweighted averages of the target-level values. Each target contributes equally, rather than each test example contributing equally across targets.
+- **Accuracy** is the fraction of correctly classified test examples.
+- **Macro-F1** computes F1 per class and averages classes equally. It is sensitive to poor performance on less frequent classes.
+- **Weighted-F1** averages class F1 using each class's support. It is more influenced by common classes.
+- **Confusion matrices** show the relationship between true and predicted labels. Rows and columns should be interpreted using the dataset's verified label mapping.
+- **Training-history plots** show the values recorded during training. They are not a substitute for final sample-level evaluation.
+- **Paper comparisons** use accuracy values transcribed for the corresponding targets. Differences are reported in percentage points, not relative percent.
 
-The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target labels therefore influence checkpoint selection, even though they are not used for gradient-based parameter updates. The reported scores must be interpreted in light of this protocol; they are not an evaluation in which the target domain is entirely unseen during model selection.
+A large gap between weighted-F1 and macro-F1 can indicate uneven class-level performance. Class-support imbalance is descriptive; it does not, by itself, establish why a model makes particular errors.
 
-The historical training-accuracy calculation also used a denominator based on the configured batch size. Since the final batch can contain fewer samples, the historical training log values may not exactly match sample-level accuracy. The final evaluation metrics are calculated from the actual number of evaluated samples. See `Reproduction/Final Reproduction/Analysis/Audit/accuracy_calculation_audit.txt` for the calculation audit.
+## 5. Evaluation protocol and limitations
 
-## Repository structure
+The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target labels therefore influence checkpoint selection, even though they are not used for gradient-based parameter updates. The results should not be described as a strictly target-unseen model-selection evaluation.
 
-- `Original Code/` — source implementation supplied with the GILE paper.
-- `Reproduction/Final Reproduction/` — final reproduction code, results, analysis, logs and documentation.
-- `Reproduction/Experiment Archive/Run 1/` — records from the interrupted initial experiment.
-- `Reproduction/Experiment Archive/Run 2/` — execution records and analysis associated with the main experimental run.
-- `Reproduction/Experiment Archive/Source Archive/` — source snapshots and their supporting documentation.
+The original training-accuracy calculation uses `len(predictions_y) * batch_size` as its denominator. Because the final batch can be smaller than the configured batch size, historical training accuracy can be underestimated. The final evaluation metrics use the actual number of evaluated samples. See `Reproduction/Final Reproduction/Analysis/Audit/accuracy_calculation_audit.txt`.
 
-## Main final-reproduction files
+The final UCI HAR metrics come from fresh CPU evaluation JSONs. This CPU evaluation is an evaluation step; model training was performed on Colab GPU. Opportunity and UniMiB-SHAR final metrics use the Run 2 evaluation outputs.
 
-Within `Reproduction/Final Reproduction/`:
+## 6. Repository map
 
-- `Results/` — target-level evaluation outputs and final result summaries.
-- `Analysis/Final Analysis Tables/` — consolidated target-level, dataset-level and per-class metrics.
-- `Analysis/Fresh UCI HAR Confusion Matrices/` — confusion matrices and supporting metrics from the final UCI HAR evaluation.
-- `Analysis/Training History Plots/` — activity and domain training-history plots for all 13 targets.
-- `Analysis/Audit/` — evaluation and metric-calculation audit notes.
-- `Code/` — reproduction and evaluation scripts.
+- `Original Code/` — source implementation supplied with the paper.
+- `Reproduction/Final Reproduction/` — final experiment results, evaluation artefacts, analysis, setup and methodology documentation.
+- `Reproduction/Experiment Archive/Run 1/` — interrupted initial attempt, retained for traceability and excluded from final metrics.
+- `Reproduction/Experiment Archive/Run 2/` — main execution records and analysis.
+- `Reproduction/Experiment Archive/Source Archive/` — source snapshots and supporting records.
 
-Raw datasets are not included. Follow the original implementation's dataset preparation instructions and place the processed data in the expected `data` directories before running the scripts.
+Start with:
+1. `Reproduction/Final Reproduction/README.md` for the final experiment scope and results.
+2. `Reproduction/Final Reproduction/SETUP.md` for environment, data layout and commands.
+3. `Reproduction/Final Reproduction/ANALYSIS_GUIDE.md` for interpretation of the evaluation artefacts.
+
+Raw datasets are not included. Follow the setup guide and original dataset preparation instructions before attempting a new run.
 
 ## Citation
-
-If you use this implementation or reproduce the method, cite the original paper:
 
 ```bibtex
 @inproceedings{DBLP:conf/aaai/QianPM21,

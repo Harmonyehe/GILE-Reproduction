@@ -1,16 +1,9 @@
-# Run 1 — Initial Source and Experiment Snapshot
+# Run 1 — Source and Experiment Snapshot
 
-## Purpose
+This directory identifies source material associated with the initial Run 1 attempt. Run 1 was interrupted and its UCI HAR execution used 150 epochs rather than the 100-epoch configuration used for the final UCI HAR experiments. It was excluded from the final result set.
 
-This directory identifies the source and experiment material associated with the initial Run 1 attempt. The attempt was interrupted before completion. Its files are retained to provide a traceable record of the development of the reproduction.
+All model-training experiments were conducted in Google Colab with GPU acceleration. The Run 1 source and outputs are preserved for traceability, not as inputs to the final 13-target metrics.
 
-## Relationship to the completed reproduction
+The final reproduction combines the corrected 100-epoch UCI HAR results with the completed 100-epoch Run 2 Opportunity and UniMiB-SHAR results.
 
-The final reproduction consists of the Run 2 Opportunity and UniMiB-SHAR experiments together with the UCI HAR experiments conducted using the corrected 100-epoch configuration. Run 1 is not included in the final 13-target metrics.
-
-## Reporting
-
-- Keep the Run 1 execution records distinct from the final result tables.
-- Do not combine Run 1 metrics with the final target-level metrics.
-- Use the original file paths and experiment records when describing the initial attempt.
-- Refer to `Reproduction/Final Reproduction/README.md` for the final experiment configuration and results.
+Keep Run 1 source files and metrics distinct from the final result tables. See `Reproduction/Final Reproduction/README.md` for the final configuration.

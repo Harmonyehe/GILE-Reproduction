@@ -1,9 +1,7 @@
 # Run 1 — Evaluation Records
 
-This directory documents the evaluation artefacts associated with the initial experimental attempt.
+This directory contains evaluation artefacts from the initial Run 1 attempt. Run 1 was interrupted and its UCI HAR execution used 150 epochs rather than the 100-epoch configuration adopted for the final reproduction. It was therefore excluded from the final metrics.
 
-The available categories include metrics, summaries, visualisations and other evaluation outputs. The initial attempt was interrupted, so these files should be interpreted in the context of the corresponding Run 1 execution records rather than as the final reproduction results.
+The files are preserved as historical evidence. They should not be mixed with the final target-wise or dataset-level tables. The final 13-target result set uses corrected 100-epoch UCI HAR experiments and the completed 100-epoch Run 2 Opportunity and UniMiB-SHAR experiments.
 
-Where an identical file is stored elsewhere in the repository, its original path and current location are recorded in `../RUN1_FILE_INDEX.csv`. This index preserves provenance without maintaining unnecessary duplicate copies.
-
-The final 13-target results are documented in `Reproduction/Final Reproduction/README.md`.
+Where an identical file is stored elsewhere, its original path and current location are recorded in `../RUN1_FILE_INDEX.csv`. See `Reproduction/Final Reproduction/README.md` for final results.

@@ -1,34 +1,35 @@
 # Evaluation Methodology
 
-This finalisation is evaluation and repository maintenance only.
-It does not train models or execute training entry points.
+## Purpose
 
-## Metric sources
+This document describes how the final evaluation artefacts were assembled and interpreted. The evaluation/finalisation notebooks perform evaluation, repository maintenance and metric consolidation; they do not retrain models. The earlier model-training experiments were run in Google Colab with GPU acceleration.
 
-- UCI HAR: fresh CPU evaluation JSON files in
-  `Results/UCI HAR/Fresh CPU Evaluation/`.
-- Opportunity: Run 2 archived evaluation JSON files.
-- UniMiB-SHAR: Run 2 archived evaluation JSON files.
+## Final experiment sources
 
-Accuracy, macro-F1, weighted-F1, sample counts, and per-class
-precision/recall/F1 are copied from source JSONs when present.
-Missing values are not inferred.
+- **UCI HAR:** corrected 100-epoch training experiments for targets 0–4, followed by fresh CPU evaluation of the selected checkpoints.
+- **Opportunity:** completed 100-epoch Run 2 target experiments S1–S4; the final report uses their Run 2 evaluation outputs.
+- **UniMiB-SHAR:** completed 100-epoch Run 2 target experiments 1, 2, 3 and 5; the final report uses their Run 2 evaluation outputs.
 
-Confusion matrices are produced only from raw matrices in the
-authoritative source JSONs.
+Run 1 is excluded because it was interrupted and its UCI HAR execution used 150 epochs. The Run 2 UCI HAR execution also used 150 epochs and was superseded by the corrected 100-epoch UCI HAR experiments.
 
-## Backup-branch checkpoints
+## Metrics
 
-Fetched remote branches are searched using Git's tracked tree.
-Recovered checkpoint files retain available branch and original
-path provenance.
+Accuracy is the proportion of correctly classified test examples. Macro-F1 is the unweighted mean of class-level F1 scores. Weighted-F1 weights each class-level F1 by its number of true examples (support). The target-wise results report each participant separately; dataset-level results are unweighted means across target participants.
 
-Recovery alone does not establish metric provenance.
-Independent evaluation requires a target-matched checkpoint,
-required dataset inputs, and an evaluation-only script.
+The paper comparison is restricted to accuracy. No paper F1 baseline is inferred.
 
-## Paper comparison
+## Confusion matrices
 
-Accuracy is compared with the target-wise GILE values
-transcribed for this project. Paper F1 values are not assumed
-or invented.
+Confusion matrices are included only when a raw matrix is available in the authoritative evaluation evidence. A missing fresh matrix is left unavailable; an archived matrix is not silently relabelled as fresh.
+
+## Checkpoints and provenance
+
+Recovered checkpoints retain available branch and source-path provenance. Recovery alone does not establish that a checkpoint generated an archived metric JSON. A fresh evaluation requires a target-matched checkpoint, the corresponding dataset inputs and an evaluation script.
+
+## Methodological caveat
+
+The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target labels therefore influence checkpoint selection even though they are not used for gradient-based parameter updates. The results should not be described as a strictly target-unseen model-selection evaluation.
+
+## Training-history accuracy audit
+
+The original training implementation calculates accuracy using `accurate_preds_y / (len(predictions_y) * batch_size)`. Because the final batch may be smaller than the configured batch size, this denominator can overcount samples and underestimate historical training accuracy. Final sample-level evaluation metrics use the actual evaluated sample count. See `Analysis/Audit/accuracy_calculation_audit.txt`.

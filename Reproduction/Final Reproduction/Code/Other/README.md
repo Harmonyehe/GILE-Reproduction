@@ -1,14 +1,12 @@
 # GILE Source Reference
 
-This directory contains the original GILE source material retained alongside the reproduction code. The method was introduced by Qian, Pan and Miao in the AAAI 2021 paper:
+This directory retains source material used by the reproduction. The method was introduced by Qian, Pan and Miao in the AAAI 2021 paper *Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition*.
 
-**Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition.**
+The original implementation supports UCI HAR, Opportunity and UniMiB-SHAR. Dataset preprocessing scripts expect the prepared files in dataset-specific `data` directories. The original implementation details are in `Original Code/cross-person-HAR/README.md`.
 
-The original implementation covers UCI HAR, Opportunity and UniMiB-SHAR. Its dataset preparation scripts expect the processed data in the relevant `data` directory. The original environment and command examples are documented in `Original Code/cross-person-HAR/README.md`.
+All model-training experiments in this reproduction were run in Google Colab with GPU acceleration. Run 1 was interrupted and used 150 epochs for UCI HAR, so it was excluded. The final result set uses the corrected 100-epoch UCI HAR experiments and the completed 100-epoch Run 2 Opportunity and UniMiB-SHAR experiments.
 
-For the completed reproduction, use the scripts and configuration under `Reproduction/Final Reproduction/Code/`. The final experimental configuration uses 100 epochs for all three datasets. The final results combine the Run 2 Opportunity and UniMiB-SHAR experiments with the UCI HAR experiments conducted using the corrected 100-epoch configuration.
-
-The consolidated metrics, evaluation notes and analysis artefacts are documented in `Reproduction/Final Reproduction/README.md`.
+Use `SETUP.md` for the final Colab workflow, `ANALYSIS_GUIDE.md` for interpreting the analysis outputs, and the main final reproduction README for results.
 
 ## Reference
 

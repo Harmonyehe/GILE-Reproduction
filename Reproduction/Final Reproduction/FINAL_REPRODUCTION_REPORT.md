@@ -1,12 +1,17 @@
 # GILE Reproduction — Final Results Report
 
-Generated: 2026-11-16T14:02:17.258397+00:00
+## Scope and provenance
 
-## Scope
+Model training was conducted during the reproduction experiments. All model-training experiments were run in Google Colab using GPU acceleration.
 
-No model training or training epochs were run by this notebook.
+This report was generated during the later evaluation and consolidation stage; that report-generation step did not run additional training epochs.
 
-UCI HAR uses the fresh CPU evaluation JSONs. Opportunity and UniMiB-SHAR use Run 2 evaluation JSONs unless an independently verified evaluation is added.
+The final result set combines:
+- UCI HAR targets 0–4: corrected 100-epoch experiments, evaluated using fresh CPU evaluation JSONs.
+- Opportunity targets S1–S4: completed 100-epoch Run 2 experiments, using Run 2 evaluation JSONs.
+- UniMiB-SHAR targets 1, 2, 3 and 5: completed 100-epoch Run 2 experiments, using Run 2 evaluation JSONs.
+
+Run 1 was excluded because it was interrupted and its UCI HAR execution used 150 epochs. The Run 2 UCI HAR execution also used 150 epochs and was superseded by the corrected 100-epoch UCI HAR experiments.
 
 ## Target-wise results
 
@@ -17,14 +22,14 @@ UCI HAR uses the fresh CPU evaluation JSONs. Opportunity and UniMiB-SHAR use Run
 | UCI HAR | 2 | 341 | 94.13% | 93.90% | 94.12% | Fresh UCI HAR evaluation |
 | UCI HAR | 3 | 317 | 91.17% | 91.06% | 91.05% | Fresh UCI HAR evaluation |
 | UCI HAR | 4 | 302 | 92.05% | 92.02% | 92.07% | Fresh UCI HAR evaluation |
-| Opportunity | S1 | 15643 | 82.66% | 61.84% | 82.19% | Run 2 archived evaluation evidence |
-| Opportunity | S2 | 15011 | 81.24% | 53.51% | 79.85% | Run 2 archived evaluation evidence |
-| Opportunity | S3 | 14456 | 78.20% | 43.82% | 76.37% | Run 2 archived evaluation evidence |
-| Opportunity | S4 | 12843 | 79.59% | 50.14% | 79.13% | Run 2 archived evaluation evidence |
-| UniMiB-SHAR | 1 | 384 | 46.35% | 33.83% | 40.26% | Run 2 archived evaluation evidence |
-| UniMiB-SHAR | 2 | 583 | 53.86% | 47.20% | 52.46% | Run 2 archived evaluation evidence |
-| UniMiB-SHAR | 3 | 304 | 67.11% | 48.81% | 65.79% | Run 2 archived evaluation evidence |
-| UniMiB-SHAR | 5 | 298 | 41.61% | 34.28% | 34.06% | Run 2 archived evaluation evidence |
+| Opportunity | S1 | 15643 | 82.66% | 61.84% | 82.19% | Run 2 evaluation evidence |
+| Opportunity | S2 | 15011 | 81.24% | 53.51% | 79.85% | Run 2 evaluation evidence |
+| Opportunity | S3 | 14456 | 78.20% | 43.82% | 76.37% | Run 2 evaluation evidence |
+| Opportunity | S4 | 12843 | 79.59% | 50.14% | 79.13% | Run 2 evaluation evidence |
+| UniMiB-SHAR | 1 | 384 | 46.35% | 33.83% | 40.26% | Run 2 evaluation evidence |
+| UniMiB-SHAR | 2 | 583 | 53.86% | 47.20% | 52.46% | Run 2 evaluation evidence |
+| UniMiB-SHAR | 3 | 304 | 67.11% | 48.81% | 65.79% | Run 2 evaluation evidence |
+| UniMiB-SHAR | 5 | 298 | 41.61% | 34.28% | 34.06% | Run 2 evaluation evidence |
 
 ## Paper comparison
 
@@ -51,13 +56,14 @@ Paper comparison is provided for accuracy only. No paper F1 baseline is asserted
 - Recovered checkpoint files retain their available source-path provenance.
 - A recovered checkpoint is not automatically treated as the source of an archived metric JSON; matching and independent evaluation must be established.
 
-## Confusion matrix evidence
+## Confusion-matrix evidence
 
-- Confusion matrices are generated only from raw matrices contained in authoritative metric JSONs.
-- Fresh UCI HAR matrices are marked unavailable if no fresh raw matrix exists; archived UCI HAR matrices are not substituted.
+Confusion matrices are generated only from raw matrices contained in authoritative metric JSONs. Fresh UCI HAR matrices are marked unavailable if no fresh raw matrix exists; archived UCI HAR matrices are not substituted.
 
 ## Limitations
 
 - Missing fields remain unavailable; no metrics are fabricated.
-- Training history plots show recorded rows and do not infer epoch numbering from ambiguous CSV headers.
+- Training-history plots show recorded rows and do not infer epoch numbering from ambiguous CSV headers.
+- The target-domain accuracy is used for checkpoint selection during training, so target labels influence model selection.
+- Historical training accuracy can be underestimated due to the original denominator calculation; see `Analysis/Audit/accuracy_calculation_audit.txt`.
 - External data files or dependencies required for re-evaluation are reported as missing rather than guessed.

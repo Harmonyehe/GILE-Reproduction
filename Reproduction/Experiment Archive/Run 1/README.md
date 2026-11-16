@@ -1,34 +1,33 @@
 # Run 1 — Initial Experimental Attempt
 
-## Overview
+## Purpose and status
 
-Run 1 records the first experimental attempt in the GILE reproduction project. The attempt was interrupted before the complete set of experiments required for the final evaluation had been obtained.
+Run 1 was the initial attempt at reproducing GILE. It was interrupted and did not provide the final, consistent experiment set. It is retained to document the development of the work, but its results are excluded from the final 13-target metrics.
 
-The original experiment files, logs and available outputs are retained here so that the development of the reproduction can be traced. These records are not used to calculate the final 13-target results.
+A key reason for discarding Run 1 was the UCI HAR configuration: it used 150 epochs, whereas the final reproduction was standardised to 100 epochs. The interrupted execution and the mismatch in training duration meant Run 1 was not used as the final result source.
 
-## Experimental status
+All model-training experiments were conducted in Google Colab with GPU acceleration.
 
-The Run 1 records include incomplete experiments. In particular, the Opportunity S1 and S4 logs document interrupted execution. UCI HAR also includes an experiment that reached epoch 150; this was not the configuration used for the final UCI HAR results.
+## Relationship to the final experiments
 
-Run 1 should therefore be read as an account of the initial attempt, not as the completed reproduction.
+The final reproduction uses:
+- corrected 100-epoch UCI HAR experiments for targets 0–4;
+- Run 2 Opportunity experiments for S1–S4, each trained for 100 epochs;
+- Run 2 UniMiB-SHAR experiments for targets 1, 2, 3 and 5, each trained for 100 epochs.
 
-## Repository organisation
+Run 1 logs, outputs and source records remain available for historical inspection. Do not merge its metrics with the final analysis tables.
+
+## Directory map
 
 | Folder | Contents |
 |---|---|
-| `Code/` | Source code associated with the initial attempt |
-| `Results/` | Available experiment outputs |
-| `Evaluation/` | Evaluation artefacts and summaries |
-| `Logs/` | Training logs and execution records |
+| `Code/` | Code snapshot associated with the initial attempt |
+| `Results/` | Available Run 1 outputs |
+| `Evaluation/` | Evaluation artefacts from the initial attempt |
+| `Logs/` | Execution and training logs |
 
-## File index and provenance
+`RUN1_FILE_INDEX.csv` records original paths, current locations and SHA256 checksums for indexed files.
 
-Some files are represented elsewhere in the repository rather than duplicated in this folder. `RUN1_FILE_INDEX.csv` records their original paths, current locations and SHA256 checksums.
+Historical source snapshot: `46b5ef37b84c9ba82f9bfd5e2be2b45a860067ba`.
 
-The historical Git commit below provides the source snapshot for this experiment:
-
-`46b5ef37b84c9ba82f9bfd5e2be2b45a860067ba`
-
-## Relationship to the final reproduction
-
-The final reproduction was completed through the subsequent Run 2 experiments together with the UCI HAR experiments run using the corrected 100-epoch configuration. Run 1 remains available to document the initial attempt and is not combined with the final metrics.
+For the final configuration and results, see `Reproduction/Final Reproduction/README.md`.

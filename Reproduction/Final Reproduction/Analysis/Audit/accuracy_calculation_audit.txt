@@ -1,6 +1,17 @@
-
 GILE REPRODUCTION — ACCURACY CALCULATION AUDIT
 ================================================
+
+Purpose:
+This note documents a limitation in the historical training-accuracy
+values. It does not indicate that the reproduction was not trained.
+
+Training context:
+All model-training experiments were run in Google Colab using GPU
+acceleration. Run 1 was interrupted and its UCI HAR execution used
+150 epochs, so it was excluded from the final results. Run 2
+Opportunity and UniMiB-SHAR experiments completed 100 epochs per
+target. UCI HAR was subsequently rerun using the corrected
+100-epoch configuration.
 
 Finding:
 The original training implementation calculates classification
@@ -8,12 +19,11 @@ accuracy using:
 
 accuracy_y = accurate_preds_y / (len(predictions_y) * batch_size)
 
-However, the target DataLoader does not use drop_last=True.
-Consequently, the final batch may contain fewer samples than
-the configured batch size.
-
-The denominator therefore overestimates the number of evaluated
-samples, causing historical training accuracy to be underestimated.
+The target DataLoader does not use drop_last=True. Consequently,
+the final batch may contain fewer samples than the configured
+batch size. The denominator can therefore overestimate the number
+of evaluated samples, causing historical training accuracy to be
+underestimated.
 
 Evidence:
 - Original Code/cross-person-HAR/train.py, accuracy calculation.
@@ -22,17 +32,15 @@ Evidence:
 - Fresh UCI HAR evaluation metrics.
 - Identical SHA256 hashes for all five UCI HAR checkpoints.
 
-Impact:
-Historical training-history accuracy values should not be treated
-as directly equivalent to the fresh evaluation accuracy values.
-
-Reporting decision:
+Impact and reporting decision:
 1. Preserve all original training-history CSV files.
 2. Preserve all existing checkpoint files.
 3. Use fresh evaluation metrics as the authoritative UCI HAR results.
 4. Retain historical training plots as historical records.
-5. Document the denominator issue as an implementation limitation.
-6. Do not claim that the historical values are exact corrected
-   accuracies because the CSV values were rounded to two decimals.
+5. Do not claim historical values are exact corrected accuracies;
+   the CSV values were rounded to two decimals.
+6. Interpret training-history accuracy separately from final
+   sample-level evaluation accuracy.
 
-No retraining or modification of original results was performed.
+No retraining or modification of original metric outputs was
+performed by the documentation update.

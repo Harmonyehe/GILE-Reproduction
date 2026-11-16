@@ -1,9 +1,7 @@
 # Run 1 — Training and Execution Logs
 
-This directory contains the logs associated with the initial experimental attempt.
+This directory contains the training and execution logs from the initial Run 1 attempt. Run 1 was interrupted and is excluded from the final result set. Its UCI HAR run also used 150 epochs, rather than the corrected 100-epoch configuration used for the final UCI HAR results.
 
-The records cover UCI HAR, Opportunity, UniMiB-SHAR and other supporting runs. The Opportunity S1 and S4 logs document interrupted execution. The UCI HAR records also include the 150-epoch attempt; the final UCI HAR results use the corrected 100-epoch configuration.
+All model-training experiments in this project were run in Google Colab with GPU acceleration. These Run 1 logs are retained to show the initial execution history; they are not the source of the final metrics.
 
-These logs are retained to document what occurred during the initial attempt. They should not be used as substitutes for the final evaluation metrics.
-
-Where a log is represented elsewhere in the repository, its original path and current location are listed in `../RUN1_FILE_INDEX.csv`.
+Do not infer final Run 2 completion status from Run 1 logs. For the final experiment provenance, consult the Run 2 execution records and `Reproduction/Final Reproduction/README.md`. The file index is `../RUN1_FILE_INDEX.csv`.

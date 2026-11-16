@@ -1,24 +1,30 @@
 # GILE Reproduction — Final Experimental Results
 
-## Scope
+## 1. Scope
 
-This directory contains the completed reproduction of GILE across three wearable-sensor human activity recognition datasets and 13 target participants:
+This directory contains the final 13-target reproduction of GILE across UCI HAR, Opportunity and UniMiB-SHAR.
 
-- **UCI HAR:** targets 0, 1, 2, 3 and 4.
-- **Opportunity:** targets S1, S2, S3 and S4.
-- **UniMiB-SHAR:** targets 1, 2, 3 and 5.
+| Dataset | Final targets | Final training source |
+|---|---|---|
+| UCI HAR | 0, 1, 2, 3, 4 | Corrected 100-epoch execution |
+| Opportunity | S1, S2, S3, S4 | Run 2, 100 epochs per target |
+| UniMiB-SHAR | 1, 2, 3, 5 | Run 2, 100 epochs per target |
 
-## Final experimental configuration
+All model-training experiments were conducted in Google Colab using GPU acceleration. The later UCI HAR CPU evaluation is an evaluation step and should not be confused with the training hardware.
 
-The final reproduction uses 100 training epochs for every target experiment.
+## 2. Experimental history
 
-Run 2 provided the Opportunity and UniMiB-SHAR experiments. During the comparison with the paper, the UCI HAR training duration was checked and adjusted to 100 epochs. The five UCI HAR target experiments were run using this configuration. Together, these experiments form the final 13-target reproduction.
+Run 1 was excluded because the initial execution was interrupted and its UCI HAR experiment used 150 epochs rather than the intended 100-epoch configuration. Run 1 outputs remain archived for traceability and are not included in the final result tables.
 
-The initial experimental attempt was interrupted and is retained in the experiment records. It is not part of the final result tables.
+Run 2 was the main execution. Opportunity and UniMiB-SHAR completed 100 epochs for each target. The Run 2 UCI HAR experiments used 150 epochs and were superseded.
 
-## Final dataset-level results
+After comparison with the paper, UCI HAR was rerun for all five target participants using the corrected 100-epoch configuration. The final 13-target result set therefore combines corrected UCI HAR with the completed Run 2 Opportunity and UniMiB-SHAR experiments.
 
-The figures below are unweighted means across the target participants within each dataset.
+The later evaluation, audit and report-generation notebooks consolidated existing outputs; they did not initiate new model training. This does not mean that the reproduction experiments themselves were untrained.
+
+## 3. Final dataset-level results
+
+Values are unweighted means across target participants within each dataset.
 
 | Dataset | Targets | Paper accuracy (%) | Reproduced accuracy (%) | Difference (percentage points) | Macro-F1 (%) | Weighted-F1 (%) |
 |---|---:|---:|---:|---:|---:|---:|
@@ -26,28 +32,32 @@ The figures below are unweighted means across the target participants within eac
 | Opportunity | 4 | 81.395 | 80.421 | -0.974 | 52.326 | 79.385 |
 | UniMiB-SHAR | 4 | 55.725 | 52.232 | -3.493 | 41.032 | 48.143 |
 
-The paper comparison is based on the accuracy values reported by Qian et al. (AAAI 2021). F1 scores are reported for the reproduction and are not presented as paper comparisons.
+Paper comparison is limited to accuracy. Reproduction F1 values are not presented as paper baselines.
 
-## Evaluation and methodological notes
+## 4. Evaluation sources
 
-- UCI HAR results are based on a fresh CPU evaluation of the final 100-epoch configuration.
-- Opportunity and UniMiB-SHAR results are from the Run 2 target experiments.
-- The final tables bring all 13 target results together using a consistent set of reported metrics.
-- Target-domain accuracy is evaluated during training and is used for checkpoint selection. Target labels therefore influence model selection. This limitation should be considered when interpreting cross-person generalisation performance.
-- Final sample-level metrics use the number of evaluated examples. The historical training-log accuracy calculation has a batch-size denominator issue when the final batch is incomplete. The details are documented in `Analysis/Audit/accuracy_calculation_audit.txt`.
+- **UCI HAR:** fresh CPU evaluation JSONs in `Results/UCI HAR/Fresh CPU Evaluation/`, using the corrected 100-epoch experiment checkpoints.
+- **Opportunity:** Run 2 evaluation outputs for S1–S4.
+- **UniMiB-SHAR:** Run 2 evaluation outputs for targets 1, 2, 3 and 5.
 
-## Main files
+The provenance label identifies where each metric was obtained. The presence of an archived evaluation JSON does not by itself mean that the finalisation notebook freshly evaluated a checkpoint.
 
-- `Results/` — evaluation metrics, prediction outputs and result summaries.
-- `Analysis/Final Analysis Tables/` — consolidated target-level, dataset-level and per-class results.
-- `Analysis/Fresh UCI HAR Confusion Matrices/` — final UCI HAR confusion matrices, CSV data and summary metrics.
-- `Analysis/Training History Plots/` — activity and domain accuracy plots for all 13 target experiments, plus the training-history summary.
-- `Analysis/Analysis Tables/training_history_vs_evaluation.csv` — comparison of training-history and final evaluation metrics.
-- `Analysis/Audit/accuracy_calculation_audit.txt` — audit of the historical accuracy calculation and final reporting approach.
-- `Code/` — reproduction and evaluation source code.
+## 5. Analysis artefacts
 
-## Reproducibility
+- `Analysis/Final Analysis Tables/` — consolidated target-wise, per-class and dataset-level metrics.
+- `Analysis/Training History Plots/` — recorded activity/domain training-history plots and summary.
+- `Analysis/Fresh UCI HAR Confusion Matrices/` — confusion matrices generated from the fresh UCI HAR evaluation evidence.
+- `Analysis/Analysis Tables/training_history_vs_evaluation.csv` — comparison between historical training records and evaluation values.
+- `Analysis/Audit/accuracy_calculation_audit.txt` — explanation of the historical training-accuracy denominator issue.
 
-The final result tables identify the dataset, target participant, sample count, accuracy, Macro-F1, Weighted-F1 and evidence source. Prediction-level outputs are retained for the final UCI HAR evaluation. Training histories, plots and experiment records are retained alongside the analysis.
+See `ANALYSIS_GUIDE.md` for detailed interpretation of these files.
 
-The raw datasets and model checkpoints are not distributed as part of this results directory. Refer to the original implementation documentation for dataset preparation and environment requirements.
+## 6. Methodological limitations
+
+Target-domain accuracy is evaluated during training and used for checkpoint selection. Target labels therefore influence checkpoint selection, although they are not used for gradient-based parameter updates. The results are not a strictly target-unseen model-selection evaluation.
+
+Historical training accuracy can be underestimated because the original implementation multiplies the number of prediction batches by the configured batch size, even when the last batch is smaller. Final sample-level evaluation metrics use the actual sample count.
+
+## 7. Reproducibility
+
+See `SETUP.md` for the Colab environment, expected data directories, training commands and evaluation commands. The repository does not include the raw datasets. Existing results and logs are preserved as experiment evidence; this documentation update does not retrain models or modify those outputs.

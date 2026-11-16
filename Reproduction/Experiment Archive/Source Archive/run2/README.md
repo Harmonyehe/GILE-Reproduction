@@ -1,41 +1,37 @@
-# Run 2 — Main Experimental Execution
+# Run 2 — Source and Experiment Snapshot
 
 ## Overview
 
-Run 2 was conducted as the main experimental execution for the GILE reproduction. It covers the three wearable-sensor datasets and their target participants:
+Run 2 was the main experimental execution for the GILE reproduction. It includes target experiments for UCI HAR, Opportunity and UniMiB-SHAR. All model-training experiments were conducted in Google Colab using GPU acceleration.
 
-- UCI HAR: targets 0, 1, 2, 3 and 4.
-- Opportunity: targets S1, S2, S3 and S4.
-- UniMiB-SHAR: targets 1, 2, 3 and 5.
-
-The Run 2 execution records document 13 target experiments. During comparison with the paper, the UCI HAR training duration was checked and aligned to 100 epochs for the final reproduction. The final UCI HAR results are therefore taken from the five target experiments conducted with the corrected 100-epoch configuration. Opportunity and UniMiB-SHAR results are taken from their Run 2 experiments.
+| Dataset | Targets | Run 2 training duration | Role in final results |
+|---|---|---:|---|
+| UCI HAR | 0, 1, 2, 3, 4 | 150 epochs | Superseded by corrected 100-epoch UCI HAR execution |
+| Opportunity | S1, S2, S3, S4 | 100 epochs each | Included |
+| UniMiB-SHAR | 1, 2, 3, 5 | 100 epochs each | Included |
 
 ## Role in the final reproduction
 
-The final reproduction consists of the Run 2 Opportunity and UniMiB-SHAR results together with the UCI HAR results produced using the corrected 100-epoch configuration. These results are presented together as the final 13-target evaluation.
+During comparison with the paper, the UCI HAR training duration was reviewed. The Run 2 UCI HAR execution used 150 epochs, so it was not used for the final UCI HAR results. The five UCI HAR targets were subsequently run using the corrected 100-epoch configuration.
 
-The Run 2 execution records also retain the UCI HAR 150-epoch attempt so that the experiment sequence remains traceable. That attempt is not the source of the final UCI HAR metrics.
-
-## Run 2 execution configuration recorded in the logs
-
-| Dataset | Targets | Recorded Run 2 duration |
-|---|---|---:|
-| UCI HAR | 0, 1, 2, 3, 4 | 150 epochs |
-| Opportunity | S1, S2, S3, S4 | 100 epochs |
-| UniMiB-SHAR | 1, 2, 3, 5 | 100 epochs |
-
-The UCI HAR row above describes the Run 2 execution record. The final reproduction uses the separate UCI HAR execution with the corrected 100-epoch configuration.
+The final 13-target result set combines the corrected UCI HAR results with the Run 2 Opportunity and UniMiB-SHAR results. The Run 2 Opportunity S1–S4 and UniMiB-SHAR target experiments completed their 100-epoch runs.
 
 ## Analysis records
 
-This directory contains the Run 2 execution and analysis records, including evaluation metrics, confusion matrices, classification reports, class-distribution summaries and experiment-level analysis. Consult the final reproduction tables for the metrics used in the completed cross-dataset comparison.
+The Run 2 analysis includes target-level evaluation metrics, confusion matrices, classification reports, class-support summaries and automated findings. These artefacts describe different aspects of model performance:
+
+- target-wise accuracy measures overall correct classification for each participant;
+- per-class precision and recall help identify which activities are missed or over-predicted;
+- per-class F1 balances precision and recall;
+- confusion matrices show the distribution of true labels against predicted labels;
+- class-support summaries show how many test examples contribute to each class metric.
+
+A large gap between Macro-F1 and Weighted-F1 can indicate that performance is less consistent across classes than the overall support-weighted score suggests. Class imbalance is a possible context for interpretation, not proof of the cause of a model's errors.
 
 ## Evaluation protocol
 
-The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target-domain labels therefore influence model selection, although they are not used for gradient-based parameter updates. Results should be interpreted in light of this protocol and should not be described as a strictly target-unseen model-selection procedure.
+The implementation evaluates target-domain performance during training and uses target-domain accuracy for checkpoint selection. Target labels therefore influence checkpoint selection, although they are not used for gradient-based parameter updates. This should be disclosed when discussing generalisation to unseen people.
 
 ## Final result location
 
-The consolidated final results, including the corrected UCI HAR results, are documented in:
-
-`Reproduction/Final Reproduction/README.md`
+The consolidated final results and analysis guide are in `Reproduction/Final Reproduction/README.md` and `Reproduction/Final Reproduction/ANALYSIS_GUIDE.md`.
